@@ -6,7 +6,7 @@ class Logger:
     def success(message, log_file):
         try:
             with open(log_file, mode="w", encoding="utf-8") as success_writer:
-                timestamp = f'{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}'
+                timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 success_writer.write(f"[{timestamp}]: {message} \n")
         except Exception as e:
             print(f"Error writing to log file {log_file} | {e}")
@@ -15,7 +15,7 @@ class Logger:
     def error(message, log_file):
         try:
             with open(log_file, mode="w", encoding="utf-8") as success_writer:
-                timestamp = f'{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}'
+                timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 success_writer.write(f"[{timestamp}]: {message} \n")
         except Exception as e:
             print(f"Error writing to log file {log_file} | {e}")
@@ -24,7 +24,7 @@ class Logger:
     def info(message, log_file):
         try:
             with open(log_file, mode="w", encoding="utf-8") as success_writer:
-                timestamp = f'{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}'
+                timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 success_writer.write(f"[{timestamp}]: {message} \n")
         except Exception as e:
             print(f"Error writing to log file {log_file} | {e}")
