@@ -1,5 +1,5 @@
 import json
-from typing import Dict
+from typing import Dict, Optional
 from src.hr_saas.model.employee import Employee
 from src.hr_saas.file_IO.logging import Logger
 from src.hr_saas.file_IO.config_file import ERROR_LOG_FILE
@@ -26,6 +26,9 @@ class EmployeeRepo:
                 json.dump(savable_data, file_writer, indent=4)
         except Exception as e:
             Logger.error(f"Error saving employee | {e}", ERROR_LOG_FILE)
+
+    def get_employee_by_email(self, email: str) -> Optional[Employee]:
+        return self._employee_database.get(email)
 
     def _load_employee_database(self):
         self._employee_database.clear()

@@ -15,7 +15,6 @@ class Utils:
 
     @staticmethod
     def validate_name(name: str) -> str:
-        name = name.strip()
         if name and len(name) >= 3:
             return name
         raise ValidationError("Name value cannot be empty and must be at-least 3 characters")

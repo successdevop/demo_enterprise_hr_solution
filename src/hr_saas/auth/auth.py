@@ -85,8 +85,9 @@ class Auth:
         if password == verify_password:
             user.set_password(password)
 
-        self._emp_repo.save_employee(self._current_user)
+        self._emp_repo.save_employee(user)
         Logger.info("Password changed successfully", INFO_LOG_FILE)
         print("Password changed successfully")
+        return user
 
 

@@ -1,0 +1,7 @@
+[2026-04-26 18:14:16]: Database file not found, starting fresh | [Errno 2] No such file or directory: 'employee.json' 
+[2026-04-26 18:15:13]: Invalid password for email | success@gmail.com 
+[2026-04-26 18:16:52]: Invalid password for email | success@gmail.com 
+[2026-04-26 18:19:35]: Invalid password for email | success@gmail.com 
+[2026-04-26 18:20:56]: Invalid password for email | success@gmail.com 
+[2026-04-26 18:25:12]: Invalid password for email | success@gmail.com 
+[2026-04-26 18:44:06]: Invalid password for email | success@gmail.com 

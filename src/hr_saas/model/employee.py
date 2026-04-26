@@ -77,7 +77,8 @@ class Employee(Person):
             "role": self.role.value if hasattr(self.role, "value") else self.role,
             "is_active": self.isActive,
             "department": self.department,
-            "hire_date": self.hire_date
+            "hire_date": self.hire_date,
+            "password": self._password
         }
 
     @classmethod
@@ -99,7 +100,7 @@ class Employee(Person):
         employee._employee_id = data.get("employee_id")
         employee.isActive = data.get("is_active")
         employee.department = data.get("department")
-        employee._get_password()
-        employee.type = data["type"]
+        employee._password = data.get("password")
+        employee.type = data.get("type")
         return employee
 
