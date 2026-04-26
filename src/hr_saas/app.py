@@ -8,7 +8,7 @@ def main():
     emp_repo = EmployeeRepo(EMPLOYEE_DATABASE)
     auth = Auth(emp_repo)
 
-    auth.login("success@gmail.com", "mynewpassword123@/.com")
+    # auth.login("success@gmail.com", "mynewpassword123@/.com")
     # auth.forgot_password("success@gmail.com")
 
     # employee_1 = auth.register_user(
@@ -29,6 +29,16 @@ def main():
     #     role=Role.HR,
     #     salary=30000,
     #     password="eoluch123@/.com"
+    # )
+    #
+    # employee_1 = auth.register_user(
+    #     name="Obi joy",
+    #     email="obiageli@gmail.com",
+    #     age=28,
+    #     origin="ebonyi state, nigeria",
+    #     role=Role.EMPLOYEE,
+    #     salary=10000,
+    #     password="obyski123@/.com"
     # )
 
 
