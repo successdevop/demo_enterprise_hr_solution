@@ -23,6 +23,10 @@ class Department:
     def manager(self):
         return self._manager
 
+    @manager.setter
+    def manager(self, manager: Employee):
+        self._manager = manager
+
     def view_dept_employees(self):
         for emp in self._dept_employees:
             print(emp)

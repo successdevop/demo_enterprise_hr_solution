@@ -58,4 +58,57 @@ class DepartmentService:
         employee.department.remove(dept_name)
         self._emp_repo.save_employee(employee)
 
+    def assign_a_new_department_manager(self, current_user, dept_name: str, manager: Employee):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
+
+        department = self._dept_repo.get_dept_by_name(dept_name)
+        if not department:
+            raise NotFoundError(f"{dept_name} department not found")
+        print(department.manager.department)
+
+        if manager.role.value != "Manager":
+            manager.role = Role.MANAGER
+            manager.department.clear()
+            manager.department.append(dept_name)
+            self._emp_repo.save_employee(manager)
+            self._emp_repo.update_employee_database()
+
+        department.manager = manager
+        self._dept_repo.save_department(department)
+    #     still working on this method-----
+
+    def get_all_department(self, current_user):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
+
+        departments = self._dept_repo.get_all_department()
+        print(departments)
+
+    def get_all_department_managers(self, current_user):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
+        managers = self._dept_repo.get_dept_managers()
+        print(managers)
+
+    def delete_dept(self, current_user, dept_name: str):
+        Authorization.authorized_roles(current_user, [Role.ADMIN])
+        self._dept_repo.delete_dept_by_name(dept_name)
+
+        for employee in self._emp_repo.get_all_employee().values():
+            if dept_name in employee.department:
+                employee.department.remove(dept_name)
+        self._emp_repo.update_employee_database()
+
+    def delete_all_dept(self, current_user):
+        Authorization.authorized_roles(current_user, [Role.ADMIN])
+        self._dept_repo.delete_all_department()
+
+        for employee in self._emp_repo.get_all_employee().values():
+            employee.department.clear()
+        self._emp_repo.update_employee_database()
+
+    def count_all_dept(self, current_user):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
+        print(self._dept_repo.count_dept())
+
+
+
 

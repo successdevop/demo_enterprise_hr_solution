@@ -14,6 +14,12 @@ class EmployeeRepo:
         self._employee_database[employee.email] = employee
         DictionaryDatabase.save(self._employee_storage_file, "Employee", self._employee_database)
 
+    def get_all_employee(self):
+        return self._employee_database
+
+    def update_employee_database(self):
+        DictionaryDatabase.save(self._employee_storage_file, "Employee", self._employee_database)
+
     def get_employee_by_email(self, email: str) -> Optional[Employee]:
         return self._employee_database.get(email)
 

@@ -15,12 +15,21 @@ def main():
     auth = Auth(emp_repo)
 
     auth.login("success@gmail.com", "mynewpassword123@/.com")
-    #
+    # dept_service.get_all_department(auth.get_current_user())
+    # dept_service.get_all_department_managers(auth.get_current_user())
+    # dept_service.delete_dept(auth.get_current_user(), ENGINEERING)
+    # dept_service.delete_all_dept(auth.get_current_user())
+    # dept_service.assign_a_new_department_manager(auth.get_current_user(), ENGINEERING,
+    #                                              emp_repo.get_employee_by_email("francis@gmail.com"))
+
     # dept_service.create_department(auth.get_current_user(), ENGINEERING,
     #                                emp_repo.get_employee_by_email("adewusi@gmail.com"))
+    #
+    # dept_service.assign_employee(auth.get_current_user(), ENGINEERING,
+    #                                emp_repo.get_employee_by_email("francis@gmail.com"))
 
-    dept_service.assign_employee(auth.get_current_user(), ENGINEERING,
-                                   emp_repo.get_employee_by_email("folakemi.ola@gmail.com"))
+    # dept_service.remove_employee(auth.get_current_user(), ENGINEERING,
+    #                                emp_repo.get_employee_by_email("francis@gmail.com"))
 
     # employee_1 = auth.register_user(
     #     name="succeSS ifeANYi raPHaEl",
