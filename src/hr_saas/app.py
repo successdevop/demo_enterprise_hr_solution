@@ -1,15 +1,26 @@
 from src.hr_saas.repository.employee_repo import EmployeeRepo
+from src.hr_saas.repository.department_repo import DepartmentRepo
+from src.hr_saas.services.department_service import DepartmentService
 from src.hr_saas.auth.auth import Auth
 from src.hr_saas.enums.role import Role
-from src.hr_saas.file_IO.database_files import EMPLOYEE_DATABASE
+from src.hr_saas.file_IO.database_files import EMPLOYEE_DATABASE, DEPARTMENT_DATABASE
+from src.hr_saas.app_files.files import ENGINEERING
 
 
 def main():
     emp_repo = EmployeeRepo(EMPLOYEE_DATABASE)
+    dept_repo = DepartmentRepo(DEPARTMENT_DATABASE)
+
+    dept_service = DepartmentService(dept_repo, emp_repo)
     auth = Auth(emp_repo)
 
-    # auth.login("success@gmail.com", "mynewpassword123@/.com")
-    # auth.forgot_password("success@gmail.com")
+    auth.login("success@gmail.com", "mynewpassword123@/.com")
+    #
+    # dept_service.create_department(auth.get_current_user(), ENGINEERING,
+    #                                emp_repo.get_employee_by_email("adewusi@gmail.com"))
+
+    dept_service.assign_employee(auth.get_current_user(), ENGINEERING,
+                                   emp_repo.get_employee_by_email("folakemi.ola@gmail.com"))
 
     # employee_1 = auth.register_user(
     #     name="succeSS ifeANYi raPHaEl",
@@ -21,7 +32,7 @@ def main():
     #     password="ehez123@/.com|mynewpassword123@/.com"
     # )
     #
-    # employee_1 = auth.register_user(
+    # employee_2 = auth.register_user(
     #     name="oluchi favour",
     #     email="umah@gmail.com",
     #     age=34,
@@ -31,7 +42,7 @@ def main():
     #     password="eoluch123@/.com"
     # )
     #
-    # employee_1 = auth.register_user(
+    # employee_3 = auth.register_user(
     #     name="Obi joy",
     #     email="obiageli@gmail.com",
     #     age=28,
@@ -39,6 +50,36 @@ def main():
     #     role=Role.EMPLOYEE,
     #     salary=10000,
     #     password="obyski123@/.com"
+    # )
+
+    # employee_3 = auth.register_user(
+    #     name="adewusi tobi",
+    #     email="adewusi@gmail.com",
+    #     age=28,
+    #     origin="osun state, nigeria",
+    #     role=Role.MANAGER,
+    #     salary=10000,
+    #     password="obyadew123@/.com"
+    # )
+    #
+    # employee_3 = auth.register_user(
+    #     name="francis ebinabo",
+    #     email="francis@gmail.com",
+    #     age=32,
+    #     origin="kogi state, nigeria",
+    #     role=Role.EMPLOYEE,
+    #     salary=10000,
+    #     password="obyskfranco@/.com"
+    # )
+
+    # employee_3 = auth.register_user(
+    #     name="oladimeji folakemi",
+    #     email="folakemi.ola@gmail.com",
+    #     age=24,
+    #     origin="ekiti state, nigeria",
+    #     role=Role.MANAGER,
+    #     salary=15000,
+    #     password="kemzyolas123@/.com"
     # )
 
 

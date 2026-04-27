@@ -12,6 +12,9 @@ class Auth:
         self._emp_repo = emp_repo
         self._current_user: Optional[Employee] = None
 
+    def get_current_user(self):
+        return self._current_user
+
     def register_user(self, name, email, age, origin, role, salary, password):
         email = email.strip().lower()
         Utils.validate_email(email)

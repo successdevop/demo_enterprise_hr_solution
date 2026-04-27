@@ -28,6 +28,12 @@ class Department:
             print(emp)
 
     def assign_employee(self, employee: Employee):
+        if self._manager.employee_id == employee.employee_id:
+            raise ValidationError(f"{employee.name} is the manager of {self._name} department, and cannot be assigned")
+
+        if employee.role.value == "Manager":
+            raise ValidationError(f"{employee.name} is a manager and cannot be assigned as a team member")
+
         if employee in self._dept_employees:
             raise UserAlreadyExistError(f"{employee.name} already in {self._name} Department")
 
