@@ -66,6 +66,9 @@ class Employee(Person):
         check = hashlib.sha256(password.encode()).hexdigest()
         return check == self._get_password()
 
+    def deactivate(self):
+        self.isActive = False
+
     def to_dict(self) -> dict:
         return {
             "employee_id": self._employee_id,
@@ -103,4 +106,15 @@ class Employee(Person):
         employee._password = data.get("password")
         employee.type = data.get("type")
         return employee
+
+    def __eq__(self, other):
+        if not isinstance(other, Employee):
+            return False
+        return self._employee_id == other._employee_id
+
+    def __hash__(self):
+        return hash(self._employee_id)
+
+    def __repr__(self):
+        return f"<Employee id:{self._employee_id} | name:{self.name} | role:{self.role.value}"
 
