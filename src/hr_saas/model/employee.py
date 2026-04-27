@@ -69,20 +69,27 @@ class Employee(Person):
     def deactivate(self):
         self.isActive = False
 
-    def to_dict(self) -> dict:
-        return {
-            "employee_id": self._employee_id,
-            "name": self.name,
-            "email": self.email,
-            "age": self.age,
-            "origin": self.state_of_origin,
-            "salary": self._salary,
-            "role": self.role.value if hasattr(self.role, "value") else self.role,
-            "is_active": self.isActive,
-            "department": self.department,
-            "hire_date": self.hire_date,
-            "password": self._password
-        }
+    def to_dict(self, show_all: bool = True) -> dict:
+        if show_all:
+            return {
+                "employee_id": self._employee_id,
+                "name": self.name,
+                "email": self.email,
+                "age": self.age,
+                "origin": self.state_of_origin,
+                "salary": self._salary,
+                "role": self.role.value if hasattr(self.role, "value") else self.role,
+                "is_active": self.isActive,
+                "department": self.department,
+                "hire_date": self.hire_date,
+                "password": self._password
+            }
+        else:
+            return {
+                "employee_id": self._employee_id,
+                "name": self.name,
+                "role": self.role.value if hasattr(self.role, "value") else self.role,
+            }
 
     @classmethod
     def from_dict(cls, data: dict) -> "Employee":
