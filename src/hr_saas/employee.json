@@ -9,7 +9,7 @@
         "role": "Admin",
         "is_active": true,
         "department": [],
-        "hire_date": "2026-04-27 14:14:49",
+        "hire_date": "2026-04-28 17:03:34",
         "password": "f93ec8b7c8283d18a8f7507899cf3155be960a19f15c56c4ef544b1ac90129a3"
     },
     "umah@gmail.com": {
@@ -22,7 +22,7 @@
         "role": "Hr",
         "is_active": true,
         "department": [],
-        "hire_date": "2026-04-27 14:14:49",
+        "hire_date": "2026-04-28 17:03:34",
         "password": "e146428f02d98bde7c856842ca9084d8119472a2b2a979c11aa7a80093034916"
     },
     "obiageli@gmail.com": {
@@ -35,7 +35,7 @@
         "role": "Employee",
         "is_active": true,
         "department": [],
-        "hire_date": "2026-04-27 14:14:49",
+        "hire_date": "2026-04-28 17:03:34",
         "password": "12b1a7f7dc7369d35f93569420e27e2b77788950e128f635e3ee3186646e69fe"
     },
     "adewusi@gmail.com": {
@@ -48,8 +48,9 @@
         "role": "Manager",
         "is_active": true,
         "department": [
+            "Robotics", "Engineering"
         ],
-        "hire_date": "2026-04-27 14:14:49",
+        "hire_date": "2026-04-28 17:03:34",
         "password": "adfcaa5598180a042b1d6f1aa795daed72ce9e13b57497d857378561ec047ae6"
     },
     "francis@gmail.com": {
@@ -62,8 +63,9 @@
         "role": "Employee",
         "is_active": true,
         "department": [
+            "Engineering", "Marketing", "Sales"
         ],
-        "hire_date": "2026-04-27 14:14:49",
+        "hire_date": "2026-04-28 17:03:34",
         "password": "f37d551502c5f7f766732e42efb75ff20e7495fd43055c14b4cf566529da28ce"
     },
     "folakemi.ola@gmail.com": {
@@ -76,7 +78,7 @@
         "role": "Manager",
         "is_active": true,
         "department": [],
-        "hire_date": "2026-04-27 14:14:49",
+        "hire_date": "2026-04-28 17:03:34",
         "password": "c2476503dece9cde1f565e6f842c4316405802e402d6590a958c83fc09d0bda4"
     }
 }

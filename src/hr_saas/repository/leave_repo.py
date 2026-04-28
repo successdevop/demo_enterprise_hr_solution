@@ -15,7 +15,7 @@ class LeaveRepository:
     def get_all_leave_request(self):
         return self._leave_database
 
-    def get_employee_requests(self, email: str) -> List[LeaveRequest]:
+    def get_employee_requests_by_email(self, email: str) -> List[LeaveRequest]:
         return self._leave_database.get(email, [])
 
     def save_leave_request(self, leave_request: LeaveRequest):
@@ -24,7 +24,9 @@ class LeaveRepository:
         if email not in self._leave_database:
             self._leave_database[email] = []
 
-        self._leave_database[email].append(leave_request)
+        user = next((leave for leave in self._leave_database.get(email) if leave.leave_id))
+        if not user:
+            self._leave_database[email].append(leave_request)
 
         # Serialization process
         return self._persist_to_disk()
@@ -38,7 +40,6 @@ class LeaveRepository:
         try:
             with open(self._leave_storage_file, mode="r", encoding="utf-8") as file_reader:
                 data = json.load(file_reader)
-                print(data)
 
                 for email, requests_data in data.items():
                     self._leave_database[email] = [

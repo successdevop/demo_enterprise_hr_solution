@@ -123,3 +123,145 @@
 [2026-04-28 11:04:53]: Login successful | success@gmail.com 
 [2026-04-28 11:06:58]: Login successful | success@gmail.com 
 [2026-04-28 11:06:58]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 15:44:30]: Login successful | success@gmail.com 
+[2026-04-28 15:44:30]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 15:45:20]: Login successful | success@gmail.com 
+[2026-04-28 15:45:20]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 15:45:23]: Login successful | success@gmail.com 
+[2026-04-28 15:45:23]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 15:47:15]: Login successful | success@gmail.com 
+[2026-04-28 15:47:15]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 15:47:57]: Login successful | success@gmail.com 
+[2026-04-28 15:47:57]: Obi Joy applied for 10 days of LeaveType.UNPAID 
+[2026-04-28 15:48:21]: Login successful | success@gmail.com 
+[2026-04-28 15:49:01]: Login successful | success@gmail.com 
+[2026-04-28 15:49:01]: Francis Ebinabo applied for 10 days of LeaveType.ANNUAL 
+[2026-04-28 15:51:03]: Login successful | success@gmail.com 
+[2026-04-28 15:51:03]: Francis Ebinabo applied for 9 days of LeaveType.ANNUAL 
+[2026-04-28 15:51:20]: Login successful | success@gmail.com 
+[2026-04-28 15:52:28]: Login successful | success@gmail.com 
+[2026-04-28 15:52:28]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 15:54:55]: Login successful | success@gmail.com 
+[2026-04-28 15:55:23]: Login successful | success@gmail.com 
+[2026-04-28 15:56:36]: Login successful | success@gmail.com 
+[2026-04-28 15:58:01]: Login successful | success@gmail.com 
+[2026-04-28 15:58:01]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 15:59:08]: Leave fully approved ✅ 
+[2026-04-28 16:00:05]: Login successful | success@gmail.com 
+[2026-04-28 16:00:05]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 16:03:36]: Leave fully approved ✅ 
+[2026-04-28 16:08:31]: Login successful | success@gmail.com 
+[2026-04-28 16:08:31]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 16:08:31]: Leave fully approved ✅ 
+[2026-04-28 16:11:42]: Login successful | success@gmail.com 
+[2026-04-28 16:11:42]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 16:12:25]: Login successful | success@gmail.com 
+[2026-04-28 16:12:25]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 16:12:25]: Leave fully approved ✅ 
+[2026-04-28 16:21:52]: Login successful | success@gmail.com 
+[2026-04-28 16:21:52]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 16:21:52]: Leave fully approved ✅ 
+[2026-04-28 16:22:06]: Login successful | success@gmail.com 
+[2026-04-28 16:22:06]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 16:22:06]: Leave fully approved ✅ 
+[2026-04-28 16:23:02]: Login successful | success@gmail.com 
+[2026-04-28 16:25:02]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 16:45:20]: Leave fully approved ✅ 
+[2026-04-28 16:47:26]: Login successful | success@gmail.com 
+[2026-04-28 16:47:26]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 16:47:26]: Leave fully approved ✅ 
+[2026-04-28 16:56:52]: Login successful | folakemi.ola@gmail.com 
+[2026-04-28 16:56:52]: Francis Ebinabo applied for 9 days of LeaveType.ANNUAL 
+[2026-04-28 16:59:50]: Login successful | folakemi.ola@gmail.com 
+[2026-04-28 16:59:50]: Francis Ebinabo applied for 9 days of LeaveType.ANNUAL 
+[2026-04-28 17:01:12]: Login successful | folakemi.ola@gmail.com 
+[2026-04-28 17:01:12]: Francis Ebinabo applied for 9 days of LeaveType.ANNUAL 
+[2026-04-28 17:03:34]: Login successful | success@gmail.com 
+[2026-04-28 17:03:34]: Engineering Department: created successfully 
+[2026-04-28 17:04:07]: Login successful | folakemi.ola@gmail.com 
+[2026-04-28 17:05:35]: Login successful | folakemi.ola@gmail.com 
+[2026-04-28 17:05:35]: Francis Ebinabo applied for 9 days of LeaveType.ANNUAL 
+[2026-04-28 17:10:50]: Login successful | adewusi@gmail.com 
+[2026-04-28 17:10:50]: Francis Ebinabo applied for 9 days of LeaveType.ANNUAL 
+[2026-04-28 17:20:31]: Login successful | adewusi@gmail.com 
+[2026-04-28 17:20:31]: Francis Ebinabo applied for 9 days of LeaveType.ANNUAL 
+[2026-04-28 17:24:46]: Login successful | adewusi@gmail.com 
+[2026-04-28 17:24:46]: Francis Ebinabo applied for 9 days of LeaveType.ANNUAL 
+[2026-04-28 17:25:38]: Login successful | adewusi@gmail.com 
+[2026-04-28 17:25:38]: Francis Ebinabo applied for 9 days of LeaveType.ANNUAL 
+[2026-04-28 17:26:25]: Login successful | adewusi@gmail.com 
+[2026-04-28 17:26:25]: Francis Ebinabo applied for 9 days of LeaveType.ANNUAL 
+[2026-04-28 17:27:55]: Login successful | adewusi@gmail.com 
+[2026-04-28 17:29:11]: Login successful | adewusi@gmail.com 
+[2026-04-28 17:29:11]: Francis Ebinabo applied for 11 days of LeaveType.ANNUAL 
+[2026-04-28 17:29:36]: Login successful | adewusi@gmail.com 
+[2026-04-28 17:29:36]: Francis Ebinabo applied for 11 days of LeaveType.ANNUAL 
+[2026-04-28 17:41:09]: Login successful | success@gmail.com 
+[2026-04-28 17:41:09]: Francis Ebinabo applied for 11 days of LeaveType.ANNUAL 
+[2026-04-28 17:41:09]: Leave fully approved ✅ 
+[2026-04-28 17:45:30]: Login successful | adewusi@gmail.com 
+[2026-04-28 17:45:30]: Francis Ebinabo applied for 11 days of LeaveType.ANNUAL 
+[2026-04-28 17:52:50]: Login successful | adewusi@gmail.com 
+[2026-04-28 17:52:50]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 17:52:50]: Francis Ebinabo applied for 9 days of LeaveType.ANNUAL 
+[2026-04-28 18:04:54]: Login successful | adewusi@gmail.com 
+[2026-04-28 18:04:54]: Leave fully approved ✅ 
+[2026-04-28 18:06:53]: Login successful | adewusi@gmail.com 
+[2026-04-28 18:07:40]: Login successful | adewusi@gmail.com 
+[2026-04-28 18:08:14]: Login successful | adewusi@gmail.com 
+[2026-04-28 18:08:28]: Login successful | adewusi@gmail.com 
+[2026-04-28 18:09:06]: Login successful | success@gmail.com 
+[2026-04-28 18:11:27]: Login successful | success@gmail.com 
+[2026-04-28 18:33:18]: Login successful | success@gmail.com 
+[2026-04-28 18:49:54]: Login successful | success@gmail.com 
+[2026-04-28 18:49:54]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 18:52:48]: Login successful | success@gmail.com 
+[2026-04-28 18:54:22]: Login successful | success@gmail.com 
+[2026-04-28 18:56:08]: Login successful | success@gmail.com 
+[2026-04-28 18:59:01]: Login successful | success@gmail.com 
+[2026-04-28 18:59:53]: Login successful | success@gmail.com 
+[2026-04-28 19:24:52]: Login successful | success@gmail.com 
+[2026-04-28 19:24:55]: Login successful | success@gmail.com 
+[2026-04-28 19:25:34]: Login successful | success@gmail.com 
+[2026-04-28 19:26:30]: Login successful | success@gmail.com 
+[2026-04-28 19:28:45]: Login successful | success@gmail.com 
+[2026-04-28 19:28:54]: Login successful | success@gmail.com 
+[2026-04-28 19:29:50]: Login successful | success@gmail.com 
+[2026-04-28 19:30:30]: Login successful | success@gmail.com 
+[2026-04-28 19:30:45]: Login successful | success@gmail.com 
+[2026-04-28 19:30:49]: Login successful | success@gmail.com 
+[2026-04-28 19:32:54]: Login successful | success@gmail.com 
+[2026-04-28 19:40:23]: Login successful | adewusi@gmail.com 
+[2026-04-28 19:40:32]: Login successful | adewusi@gmail.com 
+[2026-04-28 19:41:13]: Login successful | adewusi@gmail.com 
+[2026-04-28 19:42:24]: Login successful | success@gmail.com 
+[2026-04-28 19:54:47]: Login successful | success@gmail.com 
+[2026-04-28 19:55:19]: Login successful | success@gmail.com 
+[2026-04-28 19:55:19]: Leave fully approved ✅ 
+[2026-04-28 19:55:24]: Login successful | success@gmail.com 
+[2026-04-28 19:57:14]: Login successful | success@gmail.com 
+[2026-04-28 19:59:22]: Login successful | success@gmail.com 
+[2026-04-28 19:59:22]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 20:00:12]: Login successful | success@gmail.com 
+[2026-04-28 20:07:21]: Login successful | success@gmail.com 
+[2026-04-28 20:12:09]: Login successful | success@gmail.com 
+[2026-04-28 20:17:46]: Login successful | success@gmail.com 
+[2026-04-28 20:18:36]: Login successful | success@gmail.com 
+[2026-04-28 20:27:05]: Login successful | success@gmail.com 
+[2026-04-28 20:29:19]: Login successful | success@gmail.com 
+[2026-04-28 20:29:19]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 20:29:19]: Obi Joy applied for 10 days of LeaveType.UNPAID 
+[2026-04-28 20:29:19]: Francis Ebinabo applied for 9 days of LeaveType.ANNUAL 
+[2026-04-28 20:29:19]: Francis Ebinabo applied for 11 days of LeaveType.ANNUAL 
+[2026-04-28 20:31:43]: Login successful | success@gmail.com 
+[2026-04-28 20:31:43]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-28 20:31:43]: Obi Joy applied for 10 days of LeaveType.UNPAID 
+[2026-04-28 20:31:43]: Francis Ebinabo applied for 9 days of LeaveType.ANNUAL 
+[2026-04-28 20:31:43]: Francis Ebinabo applied for 11 days of LeaveType.ANNUAL 
+[2026-04-28 20:32:27]: Login successful | success@gmail.com 
+[2026-04-28 20:32:37]: Login successful | success@gmail.com 
+[2026-04-28 20:32:48]: Login successful | success@gmail.com 
+[2026-04-28 20:33:31]: Login successful | success@gmail.com 
+[2026-04-28 20:54:56]: Login successful | success@gmail.com 
+[2026-04-28 21:10:47]: Login successful | success@gmail.com 
+[2026-04-28 21:14:19]: Leave fully approved ✅ 

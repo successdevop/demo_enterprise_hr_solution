@@ -1,3 +1,4 @@
+import random
 from datetime import datetime
 from src.hr_saas.model.employee import Employee
 from src.hr_saas.error_handling.exceptions import ValidationError
@@ -14,6 +15,7 @@ class LeaveRequest:
         else:
             self.total_leave_for_the_year = 21
 
+        self.leave_id = ''.join(str(random.randint(0, 9)) for _ in range(4))
         self.days = days
         self.employee = employee
         self.leave_status = LeaveStatus.PENDING
@@ -32,7 +34,7 @@ class LeaveRequest:
 
         self.leave_status = LeaveStatus.APPROVED
         self.time_approved = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        self.approved_by.append({"name": executive.name, "role":executive.role})
+        self.approved_by.append({"name": executive.name, "role": executive.role.value})
 
     def reject_leave(self, executive: Employee):
         if self.leave_status != LeaveStatus.PENDING:
@@ -44,6 +46,7 @@ class LeaveRequest:
 
     def to_dict(self):
         return {
+            "leave_id": self.leave_id,
             "days": self.days,
             "total_leave": self.total_leave_for_the_year,
             "leave_status": self.leave_status.value if hasattr(self.leave_status, "value") else self.leave_status,
@@ -70,15 +73,23 @@ class LeaveRequest:
             leave_type=l_type,
             employee=Employee.from_dict(data.get("employee"))
         )
+        leave_request.leave_id = data.get("leave_id")
         leave_request.leave_status = status
-        leave_request.leave_balance = data.get("leave_balance")
         leave_request.total_leave_for_the_year = data.get("total_leave")
         leave_request.created_at = data.get("time_created")
         leave_request.time_approved = data.get("time_approved")
-        leave_request.approved_by = data.get("approval_stage")
+        leave_request.approved_by = data.get("approved_by")
         leave_request.approval_stage = data.get("approval_stage")
         return leave_request
 
+    def __eq__(self, other):
+        if not isinstance(other, LeaveRequest):
+            return False
+        return self.leave_id == other.leave_id
+
+    def __hash__(self):
+        return hash(self.leave_id)
+
     def __repr__(self):
-        return (f"<LeaveRequest(name:{self.employee.name} | days:{self.days} | leave_type:{self.leave_type.value} | "
+        return (f"<LeaveRequest(name:{self.employee.name} | days:{self.days} | leave_type:{self.leave_type} | "
                 f"leave_status:{self.leave_status.value})>")

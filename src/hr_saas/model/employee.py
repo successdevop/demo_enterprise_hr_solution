@@ -86,7 +86,7 @@ class Employee(Person):
             }
         else:
             return {
-                "employee_id": self._employee_id,
+                "email": self.email,
                 "name": self.name,
                 "role": self.role.value if hasattr(self.role, "value") else self.role,
             }
@@ -117,11 +117,10 @@ class Employee(Person):
     def __eq__(self, other):
         if not isinstance(other, Employee):
             return False
-        return self._employee_id == other._employee_id
+        return self.email == other.email
 
     def __hash__(self):
-        return hash(self._employee_id)
+        return hash(self.email)
 
     def __repr__(self):
         return f"<Employee id:{self._employee_id} | name:{self.name} | role:{self.role.value}"
-

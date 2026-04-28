@@ -17,7 +17,7 @@ class LeaveService:
         total_days_taken = 0
 
         if employee.email in self._leave_repo.get_all_leave_request():
-            requests = self._leave_repo.get_employee_requests(employee.email)
+            requests = self._leave_repo.get_employee_requests_by_email(employee.email)
             for request in requests:
                 total_days_taken += request.days
             balance = requests[0].total_leave_for_the_year - total_days_taken
@@ -40,32 +40,48 @@ class LeaveService:
 
         return leave_request
 
-    def approve_leave(self, current_user, leave: LeaveRequest):
-        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR, Role.ADMIN])
+    def approve_leave(self, current_user, emp_email: str, leave_id: str):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR, Role.MANAGER])
+
+        if emp_email not in self._leave_repo.get_all_leave_request():
+            print("Email not found")
+            return
+        if not self._leave_repo.get_employee_requests_by_email(emp_email):
+            print("No Leave Request found")
+            return
 
         if current_user.role == Role.ADMIN:
-            leave.approved_by.append(current_user)
-            leave.approve_leave(current_user)
+            request_box = self._leave_repo.get_employee_requests_by_email(emp_email)
+            request = next((req for req in request_box if req.leave_id == leave_id))
+            if not request:
+                print("Leave_Request not found")
+                return
+
+            request.approve_leave(current_user)
+            request.approval_stage = 2
+            self._leave_repo.save_leave_request(request)
             Logger.success("Leave fully approved ✅", SUCCESS_LOG_FILE)
-        else:
-            if leave.approval_stage == 1:
-                if current_user.role != Role.MANAGER:
-                    raise AuthorizationError("Only Manager or Admin can approve at stage 1")
 
-                if not set(leave.employee.department).intersection(current_user.department):
-                    raise AuthorizationError("Not your team member. You can only approve your team member's leave")
-
-                leave.approved_by.append(current_user)
-                leave.approval_stage = 2
-                Logger.info("Approved by Manager → moving to HR", INFO_LOG_FILE)
-
-            elif leave.approval_stage == 2:
-                if current_user != Role.HR:
-                    raise AuthorizationError("Only HR or Admin can finalize approval")
-
-                leave.approved_by.append(current_user)
-                leave.approve_leave(current_user)
-                Logger.info("Leave fully approved ✅", SUCCESS_LOG_FILE)
+        # else:
+            # if leave.approval_stage == 1:
+            #     if current_user.role != Role.MANAGER:
+            #         raise AuthorizationError("Only Manager or Admin can approve at stage 1")
+            #
+            #     if not set(leave.employee.department).intersection(current_user.department):
+            #         raise AuthorizationError("Not your team member. You can only approve your team member's leave")
+            #
+            #     leave.approved_by.append({"name": current_user.name, "role": current_user.role.value})
+            #     leave.approval_stage = 2
+            #     self._leave_repo.save_leave_request(leave)
+            #     Logger.info("Approved by Manager → moving to HR", INFO_LOG_FILE)
+            #
+            # elif leave.approval_stage == 2:
+            #     if current_user != Role.HR:
+            #         raise AuthorizationError("Only HR or Admin can finalize approval")
+            #
+            #     leave.approve_leave(current_user)
+            #     self._leave_repo.save_leave_request(leave)
+            #     Logger.info("Leave fully approved ✅", SUCCESS_LOG_FILE)
 
 
 
