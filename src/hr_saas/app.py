@@ -1,20 +1,26 @@
 from src.hr_saas.repository.employee_repo import EmployeeRepo
 from src.hr_saas.repository.department_repo import DepartmentRepo
+from src.hr_saas.repository.leave_repo import LeaveRepository
 from src.hr_saas.services.department_service import DepartmentService
+from src.hr_saas.services.leave_service import LeaveService
 from src.hr_saas.auth.auth import Auth
 from src.hr_saas.enums.role import Role
-from src.hr_saas.file_IO.database_files import EMPLOYEE_DATABASE, DEPARTMENT_DATABASE
+from src.hr_saas.enums.leave import LeaveType, LeaveStatus
+from src.hr_saas.file_IO.database_files import EMPLOYEE_DATABASE, DEPARTMENT_DATABASE, LEAVE_REQUEST_DATABASE
 from src.hr_saas.app_files.files import ENGINEERING
 
 
 def main():
     emp_repo = EmployeeRepo(EMPLOYEE_DATABASE)
     dept_repo = DepartmentRepo(DEPARTMENT_DATABASE)
+    leave_repo = LeaveRepository(LEAVE_REQUEST_DATABASE)
 
     dept_service = DepartmentService(dept_repo, emp_repo)
+    leave_service = LeaveService(leave_repo)
     auth = Auth(emp_repo)
 
     auth.login("success@gmail.com", "mynewpassword123@/.com")
+    leave_service.apply_for_leave(emp_repo.get_employee_by_email("obiageli@gmail.com"), 5, LeaveType.UNPAID)
     # dept_service.get_all_department(auth.get_current_user())
     # dept_service.get_all_department_managers(auth.get_current_user())
     # dept_service.delete_dept(auth.get_current_user(), ENGINEERING)
