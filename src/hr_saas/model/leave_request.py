@@ -21,6 +21,7 @@ class LeaveRequest:
         self.created_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         self.time_approved = None
         self.approved_by = []
+        self.approval_stage = 1
 
     def increase_total_leave_for_the_year(self, days):
         self.total_leave_for_the_year += days
@@ -50,6 +51,7 @@ class LeaveRequest:
             "time_created": self.created_at,
             "time_approved": self.time_approved,
             "approved_by": self.approved_by,
+            "approval_stage": self.approval_stage,
             "employee": self.employee.to_dict(show_all=False) if self.employee else None
         }
 
@@ -73,7 +75,8 @@ class LeaveRequest:
         leave_request.total_leave_for_the_year = data.get("total_leave")
         leave_request.created_at = data.get("time_created")
         leave_request.time_approved = data.get("time_approved")
-        leave_request.approved_by = data.get("approved_by")
+        leave_request.approved_by = data.get("approval_stage")
+        leave_request.approval_stage = data.get("approval_stage")
         return leave_request
 
     def __repr__(self):
