@@ -1,11 +1,12 @@
 from src.hr_saas.repository.leave_repo import LeaveRepository
+from src.hr_saas.auth.authorization import Authorization
 from src.hr_saas.enums.leave import LeaveType
 from src.hr_saas.enums.role import Role
 from src.hr_saas.model.employee import Employee
 from src.hr_saas.model.leave_request import LeaveRequest
-from src.hr_saas.error_handling.exceptions import ValidationError
+from src.hr_saas.error_handling.exceptions import ValidationError, AuthorizationError
 from src.hr_saas.file_IO.logging import Logger
-from src.hr_saas.file_IO.config_file import SUCCESS_LOG_FILE
+from src.hr_saas.file_IO.config_file import SUCCESS_LOG_FILE, INFO_LOG_FILE
 
 
 class LeaveService:
@@ -39,4 +40,33 @@ class LeaveService:
 
         return leave_request
 
-    def approve_leave(self, ):
+    def approve_leave(self, current_user, leave: LeaveRequest):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR, Role.ADMIN])
+
+        if current_user.role == Role.ADMIN:
+            leave.approved_by.append(current_user)
+            leave.approve_leave(current_user)
+            Logger.success("Leave fully approved ✅", SUCCESS_LOG_FILE)
+        else:
+            if leave.approval_stage == 1:
+                if current_user.role != Role.MANAGER:
+                    raise AuthorizationError("Only Manager or Admin can approve at stage 1")
+
+                if not set(leave.employee.department).intersection(current_user.department):
+                    raise AuthorizationError("Not your team member. You can only approve your team member's leave")
+
+                leave.approved_by.append(current_user)
+                leave.approval_stage = 2
+                Logger.info("Approved by Manager → moving to HR", INFO_LOG_FILE)
+
+            elif leave.approval_stage == 2:
+                if current_user != Role.HR:
+                    raise AuthorizationError("Only HR or Admin can finalize approval")
+
+                leave.approved_by.append(current_user)
+                leave.approve_leave(current_user)
+                Logger.info("Leave fully approved ✅", SUCCESS_LOG_FILE)
+
+
+
+
