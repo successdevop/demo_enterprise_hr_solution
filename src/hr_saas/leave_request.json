@@ -1,12 +1,29 @@
 {
     "obiageli@gmail.com": {
-        "0554": {
-            "leave_id": "0554",
+        "5257": {
+            "leave_id": "5257",
             "days": 5,
             "total_leave": 21,
             "leave_status": "Pending",
             "leave_type": "Unpaid_leave",
-            "time_created": "2026-04-29 18:06:06",
+            "time_created": "2026-04-29 19:51:20",
+            "time_approved": null,
+            "approved_by": [],
+            "approval_stage": 1,
+            "employee": {
+                "email": "obiageli@gmail.com",
+                "name": "Obi Joy",
+                "role": "Employee",
+                "department": []
+            }
+        },
+        "0727": {
+            "leave_id": "0727",
+            "days": 10,
+            "total_leave": 21,
+            "leave_status": "Pending",
+            "leave_type": "Annual_leave",
+            "time_created": "2026-04-29 19:51:20",
             "time_approved": null,
             "approved_by": [],
             "approval_stage": 1,
@@ -19,35 +36,43 @@
         }
     },
     "francis@gmail.com": {
-        "4955": {
-            "leave_id": "4955",
-            "days": 11,
+        "8171": {
+            "leave_id": "8171",
+            "days": 9,
             "total_leave": 21,
-            "leave_status": "Approved",
+            "leave_status": "Pending",
             "leave_type": "Annual_leave",
-            "time_created": "2026-04-29 18:06:06",
-            "time_approved": "2026-04-29 18:23:40",
-            "approved_by": [
-                {
-                    "name": "Adewusi Tobi",
-                    "role": "Manager"
-                },
-                {
-                    "name": "Oluchi Favour",
-                    "role": "Hr"
-                }
-            ],
-            "approval_stage": 2,
+            "time_created": "2026-04-29 19:51:20",
+            "time_approved": null,
+            "approved_by": [],
+            "approval_stage": 1,
             "employee": {
                 "email": "francis@gmail.com",
                 "name": "Francis Ebinabo",
                 "role": "Employee",
-                "department": [
-                    "Marketing",
-                    "Sales",
-                    "Engineering",
-                    "Engineering"
-                ]
+                "department": []
+            }
+        },
+        "8115": {
+            "leave_id": "8115",
+            "days": 11,
+            "total_leave": 21,
+            "leave_status": "Rejected",
+            "leave_type": "Annual_leave",
+            "time_created": "2026-04-29 19:51:20",
+            "time_approved": "2026-04-29 19:58:35",
+            "approved_by": [
+                {
+                    "name": "Adewusi Tobi",
+                    "role": "Manager"
+                }
+            ],
+            "approval_stage": 1,
+            "employee": {
+                "email": "francis@gmail.com",
+                "name": "Francis Ebinabo",
+                "role": "Employee",
+                "department": []
             }
         }
     }

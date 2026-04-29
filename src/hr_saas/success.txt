@@ -326,3 +326,14 @@
 [2026-04-29 18:20:48]: Login successful | umah@gmail.com 
 [2026-04-29 18:23:16]: Login successful | umah@gmail.com 
 [2026-04-29 18:24:24]: Leave fully approved ✅ 
+[2026-04-29 19:07:50]: Login successful | umah@gmail.com 
+[2026-04-29 19:10:00]: Leave fully approved ✅ 
+[2026-04-29 19:51:20]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-29 19:51:20]: Obi Joy applied for 10 days of LeaveType.ANNUAL 
+[2026-04-29 19:51:20]: Francis Ebinabo applied for 9 days of LeaveType.ANNUAL 
+[2026-04-29 19:51:20]: Francis Ebinabo applied for 11 days of LeaveType.ANNUAL 
+[2026-04-29 19:52:37]: Login successful | adewusi@gmail.com 
+[2026-04-29 19:55:23]: Login successful | adewusi@gmail.com 
+[2026-04-29 19:57:02]: Login successful | adewusi@gmail.com 
+[2026-04-29 19:58:16]: Login successful | adewusi@gmail.com 
+[2026-04-29 19:58:54]: Leave fully approved ✅ 

@@ -42,7 +42,7 @@ class LeaveRequest:
 
         self.leave_status = LeaveStatus.REJECTED
         self.time_approved = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        self.approved_by.append({"name": executive.name, "role": executive.role})
+        self.approved_by.append({"name": executive.name, "role": executive.role.value})
 
     def to_dict(self):
         return {
