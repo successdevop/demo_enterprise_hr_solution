@@ -1,33 +1,44 @@
 {
-    "obiageli@gmail.com": [
-        {
-            "leave_id": "4358",
+    "obiageli@gmail.com": {
+        "1129": {
+            "leave_id": "1129",
             "days": 5,
             "total_leave": 21,
-            "leave_status": "Approved",
+            "leave_status": "Pending",
             "leave_type": "Unpaid_leave",
-            "time_created": "2026-04-28 20:31:43",
-            "time_approved": "2026-04-28 21:11:08",
-            "approved_by": [
-                {
-                    "name": "Success Ifeanyi Raphael",
-                    "role": "Admin"
-                }
-            ],
-            "approval_stage": 2,
+            "time_created": "2026-04-29 11:47:39",
+            "time_approved": null,
+            "approved_by": [],
+            "approval_stage": 1,
             "employee": {
                 "email": "obiageli@gmail.com",
                 "name": "Obi Joy",
                 "role": "Employee"
             }
         },
-        {
-            "leave_id": "7719",
+        "1940": {
+            "leave_id": "1940",
             "days": 10,
             "total_leave": 21,
             "leave_status": "Pending",
+            "leave_type": "Annual_leave",
+            "time_created": "2026-04-29 11:47:39",
+            "time_approved": null,
+            "approved_by": [],
+            "approval_stage": 1,
+            "employee": {
+                "email": "obiageli@gmail.com",
+                "name": "Obi Joy",
+                "role": "Employee"
+            }
+        },
+        "6224": {
+            "leave_id": "6224",
+            "days": 5,
+            "total_leave": 21,
+            "leave_status": "Pending",
             "leave_type": "Unpaid_leave",
-            "time_created": "2026-04-28 20:31:43",
+            "time_created": "2026-04-29 11:48:27",
             "time_approved": null,
             "approved_by": [],
             "approval_stage": 1,
@@ -37,65 +48,5 @@
                 "role": "Employee"
             }
         }
-    ],
-    "francis@gmail.com": [
-        {
-            "leave_id": "1237",
-            "days": 9,
-            "total_leave": 21,
-            "leave_status": "Pending",
-            "leave_type": "Annual_leave",
-            "time_created": "2026-04-28 20:31:43",
-            "time_approved": null,
-            "approved_by": [],
-            "approval_stage": 1,
-            "employee": {
-                "email": "francis@gmail.com",
-                "name": "Francis Ebinabo",
-                "role": "Employee"
-            }
-        },
-        {
-            "leave_id": "3745",
-            "days": 11,
-            "total_leave": 21,
-            "leave_status": "Approved",
-            "leave_type": "Annual_leave",
-            "time_created": "2026-04-28 20:31:43",
-            "time_approved": "2026-04-28 20:34:32",
-            "approved_by": [
-                {
-                    "name": "Success Ifeanyi Raphael",
-                    "role": "Admin"
-                }
-            ],
-            "approval_stage": 2,
-            "employee": {
-                "email": "francis@gmail.com",
-                "name": "Francis Ebinabo",
-                "role": "Employee"
-            }
-        },
-        {
-            "leave_id": "3745",
-            "days": 11,
-            "total_leave": 21,
-            "leave_status": "Approved",
-            "leave_type": "Annual_leave",
-            "time_created": "2026-04-28 20:31:43",
-            "time_approved": "2026-04-28 20:34:32",
-            "approved_by": [
-                {
-                    "name": "Success Ifeanyi Raphael",
-                    "role": "Admin"
-                }
-            ],
-            "approval_stage": 2,
-            "employee": {
-                "email": "francis@gmail.com",
-                "name": "Francis Ebinabo",
-                "role": "Employee"
-            }
-        }
-    ]
+    }
 }
