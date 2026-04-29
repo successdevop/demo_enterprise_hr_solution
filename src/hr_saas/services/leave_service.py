@@ -76,6 +76,23 @@ class LeaveService:
                 self._leave_repo.save_leave_request(leave)
                 Logger.info("Leave fully approved ✅", SUCCESS_LOG_FILE)
 
+    def reject_leave(self, current_user, emp_email, leave_id: str):
+        Authorization.authorized_roles(current_user, [Role.MANAGER, Role.HR, Role.ADMIN])
+        # Get the leave request
+        leave = self._leave_repo.get_employee_requests_by_email(emp_email).get(leave_id)
+        if not leave:
+            print(f"Leave_Request with id {leave_id} not found")
+            return
+
+        if current_user.role == Role.MANAGER:
+            if not set(leave.employee.department).intersection(current_user.department):
+                raise AuthorizationError("Not your team member. You can only approve your team member's leave")
+
+        leave.reject_leave(current_user)
+        self._leave_repo.save_leave_request(leave)
+        Logger.info("Leave fully approved ✅", SUCCESS_LOG_FILE)
+
+
 
 
 
