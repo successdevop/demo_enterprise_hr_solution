@@ -69,7 +69,7 @@ class LeaveService:
                 Logger.info("Approved by Manager → moving to HR", INFO_LOG_FILE)
 
             elif leave.approval_stage == 2:
-                if current_user != Role.HR:
+                if current_user.role != Role.HR:
                     raise AuthorizationError("Only HR or Admin can finalize approval")
 
                 leave.approve_leave(current_user)
