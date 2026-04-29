@@ -1,51 +1,53 @@
 {
     "obiageli@gmail.com": {
-        "1129": {
-            "leave_id": "1129",
+        "0554": {
+            "leave_id": "0554",
             "days": 5,
             "total_leave": 21,
             "leave_status": "Pending",
             "leave_type": "Unpaid_leave",
-            "time_created": "2026-04-29 11:47:39",
+            "time_created": "2026-04-29 18:06:06",
             "time_approved": null,
             "approved_by": [],
             "approval_stage": 1,
             "employee": {
                 "email": "obiageli@gmail.com",
                 "name": "Obi Joy",
-                "role": "Employee"
+                "role": "Employee",
+                "department": []
             }
-        },
-        "1940": {
-            "leave_id": "1940",
-            "days": 10,
+        }
+    },
+    "francis@gmail.com": {
+        "4955": {
+            "leave_id": "4955",
+            "days": 11,
             "total_leave": 21,
-            "leave_status": "Pending",
+            "leave_status": "Approved",
             "leave_type": "Annual_leave",
-            "time_created": "2026-04-29 11:47:39",
-            "time_approved": null,
-            "approved_by": [],
-            "approval_stage": 1,
+            "time_created": "2026-04-29 18:06:06",
+            "time_approved": "2026-04-29 18:23:40",
+            "approved_by": [
+                {
+                    "name": "Adewusi Tobi",
+                    "role": "Manager"
+                },
+                {
+                    "name": "Oluchi Favour",
+                    "role": "Hr"
+                }
+            ],
+            "approval_stage": 2,
             "employee": {
-                "email": "obiageli@gmail.com",
-                "name": "Obi Joy",
-                "role": "Employee"
-            }
-        },
-        "6224": {
-            "leave_id": "6224",
-            "days": 5,
-            "total_leave": 21,
-            "leave_status": "Pending",
-            "leave_type": "Unpaid_leave",
-            "time_created": "2026-04-29 11:48:27",
-            "time_approved": null,
-            "approved_by": [],
-            "approval_stage": 1,
-            "employee": {
-                "email": "obiageli@gmail.com",
-                "name": "Obi Joy",
-                "role": "Employee"
+                "email": "francis@gmail.com",
+                "name": "Francis Ebinabo",
+                "role": "Employee",
+                "department": [
+                    "Marketing",
+                    "Sales",
+                    "Engineering",
+                    "Engineering"
+                ]
             }
         }
     }

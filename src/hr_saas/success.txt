@@ -289,3 +289,40 @@
 [2026-04-29 11:48:27]: Login successful | success@gmail.com 
 [2026-04-29 11:48:27]: Obi Joy applied for 5 days of LeaveType.UNPAID 
 [2026-04-29 11:48:51]: Login successful | success@gmail.com 
+[2026-04-29 16:17:53]: Login successful | success@gmail.com 
+[2026-04-29 16:18:50]: Login successful | success@gmail.com 
+[2026-04-29 16:22:16]: Leave fully approved ✅ 
+[2026-04-29 16:23:12]: Login successful | success@gmail.com 
+[2026-04-29 16:24:58]: Leave fully approved ✅ 
+[2026-04-29 16:28:32]: Login successful | success@gmail.com 
+[2026-04-29 16:31:32]: Leave fully approved ✅ 
+[2026-04-29 16:43:57]: Login successful | success@gmail.com 
+[2026-04-29 16:43:57]: Francis Ebinabo applied for 9 days of LeaveType.ANNUAL 
+[2026-04-29 16:43:57]: Francis Ebinabo applied for 11 days of LeaveType.ANNUAL 
+[2026-04-29 16:45:56]: Login successful | adewusi@gmail.com 
+[2026-04-29 16:47:34]: Login successful | adewusi@gmail.com 
+[2026-04-29 16:57:24]: Login successful | adewusi@gmail.com 
+[2026-04-29 16:57:39]: Login successful | success@gmail.com 
+[2026-04-29 16:57:39]: Engineering Department: created successfully 
+[2026-04-29 16:58:10]: Login successful | success@gmail.com 
+[2026-04-29 16:58:34]: Login successful | adewusi@gmail.com 
+[2026-04-29 17:12:32]: Login successful | adewusi@gmail.com 
+[2026-04-29 17:22:02]: Login successful | adewusi@gmail.com 
+[2026-04-29 17:23:47]: Login successful | adewusi@gmail.com 
+[2026-04-29 17:45:23]: Login successful | adewusi@gmail.com 
+[2026-04-29 17:52:22]: Login successful | adewusi@gmail.com 
+[2026-04-29 17:52:39]: Login successful | success@gmail.com 
+[2026-04-29 17:52:39]: Engineering Department: created successfully 
+[2026-04-29 17:55:55]: Login successful | adewusi@gmail.com 
+[2026-04-29 18:04:29]: Login successful | adewusi@gmail.com 
+[2026-04-29 18:06:06]: Login successful | adewusi@gmail.com 
+[2026-04-29 18:06:06]: Obi Joy applied for 5 days of LeaveType.UNPAID 
+[2026-04-29 18:06:06]: Francis Ebinabo applied for 11 days of LeaveType.ANNUAL 
+[2026-04-29 18:07:57]: Login successful | adewusi@gmail.com 
+[2026-04-29 18:09:09]: Login successful | adewusi@gmail.com 
+[2026-04-29 18:13:21]: Login successful | adewusi@gmail.com 
+[2026-04-29 18:16:25]: Login successful | adewusi@gmail.com 
+[2026-04-29 18:17:52]: Login successful | umah@gmail.com 
+[2026-04-29 18:20:48]: Login successful | umah@gmail.com 
+[2026-04-29 18:23:16]: Login successful | umah@gmail.com 
+[2026-04-29 18:24:24]: Leave fully approved ✅ 

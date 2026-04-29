@@ -89,6 +89,7 @@ class Employee(Person):
                 "email": self.email,
                 "name": self.name,
                 "role": self.role.value if hasattr(self.role, "value") else self.role,
+                "department": self.department
             }
 
     @classmethod
@@ -112,6 +113,7 @@ class Employee(Person):
         employee.department = data.get("department")
         employee._password = data.get("password")
         employee.type = data.get("type")
+        employee.department = data.get("department")
         return employee
 
     def __eq__(self, other):
@@ -123,4 +125,4 @@ class Employee(Person):
         return hash(self.email)
 
     def __repr__(self):
-        return f"<Employee id:{self._employee_id} | name:{self.name} | role:{self.role.value}"
+        return f"<Employee id:{self.email} | name:{self.name} | role:{self.role.value}"
