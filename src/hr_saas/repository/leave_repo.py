@@ -18,6 +18,14 @@ class LeaveRepository:
     def get_employee_requests_by_email(self, email: str) -> Dict[str, LeaveRequest]:
         return self._leave_database.get(email, {})
 
+    def get_all_leave_by_status(self, leave_status):
+        status_leaves = []
+        for requests in self._leave_database.values():
+            for leave in requests.values():
+                if leave.leave_status.value == leave_status:
+                    status_leaves.append(leave)
+        return status_leaves
+
     def get_leave_balance(self, email: str) -> Optional[int]:
         if email not in self._leave_database:
             print("Employee has no previous leave_request")
