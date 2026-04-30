@@ -22,7 +22,7 @@ class LeaveRequest:
         self.leave_type = leave_type
         self.created_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         self.time_approved = None
-        self.approved_by = []
+        self.reviewed_by = []
         self.approval_stage = 1
 
     def increase_total_leave_for_the_year(self, days):
@@ -34,7 +34,7 @@ class LeaveRequest:
 
         self.leave_status = LeaveStatus.APPROVED
         self.time_approved = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        self.approved_by.append({"name": executive.name, "role": executive.role.value})
+        self.reviewed_by.append({"name": executive.name, "role": executive.role.value})
 
     def reject_leave(self, executive: Employee):
         if self.leave_status != LeaveStatus.PENDING:
@@ -42,7 +42,7 @@ class LeaveRequest:
 
         self.leave_status = LeaveStatus.REJECTED
         self.time_approved = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        self.approved_by.append({"name": executive.name, "role": executive.role.value})
+        self.reviewed_by.append({"name": executive.name, "role": executive.role.value})
 
     def to_dict(self):
         return {
@@ -53,7 +53,7 @@ class LeaveRequest:
             "leave_type": self.leave_type.value if hasattr(self.leave_type, "value") else self.leave_type,
             "time_created": self.created_at,
             "time_approved": self.time_approved,
-            "approved_by": self.approved_by,
+            "reviewed_by": self.reviewed_by,
             "approval_stage": self.approval_stage,
             "employee": self.employee.to_dict(show_all=False) if self.employee else None
         }
@@ -78,7 +78,7 @@ class LeaveRequest:
         leave_request.total_leave_for_the_year = data.get("total_leave")
         leave_request.created_at = data.get("time_created")
         leave_request.time_approved = data.get("time_approved")
-        leave_request.approved_by = data.get("approved_by")
+        leave_request.reviewed_by = data.get("reviewed_by")
         leave_request.approval_stage = data.get("approval_stage")
         return leave_request
 
