@@ -1,12 +1,18 @@
 from src.hr_saas.repository.employee_repo import EmployeeRepo
 from src.hr_saas.repository.department_repo import DepartmentRepo
 from src.hr_saas.repository.leave_repo import LeaveRepository
+from src.hr_saas.repository.payroll_repo import PayrollRepository
+from src.hr_saas.strategy.tax_strategy import NigerianTaxStrategy, Pension
+from src.hr_saas.strategy.currency_converter import CurrencyStrategy
 from src.hr_saas.services.department_service import DepartmentService
 from src.hr_saas.services.leave_service import LeaveService
+from src.hr_saas.services.payroll_service import PayrollServices
 from src.hr_saas.auth.auth import Auth
 from src.hr_saas.enums.role import Role
+from src.hr_saas.enums.month import Month
 from src.hr_saas.enums.leave import LeaveType, LeaveStatus
-from src.hr_saas.file_IO.database_files import EMPLOYEE_DATABASE, DEPARTMENT_DATABASE, LEAVE_REQUEST_DATABASE
+from src.hr_saas.file_IO.database_files import (EMPLOYEE_DATABASE, DEPARTMENT_DATABASE, LEAVE_REQUEST_DATABASE,
+                                                PAYROLL_DATABASE)
 from src.hr_saas.app_files.files import ENGINEERING
 
 
@@ -14,21 +20,29 @@ def main():
     emp_repo = EmployeeRepo(EMPLOYEE_DATABASE)
     dept_repo = DepartmentRepo(DEPARTMENT_DATABASE)
     leave_repo = LeaveRepository(LEAVE_REQUEST_DATABASE)
+    payroll_repo = PayrollRepository(PAYROLL_DATABASE)
+    tax_strategy = NigerianTaxStrategy()
+    pension = Pension()
+    currency_converter = CurrencyStrategy()
 
     dept_service = DepartmentService(dept_repo, emp_repo)
     leave_service = LeaveService(leave_repo)
+    payroll_service = PayrollServices(payroll_repo, currency_converter, tax_strategy, pension)
     auth = Auth(emp_repo)
 
     # auth.login("success@gmail.com", "mynewpassword123@/.com")
     auth.login("adewusi@gmail.com", "obyadew123@/.com")
     # auth.login("umah@gmail.com", "eoluch123@/.com")
+
+    payslip = payroll_service.process_salary(auth.get_current_user(), emp_repo.get_employee_by_email("obiageli@gmail.com"),
+                                             Month.JANUARY, "USD", 0, 0)
     # leave1 = leave_service.apply_for_leave(emp_repo.get_employee_by_email("obiageli@gmail.com"), 5, LeaveType.UNPAID)
     # leave2 = leave_service.apply_for_leave(emp_repo.get_employee_by_email("obiageli@gmail.com"), 10, LeaveType.ANNUAL)
     # leave3 = leave_service.apply_for_leave(emp_repo.get_employee_by_email("francis@gmail.com"), 9, LeaveType.ANNUAL)
     # leave4 = leave_service.apply_for_leave(emp_repo.get_employee_by_email("francis@gmail.com"), 9, LeaveType.ANNUAL)
     # leave4 = leave_service.apply_for_leave(emp_repo.get_employee_by_email("francis@gmail.com"), 11, LeaveType.ANNUAL)
     # leave_service.approve_leave(auth.get_current_user(), "francis@gmail.com", "4955")
-    leave_service.reject_leave(auth.get_current_user(), "francis@gmail.com", "8115")
+    # leave_service.reject_leave(auth.get_current_user(), "francis@gmail.com", "8115")
     # leave_service.reject_leave(auth.get_current_user(), "obiageli@gmail.com", "0554")
     # dept_service.get_all_department(auth.get_current_user())
     # dept_service.get_all_department_managers(auth.get_current_user())

@@ -27,9 +27,11 @@ class PayrollRepository:
 
         for payslip in self._payroll_database[month]:
             if payslip.employee.email == email:
+                print(f"Employee payslip for the month of {month} already processed")
                 return payslip
 
         print(f"Employee has no payslip for the month of {month}")
+        return None
 
     def get_payslip_for_each_month(self, month: str):
         if month not in self._payroll_database:

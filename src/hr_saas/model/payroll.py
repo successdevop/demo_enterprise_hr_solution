@@ -3,8 +3,8 @@ from src.hr_saas.enums.month import Month
 
 
 class Payslip:
-    def __init__(self, employee: Employee, base_salary: float, deductions: float, bonus: float,
-                 net_salary: float, pension: float, month: Month, currency):
+    def __init__(self, employee: Employee, base_salary: float, net_salary: float, pension: float, month: Month,
+                 currency: str, deductions: float, bonus: float):
         self.month = month
         self.employee = employee
         self.base_salary = base_salary
