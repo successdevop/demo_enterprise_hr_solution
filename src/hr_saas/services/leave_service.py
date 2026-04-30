@@ -63,7 +63,7 @@ class LeaveService:
                 if not set(leave.employee.department).intersection(current_user.department):
                     raise AuthorizationError("Not your team member. You can only approve your team member's leave")
 
-                leave.approved_by.append({"name": current_user.name, "role": current_user.role.value})
+                leave.reviewed_by.append({"name": current_user.name, "role": current_user.role.value})
                 leave.approval_stage = 2
                 self._leave_repo.save_leave_request(leave)
                 Logger.info("Approved by Manager → moving to HR", INFO_LOG_FILE)
@@ -90,7 +90,13 @@ class LeaveService:
 
         leave.reject_leave(current_user)
         self._leave_repo.save_leave_request(leave)
-        Logger.info("Leave fully approved ✅", SUCCESS_LOG_FILE)
+        Logger.info("Leave rejected", SUCCESS_LOG_FILE)
+
+    def get_all_pending_leave(self, current_user, leave_status):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR, Role.MANAGER])
+
+        leaves = self._leave_repo.get_all_leave_by_status(leave_status)
+        print(leaves)
 
 
 
