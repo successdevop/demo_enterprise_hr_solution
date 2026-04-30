@@ -1,0 +1,43 @@
+from src.hr_saas.repository.payroll_repo import PayrollRepository
+from src.hr_saas.strategy.tax_strategy import NigerianTaxStrategy
+from src.hr_saas.strategy.tax_strategy import Pension
+from src.hr_saas.strategy.currency_converter import CurrencyStrategy
+from src.hr_saas.model.employee import Employee
+from src.hr_saas.model.payroll import Payslip
+from src.hr_saas.file_IO.logging import Logger
+from src.hr_saas.file_IO.config_file import SUCCESS_LOG_FILE
+from src.hr_saas.enums.role import Role
+from src.hr_saas.enums.month import Month
+from src.hr_saas.auth.authorization import Authorization
+
+
+class PayrollServices:
+    def __init__(self, payroll_repo: PayrollRepository, currency_converter: CurrencyStrategy,
+                 tax_strategy: NigerianTaxStrategy, pension: Pension):
+        self._payroll_repo = payroll_repo
+        self._currency_converter = currency_converter
+        self._tax_strategy = tax_strategy
+        self._pension = pension
+
+    def process_salary(self, current_user, employee: Employee, month: Month, currency: str, deduction: float,
+                       bonus: float):
+        Authorization.authorized_roles(current_user, [Role.HR, Role.ADMIN])
+
+        payslip = self._payroll_repo.get_employee_payslip(employee.email, month.value)
+        if not None:
+            return payslip
+
+        base_salary = employee.salary
+
+        tax = self._tax_strategy.calculate(base_salary)
+        emp_pension, employer_pension, total_pension = self._pension.calculate(base_salary)
+        net_salary = base_salary - tax - deduction + bonus - emp_pension
+
+        converted_salary = self._currency_converter.convert(net_salary, "NGN", currency)
+
+        payslip = Payslip(employee=employee, base_salary=base_salary, net_salary=converted_salary,
+                          pension=total_pension, month=month, currency=currency, deductions=deduction, bonus=bonus)
+
+        self._payroll_repo.save_payslip(payslip)
+        Logger.success(f"Payroll processed for {employee.name}", SUCCESS_LOG_FILE)
+        return payslip
