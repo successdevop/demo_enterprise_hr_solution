@@ -1,5 +1,5 @@
 class CurrencyStrategy:
-    def __repr__(self):
+    def __init__(self):
         self.rates = {
             "NGN": 1,
             "USD": 0.0007,
