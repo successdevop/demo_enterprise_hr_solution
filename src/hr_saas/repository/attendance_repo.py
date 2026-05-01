@@ -13,12 +13,23 @@ class AttendanceRepository:
         self._attendance_database: Dict[str, List[Attendance]] = {}
         self._load_attendance_database()
 
-    def get_employee_attendance(self, employee: Employee) -> Optional[Attendance]:
+    def get_employee_today_attendance(self, employee: Employee) -> Optional[Attendance]:
         attendance_history = self._attendance_database.get(employee.email, [])
         for attendance in attendance_history:
             if attendance.date.day == datetime.today().day:
                 return attendance
         return None
+
+    def get_employee_attendance(self, employee: Employee) -> List[Attendance]:
+        return self._attendance_database.get(employee.email, [])
+
+    def get_all_today_attendance(self) -> List[Attendance]:
+        today_attendance = []
+        for attendance in self._attendance_database.values():
+            today_attendance.extend(attendance)
+
+        today_attendance[:] = [attend for attend in today_attendance if attend.date.today() == datetime.today()]
+        return today_attendance
 
     def save_attendance(self, attendance: Attendance):
         email = attendance.employee.email
