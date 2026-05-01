@@ -19,7 +19,7 @@ class AttendanceService:
             raise UserAlreadyExistError("Already clocked in")
 
         attendance = Attendance(employee=current_user)
-        attendance.clock_in()
+        attendance.check_in()
 
         self._attendance_repo.save_attendance(attendance)
         Logger.success(f"{current_user.name} just clocked in", SUCCESS_LOG_FILE)
