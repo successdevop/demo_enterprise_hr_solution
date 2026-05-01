@@ -1,0 +1,19 @@
+{
+    "January": [
+        {
+            "month": "January",
+            "base_salary": 10000,
+            "deductions": 0,
+            "bonus": 0,
+            "net_salary": 5.39,
+            "pension": 1800.0,
+            "currency": "USD",
+            "employee": {
+                "email": "obiageli@gmail.com",
+                "name": "Obi Joy",
+                "role": "Employee",
+                "department": []
+            }
+        }
+    ]
+}

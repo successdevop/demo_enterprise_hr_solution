@@ -117,3 +117,10 @@
 [2026-04-29 18:06:06]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
 [2026-04-29 19:09:43]: Error saving leave_request | Object of type Role is not JSON serializable 
 [2026-04-29 19:51:20]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
+[2026-04-30 17:26:38]: Database file does not exist, starting fresh | [Errno 2] No such file or directory: 'payroll.json' 
+[2026-04-30 17:31:52]: Database file does not exist, starting fresh | [Errno 2] No such file or directory: 'payroll.json' 
+[2026-04-30 17:36:22]: Database file does not exist, starting fresh | [Errno 2] No such file or directory: 'payroll.json' 
+[2026-04-30 17:39:17]: Database file does not exist, starting fresh | [Errno 2] No such file or directory: 'payroll.json' 
+[2026-04-30 18:00:44]: Database file does not exist, starting fresh | [Errno 2] No such file or directory: 'payroll.json' 
+[2026-04-30 18:08:28]: Database file does not exist, starting fresh | [Errno 2] No such file or directory: 'payroll.json' 
+[2026-04-30 18:20:43]: Database file does not exist, starting fresh | [Errno 2] No such file or directory: 'payroll.json' 
