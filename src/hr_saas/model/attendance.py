@@ -64,5 +64,5 @@ class Attendance:
         return attendance
 
     def __repr__(self):
-        return f"<Attendance(name:{self.employee.name}) | clock_in:{self.clocked_in} | clock_out:{self.clocked_out}>"
+        return f"<Attendance(name:{self.employee.name}) | clocked_in:{self.clocked_in} | clocked_out:{self.clocked_out}>"
 

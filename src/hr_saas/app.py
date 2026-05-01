@@ -41,9 +41,16 @@ def main():
     # auth.login("adewusi@gmail.com", "obyadew123@/.com")
     auth.login("umah@gmail.com", "eoluch123@/.com")
 
+    emp_1 = emp_repo.get_employee_by_email("obiageli@gmail.com")
+    emp_2 = emp_repo.get_employee_by_email("francis@gmail.com")
+
     # attendance_service.clock_in(emp_repo.get_employee_by_email("obiageli@gmail.com"), WeekDay.MONDAY)
     # attendance_service.clock_in(emp_repo.get_employee_by_email("francis@gmail.com"), WeekDay.TUESDAY)
-    attendance_service.clock_out(emp_repo.get_employee_by_email("obiageli@gmail.com"))
+    # attendance_service.clock_out(emp_repo.get_employee_by_email("francis@gmail.com"))
+    response = attendance_service.calculate_overtime(auth.get_current_user(), attendance_repo.get_employee_attendance(emp_2)[0])
+    print(response)
+
+
 
     # payslip = payroll_service.get_all_payslips(auth.get_current_user())
     # print(payslip)

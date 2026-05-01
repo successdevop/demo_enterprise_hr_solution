@@ -39,16 +39,18 @@ class AttendanceService:
         Logger.success(f"{current_user.name} just clocked out", SUCCESS_LOG_FILE)
         return attendance
 
-    def is_late(self, current_user: Employee, attendance: Attendance):
+    def is_late(self, current_user: Employee, attendance: Attendance) -> bool:
         Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
-        return attendance.clocked_in.time() > self._work_start_time
+        return datetime.now().strptime(attendance.clocked_in,
+                                       "%Y-%m-%d %H:%M:%S").time() > self._work_start_time
 
-    def calculate_overtime(self, current_user: Employee, attendance: Attendance):
+    def calculate_overtime(self, current_user: Employee, attendance: Attendance) -> float:
         Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
         if not attendance.clocked_out:
             return 0
 
-        overtime = attendance.clocked_out.time() > self._work_end_time
+        overtime = datetime.now().strptime(attendance.clocked_out,
+                                           "%Y-%m-%d %H:%M:%S").time() > self._work_end_time
 
         if overtime:
             extra_hours = attendance.total_hours_worked_per_day - 8

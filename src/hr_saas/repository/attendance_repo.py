@@ -36,9 +36,9 @@ class AttendanceRepository:
         if email not in self._attendance_database:
             self._attendance_database[attendance.employee.email] = []
 
-        new_attendance = next((other_attendance for other_attendance in self._attendance_database[email] if datetime.now()
-                          .strptime(other_attendance.date, "%Y-%m-%d %H:%M:%S") == datetime.now()
-                          .strptime(attendance.date, "%Y-%m-%d %H:%M:%S")), None)
+        new_attendance = next((other_attendance for other_attendance in self._attendance_database[email]
+                               if AttendanceRepository._compare_string_time(other_attendance.date, attendance.date)),
+                              None)
 
         if not new_attendance:
             self._attendance_database.get(email).append(attendance)
@@ -58,6 +58,12 @@ class AttendanceRepository:
         except Exception as e:
             Logger.error(f"Error saving Attendance data | {e}", ERROR_LOG_FILE)
             return False
+
+    @classmethod
+    def _compare_string_time(cls, time_1: str, time_2) -> bool:
+        from datetime import datetime
+        return (datetime.now().strptime(time_1, "%Y-%m-%d %H:%M:%S") == datetime.now()
+                .strptime(time_2, "%Y-%m-%d %H:%M:%S"))
 
     def _load_attendance_database(self):
         self._attendance_database.clear()

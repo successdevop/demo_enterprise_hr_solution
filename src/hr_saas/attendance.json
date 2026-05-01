@@ -2,8 +2,8 @@
     "obiageli@gmail.com": [
         {
             "day_of_the_week": "Monday",
-            "clock_in": "2026-05-01 17:14:18",
-            "clock_out": "2026-05-01 17:16:06",
+            "clocked_in": "2026-05-01 17:14:18",
+            "clocked_out": "2026-05-01 17:16:06",
             "total_hours_worked_per_day": 0.03,
             "date": "2026-05-01 17:14:18",
             "employee": {
@@ -17,9 +17,9 @@
     "francis@gmail.com": [
         {
             "day_of_the_week": "Tuesday",
-            "clock_in": "2026-05-01 17:14:18",
-            "clock_out": null,
-            "total_hours_worked_per_day": 0.0,
+            "clocked_in": "2026-05-01 10:14:18",
+            "clocked_out": "2026-05-01 20:12:34",
+            "total_hours_worked_per_day": 2.971111111111111,
             "date": "2026-05-01 17:14:18",
             "employee": {
                 "email": "francis@gmail.com",
