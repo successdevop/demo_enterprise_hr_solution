@@ -52,6 +52,21 @@ class PayrollServices:
                 raise AuthorizationError("You are not allowed to perform this action")
 
         payslip = self._payroll_repo.get_employee_payslip(employee, month.value)
-        if payslip:
-            print(payslip)
-        raise NotFoundError(f"{employee.name} has no payslip for the month of {month.value}")
+        if not payslip:
+            raise NotFoundError(f"{employee.name} has no payslip for the month of {month.value}")
+        return payslip
+
+    def get_payslip_for_each_month(self, current_user, month: Month):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
+
+        payslip = self._payroll_repo.get_payslip_for_each_month(month.value)
+        return payslip
+
+    def delete_payslip(self, current_user, month: Month, payslip_id: str):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
+
+        self._payroll_repo.delete_payslip(month.value, payslip_id)
+
+    def get_all_payslips(self, current_user):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
+        return self._payroll_repo.get_all_payslip()
