@@ -1,6 +1,7 @@
 import json
 from typing import Dict, List, Optional
 from src.hr_saas.model.payroll import Payslip
+from src.hr_saas.model.employee import Employee
 from src.hr_saas.file_IO.logging import Logger
 from src.hr_saas.file_IO.config_file import ERROR_LOG_FILE
 
@@ -20,24 +21,23 @@ class PayrollRepository:
         self._payroll_database[month].append(payslip)
         return self._persist_to_disk()
 
-    def get_employee_payslip(self, email: str, month: str) -> Optional[Payslip]:
+    def get_employee_payslip(self, employee: Employee, month: str) -> Optional[Payslip]:
         if month not in self._payroll_database:
             print(f"Payslips for the month of {month} not yet processed")
             return None
 
-        for payslip in self._payroll_database[month]:
-            if payslip.employee.email == email:
-                print(f"Employee payslip for the month of {month} already processed")
+        payslips = self._payroll_database.get(month, [])
+        for payslip in payslips:
+            if payslip.employee.email == employee.email:
                 return payslip
-
-        print(f"Employee has no payslip for the month of {month}")
         return None
 
-    def get_payslip_for_each_month(self, month: str):
+    def get_payslip_for_each_month(self, month: str) -> List[Payslip]:
         if month not in self._payroll_database:
             print(f"Payslips for the month of {month} not yet processed")
-            return
-        return self._payroll_database.get(month)
+            return []
+
+        return self._payroll_database.get(month, [])
 
     def _persist_to_disk(self):
         savable_data = {
@@ -69,9 +69,9 @@ class PayrollRepository:
                     return
 
                 self._payroll_database = {
-                    month: [Payslip.from_to_dict(payslip_data.to_dict()) for payslip_data in payslips]
+                    month: [Payslip.from_to_dict(payslip_data) for payslip_data in payslips]
 
-                    for month, payslips in self._payroll_database.items()
+                    for month, payslips in data.items()
                     if isinstance(payslips, list)
                 }
 
