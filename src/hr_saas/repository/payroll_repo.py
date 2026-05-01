@@ -39,6 +39,23 @@ class PayrollRepository:
 
         return self._payroll_database.get(month, [])
 
+    def get_all_payslip(self) -> List[Payslip]:
+        new_list = []
+        for each_list_of_payslips in self._payroll_database.values():
+            new_list.extend(each_list_of_payslips)
+        return new_list
+
+    def delete_payslip(self, month: str, payslip_id: str):
+        if month not in self._payroll_database:
+            print(f"Payslips for the month of {month} not yet processed")
+            return None
+
+        payslips = self._payroll_database.get(month, [])
+        for payslip in payslips:
+            if payslip.payslip_id == payslip_id:
+                payslips.remove(payslip)
+                return self._persist_to_disk()
+
     def _persist_to_disk(self):
         savable_data = {
             month: [slips.to_dict() for slips in payslip_data]
