@@ -8,6 +8,7 @@ from src.hr_saas.file_IO.logging import Logger
 from src.hr_saas.file_IO.config_file import SUCCESS_LOG_FILE
 from src.hr_saas.enums.role import Role
 from src.hr_saas.enums.month import Month
+from src.hr_saas.error_handling.exceptions import AuthorizationError, NotFoundError
 from src.hr_saas.auth.authorization import Authorization
 
 
@@ -23,8 +24,9 @@ class PayrollServices:
                        bonus: float):
         Authorization.authorized_roles(current_user, [Role.HR, Role.ADMIN])
 
-        payslip = self._payroll_repo.get_employee_payslip(employee.email, month.value)
-        if not None:
+        payslip = self._payroll_repo.get_employee_payslip(employee, month.value)
+        if payslip:
+            print(f"Payslip already processed for {employee.name} in {month.value}")
             return payslip
 
         base_salary = employee.salary
@@ -41,3 +43,15 @@ class PayrollServices:
         self._payroll_repo.save_payslip(payslip)
         Logger.success(f"Payroll processed for {employee.name}", SUCCESS_LOG_FILE)
         return payslip
+
+    def get_employee_payslip(self, current_user, employee: Employee, month: Month):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR, Role.EMPLOYEE])
+
+        if current_user.role == Role.EMPLOYEE:
+            if employee.email != current_user.email:
+                raise AuthorizationError("You are not allowed to perform this action")
+
+        payslip = self._payroll_repo.get_employee_payslip(employee, month.value)
+        if payslip:
+            print(payslip)
+        raise NotFoundError(f"{employee.name} has no payslip for the month of {month.value}")
