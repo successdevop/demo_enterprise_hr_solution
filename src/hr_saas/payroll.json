@@ -1,6 +1,7 @@
 {
     "January": [
         {
+            "payslip_id": "64918",
             "month": "January",
             "base_salary": 10000,
             "deductions": 0,
@@ -11,6 +12,24 @@
             "employee": {
                 "email": "obiageli@gmail.com",
                 "name": "Obi Joy",
+                "role": "Employee",
+                "department": []
+            }
+        }
+    ],
+    "February": [
+        {
+            "payslip_id": "47573",
+            "month": "February",
+            "base_salary": 10000,
+            "deductions": 200,
+            "bonus": 179,
+            "net_salary": 3.8395,
+            "pension": 1800.0,
+            "currency": "GBP",
+            "employee": {
+                "email": "francis@gmail.com",
+                "name": "Francis Ebinabo",
                 "role": "Employee",
                 "department": []
             }

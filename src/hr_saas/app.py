@@ -34,12 +34,25 @@ def main():
     # auth.login("adewusi@gmail.com", "obyadew123@/.com")
     auth.login("umah@gmail.com", "eoluch123@/.com")
 
+    # payslip = payroll_service.get_all_payslips(auth.get_current_user())
+    # print(payslip)
     # payslip = payroll_service.process_salary(auth.get_current_user(), emp_repo.get_employee_by_email("obiageli@gmail.com"),
     #                                          Month.JANUARY, "USD", 0, 0)
     # print(payslip)
-    payslip_1 = payroll_service.get_employee_payslip(auth.get_current_user(), emp_repo.get_employee_by_email("francis@gmail.com"),
-                                                     Month.JANUARY)
-    print(payslip_1)
+    # payslip = payroll_service.process_salary(auth.get_current_user(), emp_repo.get_employee_by_email("francis@gmail.com"),
+    #                                          Month.FEBRUARY, "GBP", 200, 179)
+    # print(payslip)
+    # payslip_1 = payroll_service.delete_payslip(auth.get_current_user(), Month.JANUARY, '23951')
+    # print(payslip_1)
+    # payslip_1 = payroll_service.get_payslip_for_each_month(auth.get_current_user(), Month.JANUARY)
+    # print(payslip_1)
+    # payslip_1 = payroll_service.get_employee_payslip(auth.get_current_user(), emp_repo.get_employee_by_email("obiageli@gmail.com"),
+    #                                                  Month.JANUARY)
+    # print(payslip_1)
+    #
+    # payslip_1 = payroll_service.get_employee_payslip(auth.get_current_user(), emp_repo.get_employee_by_email("francis@gmail.com"),
+    #                                                  Month.JANUARY)
+    # print(payslip_1)
     # leave1 = leave_service.apply_for_leave(emp_repo.get_employee_by_email("obiageli@gmail.com"), 5, LeaveType.UNPAID)
     # leave2 = leave_service.apply_for_leave(emp_repo.get_employee_by_email("obiageli@gmail.com"), 10, LeaveType.ANNUAL)
     # leave3 = leave_service.apply_for_leave(emp_repo.get_employee_by_email("francis@gmail.com"), 9, LeaveType.ANNUAL)
