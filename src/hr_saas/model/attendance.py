@@ -13,7 +13,7 @@ class Attendance:
     def check_in(self):
         if self.clock_in:
             raise UserAlreadyExistError("Already checked in")
-        self.clock_in = datetime.now()
+        self.clock_in = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     def check_out(self):
         if not self.clock_in:
@@ -22,7 +22,7 @@ class Attendance:
         if self.clock_out:
             raise UserAlreadyExistError("Already checked out")
 
-        self.clock_out = datetime.now()
+        self.clock_out = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     def total_hours_worked(self):
         if not self.clock_in or not self.clock_out:
