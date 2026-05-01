@@ -57,5 +57,26 @@ class AttendanceService:
             return max(extra_hours, 0)
         return 0
 
+    def get_all_employee_attendance(self, current_user: Employee, employee: Employee):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
+        attendance = self._attendance_repo.get_employee_attendance(employee)
+        return attendance
+
+    def get_employee_today_attendance(self, current_user: Employee, employee: Employee):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
+        attendance = self._attendance_repo.get_employee_today_attendance(employee)
+        return attendance
+
+    def get_all_attendance(self, current_user: Employee):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
+        attendance = self._attendance_repo.get_all_attendance()
+        return attendance
+
+    def get_all_today_attendance(self, current_user: Employee):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
+        attendance = self._attendance_repo.get_all_today_attendance()
+        return attendance
+
+
 
 

@@ -45,10 +45,23 @@ def main():
     emp_2 = emp_repo.get_employee_by_email("francis@gmail.com")
 
     # attendance_service.clock_in(emp_repo.get_employee_by_email("obiageli@gmail.com"), WeekDay.MONDAY)
+    # attendance_service.clock_in(emp_repo.get_employee_by_email("obiageli@gmail.com"), WeekDay.TUESDAY)
     # attendance_service.clock_in(emp_repo.get_employee_by_email("francis@gmail.com"), WeekDay.TUESDAY)
     # attendance_service.clock_out(emp_repo.get_employee_by_email("francis@gmail.com"))
-    response = attendance_service.calculate_overtime(auth.get_current_user(), attendance_repo.get_employee_attendance(emp_2)[0])
+    # response = attendance_service.calculate_overtime(auth.get_current_user(), attendance_repo.get_employee_attendance(emp_2)[0])
+    # print(response)
+    response = attendance_service.get_employee_today_attendance(auth.get_current_user(), emp_2)
     print(response)
+    response = attendance_service.get_employee_today_attendance(auth.get_current_user(), emp_1)
+    print(response)
+    response = attendance_service.get_all_employee_attendance(auth.get_current_user(), emp_1)
+    print(response)
+    response = attendance_service.get_all_attendance(auth.get_current_user())
+    print(response)
+    response = attendance_service.get_all_today_attendance(auth.get_current_user())
+    print(response)
+
+
 
 
 

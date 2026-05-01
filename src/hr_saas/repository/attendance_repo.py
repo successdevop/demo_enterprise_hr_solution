@@ -28,8 +28,15 @@ class AttendanceRepository:
         for attendance in self._attendance_database.values():
             today_attendance.extend(attendance)
 
-        today_attendance[:] = [attend for attend in today_attendance if attend.date.today() == datetime.today()]
+        today_attendance[:] = [attend for attend in today_attendance if datetime.now()
+        .strptime(attend.date, "%Y-%m-%d %H:%M:%S").date() == datetime.now().date()]
         return today_attendance
+
+    def get_all_attendance(self) -> List[Attendance]:
+        all_attendance = []
+        for attendance in self._attendance_database.values():
+            all_attendance.extend(attendance)
+        return all_attendance
 
     def save_attendance(self, attendance: Attendance):
         email = attendance.employee.email
