@@ -1,18 +1,23 @@
+from datetime import datetime
+
 from src.hr_saas.repository.employee_repo import EmployeeRepo
 from src.hr_saas.repository.department_repo import DepartmentRepo
 from src.hr_saas.repository.leave_repo import LeaveRepository
 from src.hr_saas.repository.payroll_repo import PayrollRepository
+from src.hr_saas.repository.attendance_repo import AttendanceRepository
 from src.hr_saas.strategy.tax_strategy import NigerianTaxStrategy, Pension
 from src.hr_saas.strategy.currency_converter import CurrencyStrategy
 from src.hr_saas.services.department_service import DepartmentService
 from src.hr_saas.services.leave_service import LeaveService
 from src.hr_saas.services.payroll_service import PayrollServices
+from src.hr_saas.services.attendance_service import AttendanceService
 from src.hr_saas.auth.auth import Auth
 from src.hr_saas.enums.role import Role
 from src.hr_saas.enums.month import Month
+from src.hr_saas.enums.week import WeekDay
 from src.hr_saas.enums.leave import LeaveType, LeaveStatus
 from src.hr_saas.file_IO.database_files import (EMPLOYEE_DATABASE, DEPARTMENT_DATABASE, LEAVE_REQUEST_DATABASE,
-                                                PAYROLL_DATABASE)
+                                                PAYROLL_DATABASE, ATTENDANCE_DATABASE)
 from src.hr_saas.app_files.files import ENGINEERING
 
 
@@ -21,6 +26,7 @@ def main():
     dept_repo = DepartmentRepo(DEPARTMENT_DATABASE)
     leave_repo = LeaveRepository(LEAVE_REQUEST_DATABASE)
     payroll_repo = PayrollRepository(PAYROLL_DATABASE)
+    attendance_repo = AttendanceRepository(ATTENDANCE_DATABASE)
     tax_strategy = NigerianTaxStrategy()
     pension = Pension()
     currency_converter = CurrencyStrategy()
@@ -28,11 +34,16 @@ def main():
     dept_service = DepartmentService(dept_repo, emp_repo)
     leave_service = LeaveService(leave_repo)
     payroll_service = PayrollServices(payroll_repo, currency_converter, tax_strategy, pension)
+    attendance_service = AttendanceService(attendance_repo)
     auth = Auth(emp_repo)
 
     # auth.login("success@gmail.com", "mynewpassword123@/.com")
     # auth.login("adewusi@gmail.com", "obyadew123@/.com")
     auth.login("umah@gmail.com", "eoluch123@/.com")
+
+    # attendance_service.clock_in(emp_repo.get_employee_by_email("obiageli@gmail.com"), WeekDay.MONDAY)
+    # attendance_service.clock_in(emp_repo.get_employee_by_email("francis@gmail.com"), WeekDay.TUESDAY)
+    attendance_service.clock_out(emp_repo.get_employee_by_email("obiageli@gmail.com"))
 
     # payslip = payroll_service.get_all_payslips(auth.get_current_user())
     # print(payslip)
@@ -140,3 +151,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # print(datetime.now().date())
+    # t = datetime.strptime(datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "%Y-%m-%d %H:%M:%S").date()
+    # print(t)

@@ -16,7 +16,7 @@ class AttendanceRepository:
     def get_employee_today_attendance(self, employee: Employee) -> Optional[Attendance]:
         attendance_history = self._attendance_database.get(employee.email, [])
         for attendance in attendance_history:
-            if attendance.date.day == datetime.today().day:
+            if datetime.strptime(attendance.date, "%Y-%m-%d %H:%M:%S").date() == datetime.now().date():
                 return attendance
         return None
 
@@ -36,7 +36,12 @@ class AttendanceRepository:
         if email not in self._attendance_database:
             self._attendance_database[attendance.employee.email] = []
 
-        self._attendance_database.get(email).append(attendance)
+        new_attendance = next((other_attendance for other_attendance in self._attendance_database[email] if datetime.now()
+                          .strptime(other_attendance.date, "%Y-%m-%d %H:%M:%S") == datetime.now()
+                          .strptime(attendance.date, "%Y-%m-%d %H:%M:%S")), None)
+
+        if not new_attendance:
+            self._attendance_database.get(email).append(attendance)
 
         return self._save_to_disk()
 
