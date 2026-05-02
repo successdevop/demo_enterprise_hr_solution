@@ -2,30 +2,25 @@ import uuid
 import hashlib
 from typing import List
 from datetime import datetime
-from abc import ABC, abstractmethod
 from src.hr_saas.enums.role import Role
 from src.hr_saas.error_handling.exceptions import ValidationError
 
 
-class Person(ABC):
-    @abstractmethod
-    def __init__(self, name: str, email: str, age: int, state_of_origin: str):
-        self._name = name
+class Person:
+    def __init__(self, first_name: str, last_name: str, dob: str, email: str, state_of_origin: str):
+        self._first_name = first_name
+        self._last_name = last_name
+        self._dob = datetime.now().strptime(dob, "%d/%m/%Y").date()
         self._email = email
         self._state_of_origin = state_of_origin
-        self._age = age
 
     @property
     def name(self):
-        return self._name
+        return self._first_name
 
     @property
     def email(self):
         return self._email
-
-    @property
-    def age(self):
-        return self._age
 
     @property
     def state_of_origin(self):
