@@ -4,42 +4,43 @@ from src.hr_saas.model.employee import Employee
 
 
 class Department:
-    def __init__(self, name: str, manager: Employee):
-        if not name:
+    def __init__(self, dept_name: str, dept_manager: Employee):
+        if not dept_name:
             raise ValidationError("Department must have a name")
 
-        if manager.role.value != "Manager":
+        if dept_manager.role.value != "Manager":
             raise ValidationError("Department manager must have a manager role/position")
 
-        self._name = name
-        self._manager = manager
+        self._dept_name = dept_name
+        self._dept_manager = dept_manager
         self._dept_employees: List[Employee] = []
 
     @property
-    def name(self):
-        return self._name
+    def dept_name(self):
+        return self._dept_name
 
     @property
-    def manager(self):
-        return self._manager
+    def dept_manager(self):
+        return self._dept_manager
 
-    @manager.setter
-    def manager(self, manager: Employee):
-        self._manager = manager
+    @dept_manager.setter
+    def dept_manager(self, manager: Employee):
+        self._dept_manager = manager
 
     def view_dept_employees(self):
         for emp in self._dept_employees:
-            print(emp)
+            print(emp.to_dict(show_all=False))
 
     def assign_employee(self, employee: Employee):
-        if self._manager.employee_id == employee.employee_id:
-            raise ValidationError(f"{employee.first_name} is the manager of {self._name} department, and cannot be assigned")
+        if self._dept_manager.employee_id == employee.employee_id:
+            raise ValidationError(f"{employee.first_name} is the manager of {self._dept_name} department, "
+                                  f"and cannot be assigned")
 
         if employee.role.value == "Manager":
             raise ValidationError(f"{employee.first_name} is a manager and cannot be assigned as a team member")
 
         if employee in self._dept_employees:
-            raise UserAlreadyExistError(f"{employee.first_name} already in {self._name} Department")
+            raise UserAlreadyExistError(f"{employee.first_name} already in {self._dept_name} Department")
 
         self._dept_employees.append(employee)
         print(f"Employee {employee.first_name} added to the department")
@@ -49,12 +50,12 @@ class Department:
             raise NotFoundError("Employee not found")
 
         self._dept_employees.remove(employee)
-        print(f"Employee {employee.first_name} removed from {self._name} department")
+        print(f"Employee {employee.first_name} removed from {self._dept_name} department")
 
     def to_dict(self):
         return {
-            "dept_name": self._name,
-            "dept_manager": self._manager.to_dict(show_all=False) if self._manager else None,
+            "dept_name": self._dept_name,
+            "dept_manager": self._dept_manager.to_dict(show_all=False) if self._dept_manager else None,
             "dept_employees": [emp.to_dict(show_all=False) for emp in self._dept_employees]
         }
 
@@ -66,8 +67,8 @@ class Department:
 
         # Create department
         department = cls(
-            name=data.get("dept_name"),
-            manager=manager if manager else None
+            dept_name=data.get("dept_name"),
+            dept_manager=manager if manager else None
         )
 
         department._dept_employees = [
@@ -77,4 +78,4 @@ class Department:
         return department
 
     def __repr__(self):
-        return f"<Department(name: {self._name} | manager: {self._manager.first_name})>"
+        return f"<Department(name: {self._dept_name} | manager: {self._dept_manager.first_name})>"

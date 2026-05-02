@@ -72,11 +72,11 @@ class Employee(Person):
         self._salary = Utils.validate_amount_input(salary)
 
     @property
-    def type(self):
+    def emp_type(self):
         return self._type
 
-    @type.setter
-    def type(self, employee_type: str):
+    @emp_type.setter
+    def emp_type(self, employee_type: str):
         self._type = employee_type
 
     def _get_password(self):
@@ -163,7 +163,7 @@ class Employee(Person):
         employee.department = data.get("department")
         employee._password = data.get("password")
         employee._password_text = data.get("password_text")
-        employee.type = emp_type
+        employee.emp_type = emp_type
         employee.total_leave_days_for_the_year = data.get("total_leave_days_for_the_year")
         employee.department = data.get("department")
         return employee
