@@ -26,7 +26,7 @@ class PayrollServices:
 
         payslip = self._payroll_repo.get_employee_payslip(employee, month.value)
         if payslip:
-            print(f"Payslip already processed for {employee.name} in {month.value}")
+            print(f"Payslip already processed for {employee.first_name} in {month.value}")
             return payslip
 
         base_salary = employee.salary
@@ -41,7 +41,7 @@ class PayrollServices:
                           pension=total_pension, month=month, currency=currency, deductions=deduction, bonus=bonus)
 
         self._payroll_repo.save_payslip(payslip)
-        Logger.success(f"Payroll processed for {employee.name}", SUCCESS_LOG_FILE)
+        Logger.success(f"Payroll processed for {employee.first_name}", SUCCESS_LOG_FILE)
         return payslip
 
     def get_employee_payslip(self, current_user, employee: Employee, month: Month):
@@ -53,7 +53,7 @@ class PayrollServices:
 
         payslip = self._payroll_repo.get_employee_payslip(employee, month.value)
         if not payslip:
-            raise NotFoundError(f"{employee.name} has no payslip for the month of {month.value}")
+            raise NotFoundError(f"{employee.first_name} has no payslip for the month of {month.value}")
         return payslip
 
     def get_payslip_for_each_month(self, current_user, month: Month):

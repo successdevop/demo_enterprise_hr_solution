@@ -25,7 +25,7 @@ class AttendanceService:
         attendance.check_in()
 
         self._attendance_repo.save_attendance(attendance)
-        Logger.success(f"{current_user.name} just clocked in", SUCCESS_LOG_FILE)
+        Logger.success(f"{current_user.first_name} just clocked in", SUCCESS_LOG_FILE)
 
         return attendance
 
@@ -36,7 +36,7 @@ class AttendanceService:
 
         attendance.check_out()
         self._attendance_repo.save_attendance(attendance)
-        Logger.success(f"{current_user.name} just clocked out", SUCCESS_LOG_FILE)
+        Logger.success(f"{current_user.first_name} just clocked out", SUCCESS_LOG_FILE)
         return attendance
 
     def is_late(self, current_user: Employee, attendance: Attendance) -> bool:

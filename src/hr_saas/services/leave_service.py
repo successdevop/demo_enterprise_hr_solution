@@ -28,7 +28,7 @@ class LeaveService:
         leave_request = LeaveRequest(employee, days, leave_t)
         self._leave_repo.save_leave_request(leave_request)
 
-        Logger.success(f"{employee.name} applied for {days} days of {leave_t}", SUCCESS_LOG_FILE)
+        Logger.success(f"{employee.first_name} applied for {days} days of {leave_t}", SUCCESS_LOG_FILE)
         print("Leave application successful")
 
         return leave_request
@@ -63,7 +63,7 @@ class LeaveService:
                 if not set(leave.employee.department).intersection(current_user.department):
                     raise AuthorizationError("Not your team member. You can only approve your team member's leave")
 
-                leave.reviewed_by.append({"name": current_user.name, "role": current_user.role.value})
+                leave.reviewed_by.append({"name": current_user.first_name, "role": current_user.role.value})
                 leave.approval_stage = 2
                 self._leave_repo.save_leave_request(leave)
                 Logger.info("Approved by Manager → moving to HR", INFO_LOG_FILE)
