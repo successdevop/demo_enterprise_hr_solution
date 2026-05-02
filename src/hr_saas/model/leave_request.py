@@ -34,7 +34,7 @@ class LeaveRequest:
 
         self.leave_status = LeaveStatus.APPROVED
         self.time_approved = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        self.reviewed_by.append({"name": executive.name, "role": executive.role.value})
+        self.reviewed_by.append({"name": executive.first_name, "role": executive.role.value})
 
     def reject_leave(self, executive: Employee):
         if self.leave_status != LeaveStatus.PENDING:
@@ -42,7 +42,7 @@ class LeaveRequest:
 
         self.leave_status = LeaveStatus.REJECTED
         self.time_approved = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        self.reviewed_by.append({"name": executive.name, "role": executive.role.value})
+        self.reviewed_by.append({"name": executive.first_name, "role": executive.role.value})
 
     def to_dict(self):
         return {
@@ -91,5 +91,5 @@ class LeaveRequest:
         return hash(self.leave_id)
 
     def __repr__(self):
-        return (f"<LeaveRequest(name:{self.employee.name} | days:{self.days} | leave_type:{self.leave_type} | "
+        return (f"<LeaveRequest(name:{self.employee.first_name} | days:{self.days} | leave_type:{self.leave_type} | "
                 f"leave_status:{self.leave_status.value})>")

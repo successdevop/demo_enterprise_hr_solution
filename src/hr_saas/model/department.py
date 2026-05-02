@@ -33,23 +33,23 @@ class Department:
 
     def assign_employee(self, employee: Employee):
         if self._manager.employee_id == employee.employee_id:
-            raise ValidationError(f"{employee.name} is the manager of {self._name} department, and cannot be assigned")
+            raise ValidationError(f"{employee.first_name} is the manager of {self._name} department, and cannot be assigned")
 
         if employee.role.value == "Manager":
-            raise ValidationError(f"{employee.name} is a manager and cannot be assigned as a team member")
+            raise ValidationError(f"{employee.first_name} is a manager and cannot be assigned as a team member")
 
         if employee in self._dept_employees:
-            raise UserAlreadyExistError(f"{employee.name} already in {self._name} Department")
+            raise UserAlreadyExistError(f"{employee.first_name} already in {self._name} Department")
 
         self._dept_employees.append(employee)
-        print(f"Employee {employee.name} added to the department")
+        print(f"Employee {employee.first_name} added to the department")
 
     def remove_employee(self, employee: Employee):
         if employee not in self._dept_employees:
             raise NotFoundError("Employee not found")
 
         self._dept_employees.remove(employee)
-        print(f"Employee {employee.name} removed from {self._name} department")
+        print(f"Employee {employee.first_name} removed from {self._name} department")
 
     def to_dict(self):
         return {
@@ -77,4 +77,4 @@ class Department:
         return department
 
     def __repr__(self):
-        return f"<Department(name: {self._name} | manager: {self._manager.name})>"
+        return f"<Department(name: {self._name} | manager: {self._manager.first_name})>"

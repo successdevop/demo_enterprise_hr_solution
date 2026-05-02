@@ -3,7 +3,9 @@ import hashlib
 from typing import List
 from datetime import datetime
 from src.hr_saas.enums.role import Role
+from src.hr_saas.enums.employee_type import EmployeeType
 from src.hr_saas.error_handling.exceptions import ValidationError
+from src.hr_saas.utils.utils import Utils
 
 
 class Person:
@@ -15,12 +17,20 @@ class Person:
         self._state_of_origin = state_of_origin
 
     @property
-    def name(self):
+    def first_name(self):
         return self._first_name
+
+    @property
+    def last_name(self):
+        return self._last_name
 
     @property
     def email(self):
         return self._email
+
+    @property
+    def dob(self):
+        return self._dob
 
     @property
     def state_of_origin(self):
@@ -28,16 +38,22 @@ class Person:
 
 
 class Employee(Person):
-    def __init__(self, name, email, age, state_of_origin, role: Role, salary: float):
-        super().__init__(name=name, email=email, age=age, state_of_origin=state_of_origin)
+    def __init__(self, first_name, last_name, dob, email, state_of_origin, role: Role, salary: float):
+        super().__init__(first_name=first_name, last_name=last_name, dob=dob, email=email,
+                         state_of_origin=state_of_origin)
         self._employee_id = str(uuid.uuid4())
         self.role = role
         self._salary = salary
-        self.type = None
+        self._age = self.dob - datetime.now().date()
+        self._type = None
         self.isActive = True
         self._password = None
         self.department: List[str] = []
         self.hire_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        if self._type == EmployeeType.FULL_TIME:
+            self.total_leave_days_for_the_year = 30
+        else:
+            self.total_leave_days_for_the_year = 21
 
     @property
     def employee_id(self):
@@ -46,6 +62,18 @@ class Employee(Person):
     @property
     def salary(self):
         return self._salary
+
+    @salary.setter
+    def salary(self, salary: float):
+        self._salary = Utils.validate_amount_input(salary)
+
+    @property
+    def type(self):
+        return self._type
+
+    @type.setter
+    def type(self, employee_type: str):
+        self._type = Utils.validate_name(employee_type)
 
     def _get_password(self):
         return self._password
@@ -61,6 +89,12 @@ class Employee(Person):
         check = hashlib.sha256(password.encode()).hexdigest()
         return check == self._get_password()
 
+    def increase_leave_day(self, days):
+        self.total_leave_days_for_the_year += days
+
+    def promote(self, salary_increase: float):
+        self._salary += salary_increase
+
     def deactivate(self):
         self.isActive = False
 
@@ -68,12 +102,14 @@ class Employee(Person):
         if show_all:
             return {
                 "employee_id": self._employee_id,
-                "name": self.name,
+                "first_name": self.first_name,
+                "last_name": self.last_name,
                 "email": self.email,
-                "age": self.age,
+                "age": self._age,
                 "origin": self.state_of_origin,
                 "salary": self._salary,
                 "role": self.role.value if hasattr(self.role, "value") else self.role,
+                "type": self._type.value if hasattr(self._type, "value") else self._type,
                 "is_active": self.isActive,
                 "department": self.department,
                 "hire_date": self.hire_date,
@@ -82,32 +118,36 @@ class Employee(Person):
         else:
             return {
                 "email": self.email,
-                "name": self.name,
+                "first_name": self.first_name,
                 "role": self.role.value if hasattr(self.role, "value") else self.role,
                 "department": self.department
             }
 
     @classmethod
-    def from_dict(cls, data: dict) -> "Employee":
-
+    def from_dict(cls, data: dict, dob=None) -> "Employee":
         role = data.get("role")
         if isinstance(role, str) and hasattr(Role, role.upper()):
             role = Role[role.upper()]
 
+        type = data.get("type")
+        if isinstance(type, str) and hasattr(EmployeeType, type.upper()):
+            type = Role[type.upper()]
+
         employee = cls(
-            name=data.get("name"),
+            first_name=data.get("first_name"),
+            last_name=data.get("last_name"),
             email=data.get("email"),
-            age=data.get("age"),
             state_of_origin=data.get("origin"),
             salary=data.get("salary"),
             role=role,
+            dob=data.get(dob)
         )
-
         employee._employee_id = data.get("employee_id")
+        employee._age = data.get("age")
         employee.isActive = data.get("is_active")
         employee.department = data.get("department")
         employee._password = data.get("password")
-        employee.type = data.get("type")
+        employee.type = type
         employee.department = data.get("department")
         return employee
 
@@ -120,4 +160,4 @@ class Employee(Person):
         return hash(self.email)
 
     def __repr__(self):
-        return f"<Employee id:{self.email} | name:{self.name} | role:{self.role.value}"
+        return f"<Employee email:{self.email} | first_name:{self.first_name} | role:{self.role.value}"

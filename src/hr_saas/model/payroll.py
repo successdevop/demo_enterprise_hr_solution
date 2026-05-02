@@ -52,5 +52,5 @@ class Payslip:
     def __repr__(self):
         currency_list = {"NGN": "#", "USD": "$", "EUR": "€", "GBP": "£"}
         currency = currency_list.get(self.currency, "")
-        return (f"<Payslip(name: {self.employee.name} | net_salary:{currency}{self.net_salary} | status: "
+        return (f"<Payslip(name: {self.employee.first_name} | net_salary:{currency}{self.net_salary} | status: "
                 f"{self.employee.role.value})>")
