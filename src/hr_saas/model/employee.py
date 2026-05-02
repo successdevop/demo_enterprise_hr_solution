@@ -109,7 +109,7 @@ class Employee(Person):
                 "origin": self.state_of_origin,
                 "salary": self._salary,
                 "role": self.role.value if hasattr(self.role, "value") else self.role,
-                "type": self._type.value if hasattr(self._type, "value") else self._type,
+                "emp_type": self._type.value if hasattr(self._type, "value") else self._type,
                 "is_active": self.isActive,
                 "department": self.department,
                 "hire_date": self.hire_date,
@@ -129,9 +129,9 @@ class Employee(Person):
         if isinstance(role, str) and hasattr(Role, role.upper()):
             role = Role[role.upper()]
 
-        type = data.get("type")
-        if isinstance(type, str) and hasattr(EmployeeType, type.upper()):
-            type = Role[type.upper()]
+        emp_type = data.get("emp_type")
+        if isinstance(emp_type, str) and hasattr(EmployeeType, emp_type.upper()):
+            emp_type = Role[emp_type.upper()]
 
         employee = cls(
             first_name=data.get("first_name"),
@@ -147,7 +147,7 @@ class Employee(Person):
         employee.isActive = data.get("is_active")
         employee.department = data.get("department")
         employee._password = data.get("password")
-        employee.type = type
+        employee.type = emp_type
         employee.department = data.get("department")
         return employee
 

@@ -17,7 +17,7 @@ class DepartmentRepo:
         box = []
         if len(self._department_database) > 0:
             for dept_name, dept_manager in self._department_database.items():
-                val = {"dept_name": dept_name, "manager": dept_manager.manager.name}
+                val = {"dept_name": dept_name, "manager": dept_manager.manager.first_name}
                 box.append(val)
             return box
         raise NotFoundError("No department created yet")
