@@ -12,7 +12,7 @@ class Person:
     def __init__(self, first_name: str, last_name: str, dob: str, email: str, state_of_origin: str):
         self._first_name = first_name
         self._last_name = last_name
-        self._dob = datetime.now().strptime(dob, "%d/%m/%Y").date()
+        self._dob = datetime.strptime(dob, "%d/%m/%Y").date()
         self._email = email
         self._state_of_origin = state_of_origin
 
@@ -44,17 +44,20 @@ class Employee(Person):
         self._employee_id = str(uuid.uuid4())
         self.role = role
         self._salary = salary
-        self._age = self.dob - datetime.now().date()
+        self._age = datetime.now().date().year - self.dob.year
         self._type = None
         self.isActive = True
         self._password = None
         self._password_text = None
         self.department: List[str] = []
         self.hire_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        if self._type == EmployeeType.FULL_TIME:
+
+        if self.role.value == "Admin" or self.role.value == "Hr" or self.role.value == "Manager":
+            self._type = EmployeeType.FULL_TIME
             self.total_leave_days_for_the_year = 30
         else:
-            self.total_leave_days_for_the_year = 21
+            self._type = EmployeeType.CONTRACT if self._salary > 55000 else EmployeeType.INTERN
+            self.total_leave_days_for_the_year = 14
 
     @property
     def employee_id(self):
@@ -74,7 +77,7 @@ class Employee(Person):
 
     @type.setter
     def type(self, employee_type: str):
-        self._type = Utils.validate_name(employee_type)
+        self._type = employee_type
 
     def _get_password(self):
         return self._password
@@ -112,11 +115,13 @@ class Employee(Person):
                 "salary": self._salary,
                 "role": self.role.value if hasattr(self.role, "value") else self.role,
                 "emp_type": self._type.value if hasattr(self._type, "value") else self._type,
+                "total_leave_days_for_the_year": self.total_leave_days_for_the_year,
                 "is_active": self.isActive,
                 "department": self.department,
                 "hire_date": self.hire_date,
                 "password_text": self._password_text,
-                "password": self._password
+                "password": self._password,
+                "dob": self.dob.strftime("%d/%m/%Y")
             }
         else:
             return {
@@ -127,14 +132,14 @@ class Employee(Person):
             }
 
     @classmethod
-    def from_dict(cls, data: dict, dob=None) -> "Employee":
+    def from_dict(cls, data: dict) -> "Employee":
         role = data.get("role")
         if isinstance(role, str) and hasattr(Role, role.upper()):
             role = Role[role.upper()]
 
         emp_type = data.get("emp_type")
         if isinstance(emp_type, str) and hasattr(EmployeeType, emp_type.upper()):
-            emp_type = Role[emp_type.upper()]
+            emp_type = EmployeeType[emp_type.upper()]
 
         employee = cls(
             first_name=data.get("first_name"),
@@ -143,7 +148,7 @@ class Employee(Person):
             state_of_origin=data.get("origin"),
             salary=data.get("salary"),
             role=role,
-            dob=data.get(dob)
+            dob=data.get("dob")
         )
         employee._employee_id = data.get("employee_id")
         employee._age = data.get("age")
@@ -151,6 +156,7 @@ class Employee(Person):
         employee.department = data.get("department")
         employee._password = data.get("password")
         employee.type = emp_type
+        employee.total_leave_days_for_the_year = data.get("total_leave_days_for_the_year")
         employee.department = data.get("department")
         return employee
 
