@@ -12,7 +12,7 @@ class EmployeeService:
     def update_employee_type(self, current_user: Employee, employee: Employee, emp_type: EmployeeType):
         Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
 
-        employee.type = emp_type
+        employee.emp_type = emp_type
         self._emp_repo.save_employee(employee)
 
     def increase_leave(self, current_user: Employee, employee: Employee, day: int):
