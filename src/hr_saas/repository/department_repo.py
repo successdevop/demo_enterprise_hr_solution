@@ -11,16 +11,17 @@ class DepartmentRepo:
         self._load_department_database()
 
     def get_dept_by_name(self, dept_name: str) -> Optional[Department]:
-        return self._department_database.get(dept_name)
+        return self._department_database.get(dept_name, None)
 
-    def get_dept_managers(self):
+    def get_dept_managers(self) -> List[dict]:
         box = []
-        if len(self._department_database) > 0:
-            for dept_name, dept_manager in self._department_database.items():
-                val = {"dept_name": dept_name, "manager": dept_manager.manager.first_name}
-                box.append(val)
-            return box
-        raise NotFoundError("No department created yet")
+        if not len(self._department_database) > 0:
+            raise NotFoundError("No department created yet")
+
+        for dept_name, dept_manager in self._department_database.items():
+            val = {"dept_name": dept_name, "manager": dept_manager.dept_manager.first_name}
+            box.append(val)
+        return box
 
     def get_all_department(self) -> Optional[List[str]]:
         return list(self._department_database.keys())
@@ -29,23 +30,23 @@ class DepartmentRepo:
         return len(self._department_database)
 
     def delete_dept_by_name(self, dept_name: str):
-        if dept_name in self._department_database:
-            del self._department_database[dept_name]
-            DictionaryDatabase.save(self._storage_file, "Department", self._department_database)
-            print(f"{dept_name} department deleted")
-        else:
+        if dept_name not in self._department_database:
             raise NotFoundError(f"{dept_name} department not found")
 
+        del self._department_database[dept_name]
+        DictionaryDatabase.save(self._storage_file, "Department", self._department_database)
+        print(f"{dept_name} department deleted")
+
     def delete_all_department(self):
-        if len(self._department_database) > 0:
-            self._department_database.clear()
-            DictionaryDatabase.save(self._storage_file, "Department", self._department_database)
-            print(f"All department deleted")
-        else:
+        if not len(self._department_database) > 0:
             raise NotFoundError("No department found")
 
+        self._department_database.clear()
+        DictionaryDatabase.save(self._storage_file, "Department", self._department_database)
+        print(f"All department deleted")
+
     def save_department(self, dept: Department):
-        self._department_database[dept.name] = dept
+        self._department_database[dept.dept_name] = dept
         DictionaryDatabase.save(self._storage_file, "Department", self._department_database)
 
     def _load_department_database(self):
