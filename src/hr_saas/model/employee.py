@@ -101,7 +101,14 @@ class Employee(Person):
         self._salary += salary_increase
 
     def deactivate(self):
-        self.isActive = False
+        if self.isActive:
+            self.isActive = False
+        return
+
+    def activate(self):
+        if self.isActive:
+            return
+        self.isActive = True
 
     def to_dict(self, show_all: bool = True) -> dict:
         if show_all:
@@ -155,6 +162,7 @@ class Employee(Person):
         employee.isActive = data.get("is_active")
         employee.department = data.get("department")
         employee._password = data.get("password")
+        employee._password_text = data.get("password_text")
         employee.type = emp_type
         employee.total_leave_days_for_the_year = data.get("total_leave_days_for_the_year")
         employee.department = data.get("department")

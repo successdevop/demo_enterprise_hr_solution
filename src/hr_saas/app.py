@@ -7,6 +7,7 @@ from src.hr_saas.repository.payroll_repo import PayrollRepository
 from src.hr_saas.repository.attendance_repo import AttendanceRepository
 from src.hr_saas.strategy.tax_strategy import NigerianTaxStrategy, Pension
 from src.hr_saas.strategy.currency_converter import CurrencyStrategy
+from src.hr_saas.services.employee_service import EmployeeService
 from src.hr_saas.services.department_service import DepartmentService
 from src.hr_saas.services.leave_service import LeaveService
 from src.hr_saas.services.payroll_service import PayrollServices
@@ -15,6 +16,7 @@ from src.hr_saas.auth.auth import Auth
 from src.hr_saas.enums.role import Role
 from src.hr_saas.enums.month import Month
 from src.hr_saas.enums.week import WeekDay
+from src.hr_saas.enums.employee_type import EmployeeType
 from src.hr_saas.enums.leave import LeaveType, LeaveStatus
 from src.hr_saas.file_IO.database_files import (EMPLOYEE_DATABASE, DEPARTMENT_DATABASE, LEAVE_REQUEST_DATABASE,
                                                 PAYROLL_DATABASE, ATTENDANCE_DATABASE)
@@ -31,13 +33,21 @@ def main():
     pension = Pension()
     currency_converter = CurrencyStrategy()
 
+    emp_service = EmployeeService(emp_repo)
     dept_service = DepartmentService(dept_repo, emp_repo)
     leave_service = LeaveService(leave_repo)
     payroll_service = PayrollServices(payroll_repo, currency_converter, tax_strategy, pension)
     attendance_service = AttendanceService(attendance_repo)
     auth = Auth(emp_repo)
 
-    #
+    # auth.login("succeSs@gmail.com", "mynewpassword123@/.com")
+    auth.login("esther.adeleke@company.com", "EstherAdeleke@Dev#1")
+
+    output = emp_service.activate_employee(auth.get_current_user(), emp_repo.get_employee_by_email("esther.adeleke@company.com"))
+    print(output)
+    output = emp_service.count_employees(auth.get_current_user())
+    print(output)
+
 
 if __name__ == "__main__":
     main()

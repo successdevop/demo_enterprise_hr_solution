@@ -19,7 +19,7 @@ class EmployeeRepo:
         worker = self._employee_database.get(employee.email, None)
         if not worker:
             raise NotFoundError(f"Employee:{employee.first_name} not found")
-        del worker
+        del self._employee_database[employee.email]
         self._update_employee_database()
 
     def get_all_employee(self):

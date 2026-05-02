@@ -64,7 +64,7 @@ class Auth:
 
         if not user.isActive:
             Logger.error(f"user account deactivated: {email}", ERROR_LOG_FILE)
-            raise ValidationError("Account deactivate, please contact support center/agents")
+            raise ValidationError("Account deactivated, please contact support center/agents")
 
         self._current_user = user
         Logger.success(f"Login successful | {email}", SUCCESS_LOG_FILE)
@@ -87,8 +87,11 @@ class Auth:
 
         password = str(input("enter new password: "))
         verify_password = str(input("verify new password: "))
-        if password == verify_password:
-            user.set_password(password)
+        if password != verify_password:
+            Logger.error(f"Password change does not match for {user.email}", ERROR_LOG_FILE)
+            raise ValidationError("Password does not match, try again")
+
+        user.set_password(password)
 
         self._emp_repo.save_employee(user)
         Logger.info("Password changed successfully", INFO_LOG_FILE)

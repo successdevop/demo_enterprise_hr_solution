@@ -1,344 +1,170 @@
-[2026-04-26 18:14:16]: Database file not found, starting fresh | [Errno 2] No such file or directory: 'employee.json' 
-[2026-04-26 18:15:13]: Invalid password for email | success@gmail.com 
-[2026-04-26 18:16:52]: Invalid password for email | success@gmail.com 
-[2026-04-26 18:19:35]: Invalid password for email | success@gmail.com 
-[2026-04-26 18:20:56]: Invalid password for email | success@gmail.com 
-[2026-04-26 18:25:12]: Invalid password for email | success@gmail.com 
-[2026-04-26 18:44:06]: Invalid password for email | success@gmail.com 
-[2026-04-27 10:36:10]: Database file not found, starting fresh | [Errno 2] No such file or directory: 'department.json' 
-[2026-04-27 10:39:05]: Database file not found, starting fresh | [Errno 2] No such file or directory: 'department.json' 
-[2026-04-27 10:40:06]: Database file not found, starting fresh | [Errno 2] No such file or directory: 'department.json' 
-[2026-04-27 10:45:28]: Database file not found, starting fresh | [Errno 2] No such file or directory: 'department.json' 
-[2026-04-27 10:46:04]: Database file not found, starting fresh | [Errno 2] No such file or directory: 'department.json' 
-[2026-04-27 10:47:02]: Database file not found, starting fresh | [Errno 2] No such file or directory: 'department.json' 
-[2026-04-27 11:32:08]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-27 17:25:15]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-27 17:25:15]: Database file not found, starting fresh | [Errno 2] No such file or directory: 'leave_request.json' 
-[2026-04-28 10:22:40]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 10:22:40]: Database file not found, starting fresh | [Errno 2] No such file or directory: 'leave_request.json' 
-[2026-04-28 10:24:59]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 10:24:59]: Database file not found, starting fresh | [Errno 2] No such file or directory: 'leave_request.json' 
-[2026-04-28 10:26:46]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 10:26:46]: Database file not found, starting fresh | [Errno 2] No such file or directory: 'leave_request.json' 
-[2026-04-28 10:31:20]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 10:31:52]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 10:33:03]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 10:33:10]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 10:44:13]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 10:56:41]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 10:57:14]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 10:58:13]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 11:04:53]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 11:06:58]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:44:30]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:45:20]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:45:23]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:47:15]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:47:15]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:47:57]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:48:21]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:49:01]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:51:03]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:51:20]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:52:28]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:54:55]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:55:23]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:56:36]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:58:01]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 15:58:01]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 16:00:05]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 16:08:31]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 16:08:31]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 16:08:31]: Error saving leave_request | Object of type Role is not JSON serializable 
-[2026-04-28 16:11:42]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 16:11:42]: Json Decode Error | Expecting value: line 13 column 29 (char 409) 
-[2026-04-28 16:12:25]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 16:12:25]: Error saving leave_request | Object of type Role is not JSON serializable 
-[2026-04-28 16:21:52]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 16:21:52]: Error saving leave_request | Object of type Role is not JSON serializable 
-[2026-04-28 16:22:06]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 16:22:06]: Json Decode Error | Expecting value: line 28 column 29 (char 895) 
-[2026-04-28 16:22:06]: Error saving leave_request | Object of type Role is not JSON serializable 
-[2026-04-28 16:23:02]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 16:23:02]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 16:45:16]: Error saving leave_request | Object of type Role is not JSON serializable 
-[2026-04-28 16:47:26]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 16:47:26]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 16:56:52]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 16:59:50]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 17:01:12]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 17:03:34]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 17:10:50]: Error saving leave_request | Object of type Employee is not JSON serializable 
-[2026-04-28 17:20:31]: Error saving leave_request | Object of type Employee is not JSON serializable 
-[2026-04-28 17:24:46]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 17:24:46]: Error saving leave_request | Object of type Employee is not JSON serializable 
-[2026-04-28 17:25:38]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 17:26:25]: Error saving leave_request | Object of type Employee is not JSON serializable 
-[2026-04-28 17:29:11]: Error saving leave_request | Object of type Employee is not JSON serializable 
-[2026-04-28 17:38:59]: Error saving leave_request | Object of type Employee is not JSON serializable 
-[2026-04-28 17:52:50]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 20:29:19]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 20:29:19]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 20:31:43]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 20:31:43]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 20:32:27]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 20:32:37]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 20:32:48]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 20:33:31]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 20:54:56]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-28 21:10:47]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 10:16:15]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 10:16:15]: Error loading Leave_Request database | 'list' object has no attribute 'items' 
-[2026-04-29 10:17:00]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 11:06:14]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 11:09:28]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 11:37:04]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 11:38:01]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 11:38:01]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 11:38:10]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 11:38:42]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 11:41:48]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 11:45:56]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 11:47:39]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 11:47:39]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 11:48:27]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 11:48:51]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 16:17:53]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 16:18:50]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 16:23:12]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 16:28:32]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 16:43:57]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 16:45:56]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 16:47:34]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 16:57:24]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 16:57:39]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 17:52:22]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 17:52:39]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 18:06:06]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-29 19:09:43]: Error saving leave_request | Object of type Role is not JSON serializable 
-[2026-04-29 19:51:20]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-04-30 17:26:38]: Database file does not exist, starting fresh | [Errno 2] No such file or directory: 'payroll.json' 
-[2026-04-30 17:31:52]: Database file does not exist, starting fresh | [Errno 2] No such file or directory: 'payroll.json' 
-[2026-04-30 17:36:22]: Database file does not exist, starting fresh | [Errno 2] No such file or directory: 'payroll.json' 
-[2026-04-30 17:39:17]: Database file does not exist, starting fresh | [Errno 2] No such file or directory: 'payroll.json' 
-[2026-04-30 18:00:44]: Database file does not exist, starting fresh | [Errno 2] No such file or directory: 'payroll.json' 
-[2026-04-30 18:08:28]: Database file does not exist, starting fresh | [Errno 2] No such file or directory: 'payroll.json' 
-[2026-04-30 18:20:43]: Database file does not exist, starting fresh | [Errno 2] No such file or directory: 'payroll.json' 
-[2026-05-01 08:57:01]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-05-01 08:57:54]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-05-01 14:32:52]: Database file does not exist yet, starting fresh | [Errno 2] No such file or directory: 'attendance.json' 
-[2026-05-01 14:35:56]: Database file does not exist yet, starting fresh | [Errno 2] No such file or directory: 'attendance.json' 
-[2026-05-01 14:54:20]: Database file does not exist yet, starting fresh | [Errno 2] No such file or directory: 'attendance.json' 
-[2026-05-01 14:56:06]: Error saving Attendance data | Object of type date is not JSON serializable 
-[2026-05-01 15:06:43]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-05-01 16:15:32]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-05-01 16:17:01]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-05-01 16:20:45]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-05-01 16:20:45]: Error saving Attendance data | Object of type method is not JSON serializable 
-[2026-05-01 16:20:45]: Error saving Attendance data | Object of type method is not JSON serializable 
-[2026-05-01 16:26:14]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-05-01 16:47:54]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-05-01 17:14:18]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-05-02 10:33:04]: Error Loading Employee Database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:33:04]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:33:04]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:33:04]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:33:04]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:33:04]: Error saving Employee | Object of type timedelta is not JSON serializable 
-[2026-05-02 10:33:18]: JSON Decode Error | Expecting value: line 7 column 16 (char 218) 
-[2026-05-02 10:33:18]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:33:18]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:33:18]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:33:18]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:33:18]: Error saving Employee | Object of type timedelta is not JSON serializable 
-[2026-05-02 10:55:17]: JSON Decode Error | Expecting value: line 7 column 16 (char 218) 
-[2026-05-02 10:55:17]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:55:17]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:55:17]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:55:17]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:56:45]: Error Loading Employee Database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:56:45]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:56:45]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:56:45]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:56:45]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:57:03]: Error Loading Employee Database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:57:03]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:57:03]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:57:03]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 10:57:03]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:05:05]: Error Loading Employee Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:05:05]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:05:05]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:05:05]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:05:05]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:17:05]: Error Loading Employee Database | 'FULL_TIME' 
-[2026-05-02 11:17:05]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:17:05]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:17:05]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:17:05]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:18:47]: Error Loading Employee Database | 'FULL_TIME' 
-[2026-05-02 11:18:47]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:18:47]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:18:47]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:18:47]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:19:13]: Error Loading Employee Database | 'FULL_TIME' 
-[2026-05-02 11:19:13]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:19:13]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:19:13]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:19:43]: Error Loading Employee Database | 'FULL_TIME' 
-[2026-05-02 11:19:43]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:19:43]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:19:43]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:19:43]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:21:16]: Error Loading Employee Database | 'FULL_TIME' 
-[2026-05-02 11:21:16]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:21:16]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:21:16]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:21:16]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:23:55]: Error Loading Employee Database | 'FULL_TIME' 
-[2026-05-02 11:23:55]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:23:55]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:23:55]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:26:00]: Error Loading Employee Database | 'FULL_TIME' 
-[2026-05-02 11:26:00]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:26:00]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:26:00]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:26:00]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 11:30:03]: Error Loading Employee Database | 'FULL_TIME' 
-[2026-05-02 11:40:46]: Error Loading Employee Database | 'FULL_TIME' 
-[2026-05-02 11:42:37]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 12:23:59]: Error Loading Employee Database | 'FULL_TIME' 
-[2026-05-02 12:23:59]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 12:23:59]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 12:23:59]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 12:23:59]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 14:43:34]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-05-02 14:43:34]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 14:43:34]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 14:43:34]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 14:43:34]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 14:43:34]: Error saving Employee | Object of type date is not JSON serializable 
-[2026-05-02 14:45:23]: JSON Decode Error | Expecting value: line 18 column 16 (char 641) 
-[2026-05-02 14:45:23]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 14:45:23]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 14:45:23]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 14:45:23]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 14:46:01]: Error Loading Employee Database | time data '' does not match format '%d/%m/%Y' 
-[2026-05-02 14:46:01]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 14:46:01]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 14:46:01]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 14:46:01]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 14:48:56]: JSON Decode Error | Expecting property name enclosed in double quotes: line 18 column 5 (char 630) 
-[2026-05-02 15:11:15]: Error Loading Employee Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:11:15]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:11:15]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:11:15]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:11:15]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:11:49]: Error Loading Employee Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:11:49]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:11:49]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:11:49]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:11:49]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:15:13]: Error Loading Employee Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:15:13]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:15:13]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:15:13]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:15:13]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:15:13]: Error saving Employee | Object of type date is not JSON serializable 
-[2026-05-02 15:17:19]: JSON Decode Error | Expecting value: line 18 column 16 (char 641) 
-[2026-05-02 15:17:19]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:17:19]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:17:19]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:17:19]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:17:53]: Error Loading Employee Database | object of type 'EmployeeType' has no len() 
-[2026-05-02 15:17:53]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:17:53]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:17:53]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:17:53]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:17:55]: Error Loading Employee Database | object of type 'EmployeeType' has no len() 
-[2026-05-02 15:17:55]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:17:55]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:17:55]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:17:55]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:23:30]: Error Loading Employee Database | object of type 'EmployeeType' has no len() 
-[2026-05-02 15:23:30]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:23:30]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:23:30]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:23:30]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:31:43]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:31:43]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:31:43]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:31:43]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:32:06]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:32:06]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:32:06]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:32:06]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:32:08]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:32:08]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:32:08]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:32:08]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:32:09]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:32:09]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:32:09]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:32:09]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:07]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:07]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:07]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:07]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:09]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:09]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:09]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:09]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:28]: Error Loading Employee Database | object of type 'EmployeeType' has no len() 
-[2026-05-02 15:33:28]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:28]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:28]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:28]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:39]: Error Loading Employee Database | object of type 'EmployeeType' has no len() 
-[2026-05-02 15:33:39]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:39]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:39]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:33:39]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:10]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:10]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:10]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:10]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:21]: Error Loading Employee Database | object of type 'EmployeeType' has no len() 
-[2026-05-02 15:34:21]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:21]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:21]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:21]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:39]: Error Loading Employee Database | object of type 'EmployeeType' has no len() 
-[2026-05-02 15:34:39]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:39]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:39]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:39]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:40]: Error Loading Employee Database | object of type 'EmployeeType' has no len() 
-[2026-05-02 15:34:40]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:40]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:40]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:34:40]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:35:31]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:35:31]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:35:31]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:35:31]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:55:06]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-05-02 15:55:06]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:55:06]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:55:06]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 15:55:06]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 16:01:54]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-05-02 16:01:54]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 16:01:54]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 16:01:54]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 16:01:54]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 16:03:49]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-05-02 16:03:49]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 16:03:49]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 16:03:49]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 16:03:49]: Error loading attendance_database | strptime() argument 1 must be str, not None 
-[2026-05-02 16:05:30]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
-[2026-05-02 16:05:30]: Error Loading Department Database | strptime() argument 1 must be str, not None 
-[2026-05-02 16:05:30]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
-[2026-05-02 16:05:30]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
-[2026-05-02 16:05:30]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:22:53]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:22:53]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:22:53]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:22:53]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:26:56]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:26:56]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:26:56]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:26:56]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:30:28]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:30:29]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:30:29]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:30:29]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:30:53]: Password change does not match for success@gmail.com 
+[2026-05-02 16:35:16]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:35:16]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:35:16]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:35:16]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:35:37]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:35:37]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:35:37]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:35:37]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:36:17]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:36:17]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:36:17]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:36:17]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:37:08]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:37:08]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:37:08]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:37:08]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:39:56]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:39:56]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:39:56]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:39:56]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:40:25]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:40:25]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:40:25]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:40:25]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:40:28]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:40:28]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:40:28]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:40:28]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:46:39]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:46:39]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:46:39]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:46:39]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:46:50]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:46:50]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:46:50]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:46:50]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:47:19]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:47:19]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:47:19]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:47:19]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:47:35]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:47:35]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:47:35]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:47:35]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:50:44]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:50:44]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:50:44]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:50:44]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:53:16]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:53:16]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:53:16]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:53:16]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:53:43]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:53:43]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:53:43]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:53:43]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:53:50]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:53:50]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:53:50]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:53:50]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:55:32]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:55:32]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:55:33]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:55:33]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:57:03]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:57:03]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:57:03]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:57:03]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:58:27]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:58:27]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:58:27]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:58:27]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:59:07]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:59:07]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:59:07]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:59:07]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:59:18]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:59:18]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:59:18]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 16:59:18]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:03:48]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:03:48]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:03:48]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:03:48]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:15:15]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:15:15]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:15:15]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:15:15]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:15:48]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:15:48]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:15:48]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:15:48]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:17:01]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:17:01]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:17:01]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:17:01]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:18:18]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
+[2026-05-02 17:18:18]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:18:18]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:18:18]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:18:18]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:18:18]: user not found | success@gmail.com 
+[2026-05-02 17:21:56]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
+[2026-05-02 17:21:56]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:21:56]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:21:56]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:21:56]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:21:56]: user not found | success@gmail.com 
+[2026-05-02 17:23:37]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
+[2026-05-02 17:23:37]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:23:37]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:23:37]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:23:37]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:24:24]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:24:24]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:24:24]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:24:24]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:27:57]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:27:57]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:27:57]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:27:57]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:30:05]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
+[2026-05-02 17:30:05]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:30:05]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:30:05]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:30:05]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:31:16]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:31:16]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:31:16]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:31:16]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:32:04]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:32:04]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:32:04]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:32:04]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:32:04]: Invalid password for email | success@gmail.com 
+[2026-05-02 17:32:30]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:32:30]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:32:30]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:32:30]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:32:30]: user account deactivated: esther.adeleke@company.com 
+[2026-05-02 17:32:56]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:32:56]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:32:56]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:32:56]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:32:56]: user account deactivated: esther.adeleke@company.com 
+[2026-05-02 17:33:30]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:33:30]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:33:30]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:33:30]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:33:38]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:33:38]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:33:38]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:33:38]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:33:53]: Error Loading Department Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:33:53]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:33:53]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
+[2026-05-02 17:33:53]: Error loading attendance_database | strptime() argument 1 must be str, not None 
