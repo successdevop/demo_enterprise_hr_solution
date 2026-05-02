@@ -41,82 +41,15 @@ def main():
     # auth.login("adewusi@gmail.com", "obyadew123@/.com")
     auth.login("umah@gmail.com", "eoluch123@/.com")
 
-    emp_1 = emp_repo.get_employee_by_email("obiageli@gmail.com")
-    emp_2 = emp_repo.get_employee_by_email("francis@gmail.com")
-
-    # attendance_service.clock_in(emp_repo.get_employee_by_email("obiageli@gmail.com"), WeekDay.MONDAY)
-    # attendance_service.clock_in(emp_repo.get_employee_by_email("obiageli@gmail.com"), WeekDay.TUESDAY)
-    # attendance_service.clock_in(emp_repo.get_employee_by_email("francis@gmail.com"), WeekDay.TUESDAY)
-    # attendance_service.clock_out(emp_repo.get_employee_by_email("francis@gmail.com"))
-    # response = attendance_service.calculate_overtime(auth.get_current_user(), attendance_repo.get_employee_attendance(emp_2)[0])
-    # print(response)
-    response = attendance_service.get_employee_today_attendance(auth.get_current_user(), emp_2)
-    print(response)
-    response = attendance_service.get_employee_today_attendance(auth.get_current_user(), emp_1)
-    print(response)
-    response = attendance_service.get_all_employee_attendance(auth.get_current_user(), emp_1)
-    print(response)
-    response = attendance_service.get_all_attendance(auth.get_current_user())
-    print(response)
-    response = attendance_service.get_all_today_attendance(auth.get_current_user())
-    print(response)
-
-
-
-
-
-    # payslip = payroll_service.get_all_payslips(auth.get_current_user())
-    # print(payslip)
-    # payslip = payroll_service.process_salary(auth.get_current_user(), emp_repo.get_employee_by_email("obiageli@gmail.com"),
-    #                                          Month.JANUARY, "USD", 0, 0)
-    # print(payslip)
-    # payslip = payroll_service.process_salary(auth.get_current_user(), emp_repo.get_employee_by_email("francis@gmail.com"),
-    #                                          Month.FEBRUARY, "GBP", 200, 179)
-    # print(payslip)
-    # payslip_1 = payroll_service.delete_payslip(auth.get_current_user(), Month.JANUARY, '23951')
-    # print(payslip_1)
-    # payslip_1 = payroll_service.get_payslip_for_each_month(auth.get_current_user(), Month.JANUARY)
-    # print(payslip_1)
-    # payslip_1 = payroll_service.get_employee_payslip(auth.get_current_user(), emp_repo.get_employee_by_email("obiageli@gmail.com"),
-    #                                                  Month.JANUARY)
-    # print(payslip_1)
-    #
-    # payslip_1 = payroll_service.get_employee_payslip(auth.get_current_user(), emp_repo.get_employee_by_email("francis@gmail.com"),
-    #                                                  Month.JANUARY)
-    # print(payslip_1)
-    # leave1 = leave_service.apply_for_leave(emp_repo.get_employee_by_email("obiageli@gmail.com"), 5, LeaveType.UNPAID)
-    # leave2 = leave_service.apply_for_leave(emp_repo.get_employee_by_email("obiageli@gmail.com"), 10, LeaveType.ANNUAL)
-    # leave3 = leave_service.apply_for_leave(emp_repo.get_employee_by_email("francis@gmail.com"), 9, LeaveType.ANNUAL)
-    # leave4 = leave_service.apply_for_leave(emp_repo.get_employee_by_email("francis@gmail.com"), 9, LeaveType.ANNUAL)
-    # leave4 = leave_service.apply_for_leave(emp_repo.get_employee_by_email("francis@gmail.com"), 11, LeaveType.ANNUAL)
-    # leave_service.approve_leave(auth.get_current_user(), "francis@gmail.com", "4955")
-    # leave_service.reject_leave(auth.get_current_user(), "francis@gmail.com", "8115")
-    # leave_service.reject_leave(auth.get_current_user(), "obiageli@gmail.com", "0554")
-    # dept_service.get_all_department(auth.get_current_user())
-    # dept_service.get_all_department_managers(auth.get_current_user())
-    # dept_service.delete_dept(auth.get_current_user(), ENGINEERING)
-    # dept_service.delete_all_dept(auth.get_current_user())
-    # dept_service.assign_a_new_department_manager(auth.get_current_user(), ENGINEERING,
-    #                                              emp_repo.get_employee_by_email("francis@gmail.com"))
-
-    # dept_service.create_department(auth.get_current_user(), ENGINEERING,
-    #                                emp_repo.get_employee_by_email("adewusi@gmail.com"))
-    #
-    # dept_service.assign_employee(auth.get_current_user(), ENGINEERING,
-    #                                emp_repo.get_employee_by_email("francis@gmail.com"))
-
-    # dept_service.remove_employee(auth.get_current_user(), ENGINEERING,
-    #                                emp_repo.get_employee_by_email("francis@gmail.com"))
-
-    # employee_1 = auth.register_user(
-    #     name="succeSS ifeANYi raPHaEl",
-    #     email="success@gmail.com",
-    #     age=30,
-    #     origin="imo state, nigeria",
-    #     role=Role.ADMIN,
-    #     salary=50000,
-    #     password="ehez123@/.com|mynewpassword123@/.com"
-    # )
+    employee_1 = auth.register_user(
+        name="succeSS ifeANYi raPHaEl",
+        email="success@gmail.com",
+        age=30,
+        origin="imo state, nigeria",
+        role=Role.ADMIN,
+        salary=50000,
+        password="ehez123@/.com|mynewpassword123@/.com"
+    )
     #
     # employee_2 = auth.register_user(
     #     name="oluchi favour",

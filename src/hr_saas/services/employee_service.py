@@ -39,6 +39,9 @@ class EmployeeService:
         Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
         self.emp_repo.get_all_employee()
 
+    def count_employees(self, current_user: Employee):
+        Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
+        return len(self.emp_repo.get_all_employee())
 
 
 

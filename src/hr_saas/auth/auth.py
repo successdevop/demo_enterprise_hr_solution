@@ -15,25 +15,27 @@ class Auth:
     def get_current_user(self):
         return self._current_user
 
-    def register_user(self, name, email, age, origin, role, salary, password):
+    def register_user(self, first_name, last_name, dob, email, origin, role, salary, password):
         email = email.strip().lower()
         Utils.validate_email(email)
 
         if self._emp_repo.get_employee_by_email(email):
             raise UserAlreadyExistError(f"{email} already exists")
 
-        name = name.strip().title()
+        first_name = first_name.strip().title()
+        last_name = last_name.strip().title()
         origin = origin.strip().title()
 
-        Utils.validate_name(name)
+        Utils.validate_name(first_name)
+        Utils.validate_name(last_name)
         Utils.validate_name(origin)
         Utils.validate_amount_input(salary)
-        Utils.validate_age(age)
 
         employee = Employee(
-            name=name,
+            first_name=first_name,
+            last_name=last_name,
+            dob=dob,
             email=email,
-            age=age,
             state_of_origin=origin,
             role=role,
             salary=salary
@@ -42,7 +44,7 @@ class Auth:
         employee.set_password(password)
 
         self._emp_repo.save_employee(employee)
-        Logger.success(f"Congratulations {name}, Registration Successful!!!", SUCCESS_LOG_FILE)
+        Logger.success(f"Congratulations {first_name}, Registration Successful!!!", SUCCESS_LOG_FILE)
         print("Registration successful")
 
         return employee

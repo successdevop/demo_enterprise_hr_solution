@@ -48,6 +48,7 @@ class Employee(Person):
         self._type = None
         self.isActive = True
         self._password = None
+        self._password_text = None
         self.department: List[str] = []
         self.hire_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         if self._type == EmployeeType.FULL_TIME:
@@ -81,6 +82,7 @@ class Employee(Person):
     def set_password(self, password):
         password = password.strip()
         if password and len(password) >= 8:
+            self._password_text = password
             self._password = hashlib.sha256(password.encode()).hexdigest()
         else:
             raise ValidationError("Password must be at least 8 characters long")
@@ -113,6 +115,7 @@ class Employee(Person):
                 "is_active": self.isActive,
                 "department": self.department,
                 "hire_date": self.hire_date,
+                "password_text": self._password_text,
                 "password": self._password
             }
         else:
