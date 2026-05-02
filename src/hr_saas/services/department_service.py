@@ -24,9 +24,9 @@ class DepartmentService:
 
         department = Department(dept_name, dept_manager)
 
-        self._dept_repo.save_department(department)
         dept_manager.department.append(dept_name)
         self._emp_repo.save_employee(dept_manager)
+        self._dept_repo.save_department(department)
 
         Logger.success(f"{dept_name} Department: created successfully", SUCCESS_LOG_FILE)
         print(f"{dept_name} Department created successfully")
@@ -43,7 +43,7 @@ class DepartmentService:
         department.assign_employee(employee)
         self._dept_repo.save_department(department)
 
-        employee.department.append(dept_name)
+        employee.department.add(dept_name)
         self._emp_repo.save_employee(employee)
 
     def remove_employee(self, current_user, dept_name: str, employee: Employee):
@@ -65,14 +65,13 @@ class DepartmentService:
         department = self._dept_repo.get_dept_by_name(dept_name)
         if not department:
             raise NotFoundError(f"{dept_name} department not found")
-        print(department.dept_manager.department)
 
         if manager.role.value != "Manager":
             manager.role = Role.MANAGER
             manager.department.clear()
-            manager.department.append(dept_name)
+            manager.department.add(dept_name)
             self._emp_repo.save_employee(manager)
-            self._emp_repo.update_employee_database()
+            # self._emp_repo.update_employee_database()
 
         department.dept_manager = manager
         self._dept_repo.save_department(department)

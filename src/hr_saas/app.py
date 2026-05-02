@@ -20,33 +20,29 @@ from src.hr_saas.enums.employee_type import EmployeeType
 from src.hr_saas.enums.leave import LeaveType, LeaveStatus
 from src.hr_saas.file_IO.database_files import (EMPLOYEE_DATABASE, DEPARTMENT_DATABASE, LEAVE_REQUEST_DATABASE,
                                                 PAYROLL_DATABASE, ATTENDANCE_DATABASE)
-from src.hr_saas.app_files.files import ENGINEERING
+from src.hr_saas.app_files.department_names import ENGINEERING
 
 
 def main():
     emp_repo = EmployeeRepo(EMPLOYEE_DATABASE)
     dept_repo = DepartmentRepo(DEPARTMENT_DATABASE)
-    leave_repo = LeaveRepository(LEAVE_REQUEST_DATABASE)
-    payroll_repo = PayrollRepository(PAYROLL_DATABASE)
-    attendance_repo = AttendanceRepository(ATTENDANCE_DATABASE)
-    tax_strategy = NigerianTaxStrategy()
-    pension = Pension()
-    currency_converter = CurrencyStrategy()
+    # leave_repo = LeaveRepository(LEAVE_REQUEST_DATABASE)
+    # payroll_repo = PayrollRepository(PAYROLL_DATABASE)
+    # attendance_repo = AttendanceRepository(ATTENDANCE_DATABASE)
+    # tax_strategy = NigerianTaxStrategy()
+    # pension = Pension()
+    # currency_converter = CurrencyStrategy()
 
-    emp_service = EmployeeService(emp_repo)
+    # emp_service = EmployeeService(emp_repo)
     dept_service = DepartmentService(dept_repo, emp_repo)
-    leave_service = LeaveService(leave_repo)
-    payroll_service = PayrollServices(payroll_repo, currency_converter, tax_strategy, pension)
-    attendance_service = AttendanceService(attendance_repo)
+    # leave_service = LeaveService(leave_repo)
+    # payroll_service = PayrollServices(payroll_repo, currency_converter, tax_strategy, pension)
+    # attendance_service = AttendanceService(attendance_repo)
     auth = Auth(emp_repo)
 
-    # auth.login("succeSs@gmail.com", "mynewpassword123@/.com")
-    auth.login("esther.adeleke@company.com", "EstherAdeleke@Dev#1")
-
-    output = emp_service.activate_employee(auth.get_current_user(), emp_repo.get_employee_by_email("esther.adeleke@company.com"))
-    print(output)
-    output = emp_service.count_employees(auth.get_current_user())
-    print(output)
+    auth.login("succeSs@gmail.com", "mynewpassword123@/.com")
+    # auth.login("esther.adeleke@company.com", "EstherAdeleke@Dev#1")
+    dept_service.create_department(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("michael.j@company.com"))
 
 
 if __name__ == "__main__":

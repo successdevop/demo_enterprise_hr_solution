@@ -2,27 +2,13 @@
     "Engineering": {
         "dept_name": "Engineering",
         "dept_manager": {
-            "email": "adewusi@gmail.com",
-            "name": "Adewusi Tobi",
+            "email": "michael.j@company.com",
+            "first_name": "Michael",
             "role": "Manager",
             "department": [
-                "Robotics",
-                "Engineering",
-                "Engineering",
                 "Engineering"
             ]
         },
-        "dept_employees": [
-            {
-                "email": "francis@gmail.com",
-                "name": "Francis Ebinabo",
-                "role": "Employee",
-                "department": [
-                    "Marketing",
-                    "Sales",
-                    "Engineering"
-                ]
-            }
-        ]
+        "dept_employees": []
     }
 }

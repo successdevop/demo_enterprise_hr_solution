@@ -20,12 +20,12 @@ class EmployeeRepo:
         if not worker:
             raise NotFoundError(f"Employee:{employee.first_name} not found")
         del self._employee_database[employee.email]
-        self._update_employee_database()
+        self.update_employee_database()
 
     def get_all_employee(self):
         return self._employee_database
 
-    def _update_employee_database(self):
+    def update_employee_database(self):
         DictionaryDatabase.save(self._employee_storage_file, "Employee", self._employee_database)
 
     def get_employee_by_email(self, email: str) -> Optional[Employee]:
