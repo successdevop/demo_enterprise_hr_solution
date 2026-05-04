@@ -128,7 +128,7 @@ class Employee(Person):
                 "hire_date": self.hire_date,
                 "password_text": self._password_text,
                 "password": self._password,
-                "dob": self.dob.strftime("%d/%m/%Y")
+                # "dob": self.dob.strftime("%d/%m/%Y")
             }
         else:
             return {
@@ -139,7 +139,7 @@ class Employee(Person):
             }
 
     @classmethod
-    def from_dict(cls, data: dict) -> "Employee":
+    def from_dict(cls, data: dict, dob: str = None) -> "Employee":
         role = data.get("role")
         if isinstance(role, str) and hasattr(Role, role.upper()):
             role = Role[role.upper()]
@@ -148,6 +148,10 @@ class Employee(Person):
         if isinstance(emp_type, str) and hasattr(EmployeeType, emp_type.upper()):
             emp_type = EmployeeType[emp_type.upper()]
 
+        dob_value = data.get("dob") or dob
+        if not dob_value:
+            raise ValidationError("")
+
         employee = cls(
             first_name=data.get("first_name"),
             last_name=data.get("last_name"),
@@ -155,7 +159,8 @@ class Employee(Person):
             state_of_origin=data.get("origin"),
             salary=data.get("salary"),
             role=role,
-            dob=data.get("dob")
+            # dob=data.get("dob")
+            dob=dob_value
         )
         employee._employee_id = data.get("employee_id")
         employee._age = data.get("age")

@@ -6,6 +6,7 @@
             "first_name": "Michael",
             "role": "Manager",
             "department": [
+                "Engineering",
                 "Engineering"
             ]
         },
