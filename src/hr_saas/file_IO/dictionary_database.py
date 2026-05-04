@@ -18,7 +18,6 @@ class DictionaryDatabase:
                 json.dump(savable_data, file_writer, indent=4)
         except Exception as e:
             Logger.error(f"Error saving {type_of_obj} | {e}", ERROR_LOG_FILE)
-            raise
 
     @staticmethod
     def load_data(storage_file: str, database: Dict[str, Any], object_class: Type, type_of_object: str):

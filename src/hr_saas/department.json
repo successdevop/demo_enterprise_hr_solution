@@ -5,8 +5,8 @@
             "email": "michael.j@company.com",
             "first_name": "Michael",
             "role": "Manager",
+            "dob": "03/08/1988",
             "department": [
-                "Engineering",
                 "Engineering"
             ]
         },
