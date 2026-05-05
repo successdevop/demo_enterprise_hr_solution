@@ -1,2 +1,20 @@
 [2026-05-04 20:45:35]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
 [2026-05-04 20:45:42]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
+[2026-05-05 06:53:34]: Error Loading Department Database | '>' not supported between instances of 'NoneType' and 'int' 
+[2026-05-05 06:54:30]: Error Loading Department Database | '>' not supported between instances of 'NoneType' and 'int' 
+[2026-05-05 06:57:08]: Error Loading Department Database | '>' not supported between instances of 'NoneType' and 'int' 
+[2026-05-05 06:59:15]: Error Loading Department Database | '>' not supported between instances of 'NoneType' and 'int' 
+[2026-05-05 06:59:54]: Error Loading Department Database | '>' not supported between instances of 'NoneType' and 'int' 
+[2026-05-05 07:06:42]: Error Loading Department Database | '>' not supported between instances of 'NoneType' and 'int' 
+[2026-05-05 07:10:25]: Error Loading Department Database | '>' not supported between instances of 'NoneType' and 'int' 
+[2026-05-05 07:23:34]: Error Loading Department Database | '>' not supported between instances of 'NoneType' and 'int' 
+[2026-05-05 07:25:05]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
+[2026-05-05 07:40:38]: Error Loading Department Database | '>' not supported between instances of 'NoneType' and 'int' 
+[2026-05-05 08:11:49]: Error Loading Department Database | '>' not supported between instances of 'NoneType' and 'int' 
+[2026-05-05 09:02:51]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
+[2026-05-05 09:07:05]: Error Loading Department Database | '>' not supported between instances of 'NoneType' and 'int' 
+[2026-05-05 09:22:11]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
+[2026-05-05 09:31:22]: Error Loading Department Database | 'NoneType' object has no attribute 'role' 
+[2026-05-05 09:31:25]: Error Loading Department Database | 'NoneType' object has no attribute 'role' 
+[2026-05-05 09:31:27]: Error Loading Department Database | 'NoneType' object has no attribute 'role' 
+[2026-05-05 09:34:12]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 

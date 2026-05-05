@@ -10,6 +10,16 @@
                 "Engineering"
             ]
         },
-        "dept_employees": []
+        "dept_employees": [
+            {
+                "email": "esther.adeleke@company.com",
+                "first_name": "Esther",
+                "role": "Employee",
+                "dob": "24/10/1993",
+                "department": [
+                    "Engineering"
+                ]
+            }
+        ]
     }
 }

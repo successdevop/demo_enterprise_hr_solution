@@ -15,7 +15,7 @@ class DepartmentRepo:
 
     def get_dept_managers(self) -> List[dict]:
         box = []
-        if not len(self._department_database) > 0:
+        if self._department_database is None or len(self._department_database) == 0:
             raise NotFoundError("No department created yet")
 
         for dept_name, dept_manager in self._department_database.items():
@@ -38,7 +38,7 @@ class DepartmentRepo:
         print(f"{dept_name} department deleted")
 
     def delete_all_department(self):
-        if not len(self._department_database) > 0:
+        if self._department_database is None or len(self._department_database) == 0:
             raise NotFoundError("No department found")
 
         self._department_database.clear()

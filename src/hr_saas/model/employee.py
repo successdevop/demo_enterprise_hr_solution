@@ -56,8 +56,10 @@ class Employee(Person):
             self._type = EmployeeType.FULL_TIME
             self.total_leave_days_for_the_year = 30
         else:
-            self._type = EmployeeType.CONTRACT if self._salary > 55000 else EmployeeType.INTERN
             self.total_leave_days_for_the_year = 14
+
+        if self._salary:
+            self._type = EmployeeType.CONTRACT if self._salary > 55000 else EmployeeType.INTERN
 
     @property
     def employee_id(self):
@@ -161,7 +163,6 @@ class Employee(Person):
         employee._employee_id = data.get("employee_id")
         employee._age = data.get("age")
         employee.isActive = data.get("is_active")
-        employee.department = data.get("department")
         employee._password = data.get("password")
         employee._password_text = data.get("password_text")
         employee.emp_type = emp_type

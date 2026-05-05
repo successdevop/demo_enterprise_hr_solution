@@ -42,7 +42,8 @@ def main():
 
     auth.login("succeSs@gmail.com", "mynewpassword123@/.com")
     # auth.login("esther.adeleke@company.com", "EstherAdeleke@Dev#1")
-    dept_service.create_department(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("michael.j@company.com"))
+    # dept_service.create_department(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("michael.j@company.com"))
+    dept_service.assign_employee(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("esther.adeleke@company.com"))
 
 
 if __name__ == "__main__":

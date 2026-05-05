@@ -40,11 +40,11 @@ class DepartmentService:
         if not department:
             raise NotFoundError(f"{dept_name} department not found")
 
+        employee.department.append(dept_name)
         department.assign_employee(employee)
-        self._dept_repo.save_department(department)
 
-        employee.department.add(dept_name)
         self._emp_repo.save_employee(employee)
+        self._dept_repo.save_department(department)
 
     def remove_employee(self, current_user, dept_name: str, employee: Employee):
         Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
