@@ -18,3 +18,5 @@
 [2026-05-05 09:31:25]: Error Loading Department Database | 'NoneType' object has no attribute 'role' 
 [2026-05-05 09:31:27]: Error Loading Department Database | 'NoneType' object has no attribute 'role' 
 [2026-05-05 09:34:12]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
+[2026-05-05 09:50:50]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
+[2026-05-05 09:51:04]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 

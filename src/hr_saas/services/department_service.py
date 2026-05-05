@@ -54,9 +54,9 @@ class DepartmentService:
             raise NotFoundError(f"{dept_name} department not found")
 
         department.remove_employee(employee)
-        self._dept_repo.save_department(department)
-
         employee.department.remove(dept_name)
+
+        self._dept_repo.save_department(department)
         self._emp_repo.save_employee(employee)
 
     def assign_a_new_department_manager(self, current_user, dept_name: str, manager: Employee):
