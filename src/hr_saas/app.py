@@ -45,14 +45,17 @@ def main():
     # dept_service.create_department(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("michael.j@company.com"))
     # dept_service.assign_employee(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("esther.adeleke@company.com"))
     # # dept_service.remove_employee(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("esther.adeleke@company.com"))
-
+    #
     # dept_service.create_department(auth.get_current_user(), "Sales", emp_repo.get_employee_by_email("victor.ndukwe@company.com"))
     # dept_service.assign_employee(auth.get_current_user(), "Sales", emp_repo.get_employee_by_email("linda.brown@company.com"))
     # # dept_service.remove_employee(auth.get_current_user(), "Sales", emp_repo.get_employee_by_email("linda.brown@company.com"))
-
+    #
     # dept_service.create_department(auth.get_current_user(), "TECH", emp_repo.get_employee_by_email("adamu.ibrahim@company.com"))
     # dept_service.assign_employee(auth.get_current_user(), "TECH", emp_repo.get_employee_by_email("precious.eze@company.com"))
     # # dept_service.remove_employee(auth.get_current_user(), "TECH", emp_repo.get_employee_by_email("precious.eze@company.com"))
+
+    # department = dept_service.assign_a_new_department_manager(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("esther.adeleke@company.com"))
+    # print(department)
 
     # all_dept = dept_service.get_all_department(auth.get_current_user())
     # print(all_dept)

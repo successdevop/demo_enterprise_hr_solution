@@ -27,6 +27,10 @@ class Department:
     def dept_manager(self, manager: Employee):
         self._dept_manager = manager
 
+    @property
+    def get_dept_employees(self):
+        return self._dept_employees
+
     def view_dept_employees(self):
         for emp in self._dept_employees:
             print(emp.to_dict(show_all=False))

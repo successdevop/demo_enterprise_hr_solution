@@ -8,6 +8,7 @@ from src.hr_saas.file_IO.config_file import SUCCESS_LOG_FILE
 from src.hr_saas.error_handling.exceptions import UserAlreadyExistError, NotFoundError
 from src.hr_saas.auth.authorization import Authorization
 from src.hr_saas.enums.role import Role
+from src.hr_saas.enums.employee_type import EmployeeType
 
 
 class DepartmentService:
@@ -66,16 +67,30 @@ class DepartmentService:
         if not department:
             raise NotFoundError(f"{dept_name} department not found")
 
+        department.dept_manager.department.remove(dept_name)
+        self._emp_repo.save_employee(self._emp_repo.get_employee_by_email(department.dept_manager.email))
+
+        for emp in department.get_dept_employees:
+            if emp.email == manager.email:
+                department.remove_employee(manager)
+                break
+
         if manager.role.value != "Manager":
             manager.role = Role.MANAGER
-            manager.department.clear()
-            manager.department.add(dept_name)
-            self._emp_repo.save_employee(manager)
-            # self._emp_repo.update_employee_database()
+            manager.emp_type = EmployeeType.FULL_TIME
+            manager.total_leave_days_for_the_year = 30
+            if manager.salary < 65000:
+                manager.salary = 65000
 
+        manager.department.clear()
+        manager.department.append(dept_name)
         department.dept_manager = manager
+
+        self._emp_repo.save_employee(manager)
         self._dept_repo.save_department(department)
-    #     still working on this method-----
+
+        Logger.success(f"{manager.first_name} assigned as the new manager of {dept_name} Department", SUCCESS_LOG_FILE)
+        return department
 
     def get_all_department(self, current_user):
         Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
