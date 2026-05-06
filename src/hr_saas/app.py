@@ -81,7 +81,7 @@ def main():
 
     contract = emp_repo.get_employee_by_email("femi.adeyemi@company.com")
     contract_1 = emp_repo.get_employee_by_email("linda.brown@company.com")
-    contract_2 = emp_repo.get_employee_by_email("precious.eze@company.com")
+    # contract_2 = emp_repo.get_employee_by_email("precious.eze@company.com")
 
     # leave_1 = leave_service.apply_for_leave(full_time_1, 25, LeaveType.ANNUAL)
     # print(leave_1)
