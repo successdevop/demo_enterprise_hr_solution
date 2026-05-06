@@ -25,8 +25,8 @@ from src.hr_saas.app_files.department_names import ENGINEERING
 
 def main():
     emp_repo = EmployeeRepo(EMPLOYEE_DATABASE)
-    dept_repo = DepartmentRepo(DEPARTMENT_DATABASE)
-    # leave_repo = LeaveRepository(LEAVE_REQUEST_DATABASE)
+    # dept_repo = DepartmentRepo(DEPARTMENT_DATABASE)
+    leave_repo = LeaveRepository(LEAVE_REQUEST_DATABASE)
     # payroll_repo = PayrollRepository(PAYROLL_DATABASE)
     # attendance_repo = AttendanceRepository(ATTENDANCE_DATABASE)
     # tax_strategy = NigerianTaxStrategy()
@@ -34,14 +34,16 @@ def main():
     # currency_converter = CurrencyStrategy()
 
     # emp_service = EmployeeService(emp_repo)
-    dept_service = DepartmentService(dept_repo, emp_repo)
-    # leave_service = LeaveService(leave_repo)
+    # dept_service = DepartmentService(dept_repo, emp_repo)
+    leave_service = LeaveService(leave_repo)
     # payroll_service = PayrollServices(payroll_repo, currency_converter, tax_strategy, pension)
     # attendance_service = AttendanceService(attendance_repo)
     auth = Auth(emp_repo)
 
     auth.login("succeSs@gmail.com", "mynewpassword123@/.com")
     # auth.login("esther.adeleke@company.com", "EstherAdeleke@Dev#1")
+
+    # ======== DEPARTMENT SERVICE ========
     # dept_service.create_department(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("michael.j@company.com"))
     # dept_service.assign_employee(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("sarah.williams@company.com"))
     # # dept_service.remove_employee(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("esther.adeleke@company.com"))
@@ -54,8 +56,8 @@ def main():
     # dept_service.assign_employee(auth.get_current_user(), "TECH", emp_repo.get_employee_by_email("precious.eze@company.com"))
     # # dept_service.remove_employee(auth.get_current_user(), "TECH", emp_repo.get_employee_by_email("precious.eze@company.com"))
 
-    department = dept_service.assign_a_new_department_manager(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("sarah.williams@company.com"))
-    print(department)
+    # department = dept_service.assign_a_new_department_manager(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("sarah.williams@company.com"))
+    # print(department)
 
     # all_dept = dept_service.get_all_department(auth.get_current_user())
     # print(all_dept)
@@ -69,6 +71,18 @@ def main():
     # dept_service.delete_dept(auth.get_current_user(), ENGINEERING)
 
     # dept_service.delete_all_dept(auth.get_current_user())
+
+    # ======== DEPARTMENT SERVICE ========
+    full_time = emp_repo.get_employee_by_email("michael.j@company.com")
+    contract = emp_repo.get_employee_by_email("femi.adeyemi@company.com")
+    intern = emp_repo.get_employee_by_email("abigail.mba@company.com")
+
+    leave_1 = leave_service.apply_for_leave(full_time, 25, LeaveType.ANNUAL)
+    print(leave_1)
+    leave_2 = leave_service.apply_for_leave(full_time, 31, LeaveType.ANNUAL)
+    print(leave_2)
+    leave_3 = leave_service.apply_for_leave(full_time, 31, LeaveType.ANNUAL)
+    print(leave_3)
 
 
 if __name__ == "__main__":

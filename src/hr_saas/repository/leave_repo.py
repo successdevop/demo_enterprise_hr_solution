@@ -27,26 +27,15 @@ class LeaveRepository:
         return status_leaves
 
     def get_leave_balance(self, email: str) -> Optional[int]:
-        if email not in self._leave_database:
-            print("Employee has no previous leave_request")
-            return None
-
-        if not self._leave_database.get(email):
-            print("Employee has no previous leave_request")
+        if email not in self._leave_database or not self._leave_database.get(email):
             return None
 
         total_leave_requested = 0
-        total_available_leave_days = 0
         for requests in self._leave_database.get(email).values():
-            total_available_leave_days = requests.total_leave_for_the_year
             if requests.leave_status.value == "Pending" or requests.leave_status.value == "Approved":
                 total_leave_requested += requests.days
 
-        balance = total_available_leave_days - total_leave_requested
-        if balance == 0:
-            raise ValueError("You have used up your leave for the year")
-
-        return balance
+        return total_leave_requested
 
     def save_leave_request(self, leave_request: LeaveRequest):
         email = leave_request.employee.email

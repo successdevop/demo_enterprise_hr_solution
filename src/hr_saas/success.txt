@@ -413,3 +413,15 @@
 [2026-05-06 07:49:09]: Login successful | success@gmail.com 
 [2026-05-06 07:50:16]: Login successful | success@gmail.com 
 [2026-05-06 07:50:16]: Sarah assigned as the new manager of Engineering Department 
+[2026-05-06 08:22:42]: Login successful | success@gmail.com 
+[2026-05-06 08:23:56]: Login successful | success@gmail.com 
+[2026-05-06 08:23:56]: Michael applied for 25 days of LeaveType.ANNUAL 
+[2026-05-06 08:25:27]: Login successful | success@gmail.com 
+[2026-05-06 08:25:27]: Michael applied for 25 days of LeaveType.ANNUAL 
+[2026-05-06 08:53:36]: Login successful | success@gmail.com 
+[2026-05-06 08:55:20]: Login successful | success@gmail.com 
+[2026-05-06 08:55:52]: Login successful | success@gmail.com 
+[2026-05-06 08:55:52]: Michael applied for 25 days of LeaveType.ANNUAL 
+[2026-05-06 08:57:48]: Login successful | success@gmail.com 
+[2026-05-06 08:58:19]: Login successful | success@gmail.com 
+[2026-05-06 08:58:19]: Michael applied for 25 days of LeaveType.ANNUAL 

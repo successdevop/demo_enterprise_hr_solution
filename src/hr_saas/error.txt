@@ -22,3 +22,7 @@
 [2026-05-05 09:51:04]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
 [2026-05-05 11:44:56]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
 [2026-05-06 07:22:49]: JSON Decode Error | Expecting value: line 1 column 1 (char 0) 
+[2026-05-06 08:22:42]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-06 08:23:56]: Error loading Leave_Request database | strptime() argument 1 must be str, not None 
+[2026-05-06 08:55:52]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
+[2026-05-06 08:58:19]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 

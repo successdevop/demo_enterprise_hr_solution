@@ -10,10 +10,6 @@ class LeaveRequest:
     def __init__(self, employee: Employee, days: int, leave_type: LeaveType):
         if days <= 0:
             raise ValidationError("days must be greater than zero")
-        if employee.role in [Role.HR, Role.MANAGER]:
-            self.total_leave_for_the_year = 30
-        else:
-            self.total_leave_for_the_year = 21
 
         self.leave_id = ''.join(str(random.randint(0, 9)) for _ in range(4))
         self.days = days
@@ -24,9 +20,6 @@ class LeaveRequest:
         self.time_approved = None
         self.reviewed_by = []
         self.approval_stage = 1
-
-    def increase_total_leave_for_the_year(self, days):
-        self.total_leave_for_the_year += days
 
     def approve_leave(self, executive: Employee):
         if self.leave_status != LeaveStatus.PENDING:
@@ -48,7 +41,6 @@ class LeaveRequest:
         return {
             "leave_id": self.leave_id,
             "days": self.days,
-            "total_leave": self.total_leave_for_the_year,
             "leave_status": self.leave_status.value if hasattr(self.leave_status, "value") else self.leave_status,
             "leave_type": self.leave_type.value if hasattr(self.leave_type, "value") else self.leave_type,
             "time_created": self.created_at,
@@ -75,7 +67,6 @@ class LeaveRequest:
         )
         leave_request.leave_id = data.get("leave_id")
         leave_request.leave_status = status
-        leave_request.total_leave_for_the_year = data.get("total_leave")
         leave_request.created_at = data.get("time_created")
         leave_request.time_approved = data.get("time_approved")
         leave_request.reviewed_by = data.get("reviewed_by")
@@ -91,5 +82,5 @@ class LeaveRequest:
         return hash(self.leave_id)
 
     def __repr__(self):
-        return (f"<LeaveRequest(name:{self.employee.first_name} | days:{self.days} | leave_type:{self.leave_type} | "
+        return (f"<LeaveRequest(name:{self.employee.first_name} | days:{self.days} | leave_type:{self.leave_type.value} | "
                 f"leave_status:{self.leave_status.value})>")

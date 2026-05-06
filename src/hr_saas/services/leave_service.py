@@ -14,16 +14,20 @@ class LeaveService:
         self._leave_repo = repo
 
     def apply_for_leave(self, employee: Employee, days: int, leave_t: LeaveType):
-        leave_balance = self._leave_repo.get_leave_balance(employee.email)
+        total_leave = self._leave_repo.get_leave_balance(employee.email)
+        if total_leave:
+            leave_balance = employee.total_leave_days_for_the_year - total_leave
 
-        if not leave_balance:
-            if employee.role in [Role.ADMIN, Role.HR]:
-                leave_balance = 30
-            else:
-                leave_balance = 21
+            if leave_balance == 0:
+                raise ValidationError("You have used up your leave for the year")
 
-        if days > leave_balance:
-            raise ValidationError(f"You have {leave_balance} leave request remaining for the year")
+            if days > leave_balance:
+                raise ValidationError(f"You have {leave_balance} leave request days remaining for the year")
+        else:
+
+            leave_balance = employee.total_leave_days_for_the_year
+            if days > leave_balance:
+                raise ValidationError(f"You have {leave_balance} leave request days remaining for the year")
 
         leave_request = LeaveRequest(employee, days, leave_t)
         self._leave_repo.save_leave_request(leave_request)
