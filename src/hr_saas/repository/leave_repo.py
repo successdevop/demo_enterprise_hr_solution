@@ -22,7 +22,7 @@ class LeaveRepository:
         status_leaves = []
         for requests in self._leave_database.values():
             for leave in requests.values():
-                if leave.leave_status.value == leave_status:
+                if leave.leave_status == leave_status:
                     status_leaves.append(leave)
         return status_leaves
 
@@ -36,6 +36,10 @@ class LeaveRepository:
                 total_leave_requested += requests.days
 
         return total_leave_requested
+
+    def delete_all_request(self):
+        self._leave_database.clear()
+        return self._persist_to_disk()
 
     def save_leave_request(self, leave_request: LeaveRequest):
         email = leave_request.employee.email
