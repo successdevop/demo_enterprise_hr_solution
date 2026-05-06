@@ -425,3 +425,89 @@
 [2026-05-06 08:57:48]: Login successful | success@gmail.com 
 [2026-05-06 08:58:19]: Login successful | success@gmail.com 
 [2026-05-06 08:58:19]: Michael applied for 25 days of LeaveType.ANNUAL 
+[2026-05-06 09:08:14]: Login successful | success@gmail.com 
+[2026-05-06 09:09:41]: Login successful | success@gmail.com 
+[2026-05-06 09:09:41]: Michael applied for 25 days of LeaveType.ANNUAL 
+[2026-05-06 09:09:41]: Oluwafemi applied for 14 days of LeaveType.ANNUAL 
+[2026-05-06 09:09:41]: Abigail applied for 10 days of LeaveType.ANNUAL 
+[2026-05-06 09:23:31]: Login successful | success@gmail.com 
+[2026-05-06 09:26:15]: Leave fully approved ✅ 
+[2026-05-06 09:34:56]: Login successful | esther.adeleke@company.com 
+[2026-05-06 09:36:37]: Login successful | esther.adeleke@company.com 
+[2026-05-06 09:39:12]: Login successful | esther.adeleke@company.com 
+[2026-05-06 09:42:54]: Login successful | esther.adeleke@company.com 
+[2026-05-06 09:43:08]: Login successful | success@gmail.com 
+[2026-05-06 09:43:08]: Engineering Department: created successfully 
+[2026-05-06 10:01:25]: Login successful | esther.adeleke@company.com 
+[2026-05-06 10:22:19]: Login successful | esther.adeleke@company.com 
+[2026-05-06 11:22:25]: Login successful | esther.adeleke@company.com 
+[2026-05-06 11:22:37]: Login successful | success@gmail.com 
+[2026-05-06 11:24:03]: Login successful | success@gmail.com 
+[2026-05-06 11:24:03]: Engineering Department: created successfully 
+[2026-05-06 11:24:03]: Sales Department: created successfully 
+[2026-05-06 11:24:03]: TECH Department: created successfully 
+[2026-05-06 11:26:30]: Login successful | success@gmail.com 
+[2026-05-06 11:26:30]: Oluwafemi applied for 14 days of LeaveType.ANNUAL 
+[2026-05-06 11:26:59]: Login successful | success@gmail.com 
+[2026-05-06 11:27:21]: Login successful | success@gmail.com 
+[2026-05-06 11:27:21]: Abigail applied for 10 days of LeaveType.ANNUAL 
+[2026-05-06 11:28:21]: Login successful | success@gmail.com 
+[2026-05-06 11:30:02]: Login successful | success@gmail.com 
+[2026-05-06 11:30:40]: Login successful | esther.adeleke@company.com 
+[2026-05-06 11:33:48]: Login successful | john.doe@company.com 
+[2026-05-06 11:34:13]: Leave fully approved ✅ 
+[2026-05-06 13:08:17]: Login successful | john.doe@company.com 
+[2026-05-06 13:08:49]: Login successful | success@gmail.com 
+[2026-05-06 13:14:30]: Login successful | success@gmail.com 
+[2026-05-06 13:15:52]: Login successful | success@gmail.com 
+[2026-05-06 13:15:52]: Engineering Department: created successfully 
+[2026-05-06 13:15:52]: Sales Department: created successfully 
+[2026-05-06 13:15:52]: TECH Department: created successfully 
+[2026-05-06 13:23:03]: Login successful | success@gmail.com 
+[2026-05-06 13:23:03]: Esther applied for 25 days of LeaveType.ANNUAL 
+[2026-05-06 13:23:03]: Victor applied for 22 days of LeaveType.UNPAID 
+[2026-05-06 13:24:23]: Login successful | success@gmail.com 
+[2026-05-06 13:24:23]: Esther applied for 25 days of LeaveType.ANNUAL 
+[2026-05-06 13:24:23]: Victor applied for 22 days of LeaveType.UNPAID 
+[2026-05-06 13:24:23]: Adamu applied for 19 days of LeaveType.SICK 
+[2026-05-06 13:24:23]: Oluwafemi applied for 14 days of LeaveType.ANNUAL 
+[2026-05-06 13:24:23]: Linda applied for 11 days of LeaveType.MATERNITY 
+[2026-05-06 13:24:23]: Precious applied for 8 days of LeaveType.EMERGENCY 
+[2026-05-06 13:25:57]: Login successful | success@gmail.com 
+[2026-05-06 13:27:22]: Login successful | success@gmail.com 
+[2026-05-06 13:28:49]: Login successful | success@gmail.com 
+[2026-05-06 13:30:39]: Login successful | success@gmail.com 
+[2026-05-06 13:31:45]: Login successful | esther.adeleke@company.com 
+[2026-05-06 13:38:30]: Login successful | esther.adeleke@company.com 
+[2026-05-06 13:40:09]: Login successful | john.doe@company.com 
+[2026-05-06 14:00:22]: Login successful | john.doe@company.com 
+[2026-05-06 14:08:27]: Login successful | john.doe@company.com 
+[2026-05-06 14:09:35]: Login successful | john.doe@company.com 
+[2026-05-06 14:10:19]: Login successful | john.doe@company.com 
+[2026-05-06 14:23:44]: Login successful | john.doe@company.com 
+[2026-05-06 14:23:44]: Leave fully approved ✅ 
+[2026-05-06 14:25:20]: Login successful | esther.adeleke@company.com 
+[2026-05-06 14:26:03]: Login successful | esther.adeleke@company.com 
+[2026-05-06 14:26:54]: Login successful | esther.adeleke@company.com 
+[2026-05-06 14:29:52]: Login successful | victor.ndukwe@company.com 
+[2026-05-06 14:29:52]: Leave rejected 
+[2026-05-06 14:31:37]: Login successful | victor.ndukwe@company.com 
+[2026-05-06 14:32:30]: Login successful | victor.ndukwe@company.com 
+[2026-05-06 14:33:04]: Login successful | success@gmail.com 
+[2026-05-06 14:33:41]: Login successful | success@gmail.com 
+[2026-05-06 14:34:14]: Login successful | success@gmail.com 
+[2026-05-06 14:35:37]: Login successful | john.doe@company.com 
+[2026-05-06 14:36:35]: Login successful | john.doe@company.com 
+[2026-05-06 14:38:35]: Login successful | john.doe@company.com 
+[2026-05-06 14:40:07]: Login successful | john.doe@company.com 
+[2026-05-06 14:40:42]: Login successful | john.doe@company.com 
+[2026-05-06 14:41:14]: Login successful | john.doe@company.com 
+[2026-05-06 14:43:10]: Login successful | john.doe@company.com 
+[2026-05-06 14:46:38]: Login successful | john.doe@company.com 
+[2026-05-06 14:47:11]: Login successful | john.doe@company.com 
+[2026-05-06 14:47:25]: Login successful | john.doe@company.com 
+[2026-05-06 14:48:31]: Login successful | john.doe@company.com 
+[2026-05-06 14:49:53]: Login successful | john.doe@company.com 
+[2026-05-06 14:50:54]: Login successful | john.doe@company.com 
+[2026-05-06 14:51:20]: Login successful | esther.adeleke@company.com 
+[2026-05-06 14:51:34]: Login successful | success@gmail.com 

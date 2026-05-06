@@ -12,7 +12,7 @@
         "total_leave_days_for_the_year": 30,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "mynewpassword123@/.com",
         "password": "f93ec8b7c8283d18a8f7507899cf3155be960a19f15c56c4ef544b1ac90129a3",
         "dob": "21/06/1990"
@@ -30,7 +30,7 @@
         "total_leave_days_for_the_year": 30,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "JohnDoe2024#Secure",
         "password": "9f1f3d333bc11a1c57eab25393fe625443ddc6a44251a5d820aa031bd6763c97",
         "dob": "15/03/1985"
@@ -48,7 +48,7 @@
         "total_leave_days_for_the_year": 14,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "JaneSmith@789Tech",
         "password": "c986c81cc802ac5ea9bf0af3e6cc9795806f922307bffe50e47854e535eab2b0",
         "dob": "22/11/1992"
@@ -66,7 +66,7 @@
         "total_leave_days_for_the_year": 30,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "MikeJ2024!Pass",
         "password": "661af9a0322911776e8b19f4f70f865d8689f97c9d9ca03b02964cb944396bc6",
         "dob": "03/08/1988"
@@ -83,10 +83,8 @@
         "emp_type": "Full_time",
         "total_leave_days_for_the_year": 30,
         "is_active": true,
-        "department": [
-            "Engineering"
-        ],
-        "hire_date": "2026-05-06 07:50:16",
+        "department": [],
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "SarahW@123Dev",
         "password": "50a0ec0a90c7f43df22406cc52f18726848f5a76ebb3a3c1f046167bdf98efdb",
         "dob": "17/12/1995"
@@ -104,7 +102,7 @@
         "total_leave_days_for_the_year": 14,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "ChiefOkon@2024#",
         "password": "f848b4b56112c86e3e1c2b490bd185160f30d8669359992e66b87d849cb8e1a7",
         "dob": "09/04/1980"
@@ -122,7 +120,7 @@
         "total_leave_days_for_the_year": 14,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "AbbyMba!Design987",
         "password": "7c1bd9e41f779cd36b844755ed6e39a5a904df5eb3b1d7aeb95afd02abea53e4",
         "dob": "30/09/1998"
@@ -139,8 +137,10 @@
         "emp_type": "Contract",
         "total_leave_days_for_the_year": 14,
         "is_active": true,
-        "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "department": [
+            "Engineering"
+        ],
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "FemiAde@2024Secure",
         "password": "24ac7625c14ad5d0ecfbcab617efcd2c4324fb193f049de2b60375186f3b8730",
         "dob": "12/06/1991"
@@ -158,7 +158,7 @@
         "total_leave_days_for_the_year": 14,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "GraceOkoro#HR2024",
         "password": "66b0a42a1abd1bb33d82878f2cb0924ddd91f84aa27ddc6b9559d7f73e296001",
         "dob": "25/02/1993"
@@ -175,8 +175,10 @@
         "emp_type": "Full_time",
         "total_leave_days_for_the_year": 30,
         "is_active": true,
-        "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "department": [
+            "Sales"
+        ],
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "VicNduk@Manager1",
         "password": "19ec2437f9ee3649150a8a4f5ad1cfd46cb0591d04b8b4ebb0b21e3624af3595",
         "dob": "07/10/1987"
@@ -193,8 +195,10 @@
         "emp_type": "Contract",
         "total_leave_days_for_the_year": 14,
         "is_active": true,
-        "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "department": [
+            "Sales"
+        ],
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "LindaBrownDev#2024",
         "password": "26ee4f2ad50d227043d197153036818f7aa2f6efecf10e4138b752ac5ba923d4",
         "dob": "18/07/1996"
@@ -211,8 +215,10 @@
         "emp_type": "Full_time",
         "total_leave_days_for_the_year": 30,
         "is_active": true,
-        "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "department": [
+            "TECH"
+        ],
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "AdamIbrahim@Admin2024",
         "password": "1f834189da7692cfb747a4e8def50722d9648e2f18b04b41e943ffb64dede6f0",
         "dob": "14/05/1983"
@@ -229,8 +235,10 @@
         "emp_type": "Intern",
         "total_leave_days_for_the_year": 14,
         "is_active": true,
-        "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "department": [
+            "TECH"
+        ],
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "PreciousEze!2000",
         "password": "7c97a6509824e7d6930a6b918ff6eb6fe915750a62d91d896700d1f4b7a5ed61",
         "dob": "01/01/2000"
@@ -248,7 +256,7 @@
         "total_leave_days_for_the_year": 14,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "TobiAkindele@789Tech",
         "password": "29bd81ce8e1cc53b88891b3162c0ce8c464220a2a784979580864a1df03f3bca",
         "dob": "29/08/1994"
@@ -266,7 +274,7 @@
         "total_leave_days_for_the_year": 14,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "FaithOseni#HR2024",
         "password": "5b4bc912c490eaf15f6c870cf0e632125e79e4fc3eb49c074debed45f272bb55",
         "dob": "11/11/1989"
@@ -284,7 +292,7 @@
         "total_leave_days_for_the_year": 14,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "EbukaOkafor@Manager#1",
         "password": "5714991da56420aeb6f8b0dc2fb66d1f3574dbee0d4f9c04dee5b4f34d12a9a0",
         "dob": "23/03/1986"
@@ -302,7 +310,7 @@
         "total_leave_days_for_the_year": 14,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "AmaraOkonkwo@Dev2024",
         "password": "c7b21f08cbd8ec68573206038ea7032ae423209636971d8d4624ef76354147a5",
         "dob": "05/06/1997"
@@ -320,7 +328,7 @@
         "total_leave_days_for_the_year": 30,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "SuleimanAbba@Admin#1",
         "password": "9f7fa797efcde3059db9a99f4054f491b93905534956cc197d8bc603a3dd3133",
         "dob": "19/09/1982"
@@ -338,7 +346,7 @@
         "total_leave_days_for_the_year": 14,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "IfeomaNwosu@Design99",
         "password": "2db8fdcedabe6e71aed4aa5ba45198698f89661f598afffff03d38977db73751",
         "dob": "27/04/1999"
@@ -356,7 +364,7 @@
         "total_leave_days_for_the_year": 14,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "AyomideBalo@Engineer1",
         "password": "9fbe1e74fb363eef84b49ead22675d133a7bf26b529f71884c4e0db34026c3e7",
         "dob": "13/12/1990"
@@ -374,7 +382,7 @@
         "total_leave_days_for_the_year": 14,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "NgoziUche@HR2024",
         "password": "34c2c535fa428f9298bb2ba87724ca1f3c82836e06bfc56f143946fd4f9b75de",
         "dob": "31/07/1994"
@@ -392,7 +400,7 @@
         "total_leave_days_for_the_year": 14,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "IbraheemYusuf@Manager1",
         "password": "c7096e9bc503fe1632c767d3114102b53272dff4af46085183712d5a58c5d8cf",
         "dob": "08/01/1988"
@@ -409,8 +417,10 @@
         "emp_type": "Full_time",
         "total_leave_days_for_the_year": 30,
         "is_active": true,
-        "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "department": [
+            "Engineering"
+        ],
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "EstherAdeleke@Dev#1",
         "password": "72ac8e2af141631ff3be6514051625225ac9f84161acee6e9af0c909adb956b8",
         "dob": "24/10/1993"
@@ -428,7 +438,7 @@
         "total_leave_days_for_the_year": 30,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "GodswillAkpan@Admin#2024",
         "password": "cb1fbbf7761deb0725a86701776a9599332773ac1743ccf72db7666a9f82ddcf",
         "dob": "16/02/1985"
@@ -446,7 +456,7 @@
         "total_leave_days_for_the_year": 14,
         "is_active": true,
         "department": [],
-        "hire_date": "2026-05-06 07:50:16",
+        "hire_date": "2026-05-06 13:15:52",
         "password_text": "ZainabM@Design2024",
         "password": "b32eba47dde7d5ccc2ab32daa3ca421588808fe2eb3e9965dda86f7d0881acdd",
         "dob": "02/08/1996"

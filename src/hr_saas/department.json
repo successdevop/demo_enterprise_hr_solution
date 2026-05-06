@@ -2,14 +2,70 @@
     "Engineering": {
         "dept_name": "Engineering",
         "dept_manager": {
-            "email": "sarah.williams@company.com",
-            "first_name": "Sarah",
+            "email": "esther.adeleke@company.com",
+            "first_name": "Esther",
             "role": "Manager",
-            "dob": "17/12/1995",
+            "dob": "24/10/1993",
             "department": [
                 "Engineering"
             ]
         },
-        "dept_employees": []
+        "dept_employees": [
+            {
+                "email": "femi.adeyemi@company.com",
+                "first_name": "Oluwafemi",
+                "role": "Employee",
+                "dob": "12/06/1991",
+                "department": [
+                    "Engineering"
+                ]
+            }
+        ]
+    },
+    "Sales": {
+        "dept_name": "Sales",
+        "dept_manager": {
+            "email": "victor.ndukwe@company.com",
+            "first_name": "Victor",
+            "role": "Manager",
+            "dob": "07/10/1987",
+            "department": [
+                "Sales"
+            ]
+        },
+        "dept_employees": [
+            {
+                "email": "linda.brown@company.com",
+                "first_name": "Linda",
+                "role": "Employee",
+                "dob": "18/07/1996",
+                "department": [
+                    "Sales"
+                ]
+            }
+        ]
+    },
+    "TECH": {
+        "dept_name": "TECH",
+        "dept_manager": {
+            "email": "adamu.ibrahim@company.com",
+            "first_name": "Adamu",
+            "role": "Manager",
+            "dob": "14/05/1983",
+            "department": [
+                "TECH"
+            ]
+        },
+        "dept_employees": [
+            {
+                "email": "precious.eze@company.com",
+                "first_name": "Precious",
+                "role": "Employee",
+                "dob": "01/01/2000",
+                "department": [
+                    "TECH"
+                ]
+            }
+        ]
     }
 }
