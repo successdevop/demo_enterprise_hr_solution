@@ -52,14 +52,14 @@ class Employee(Person):
         self.department: List[str] = []
         self.hire_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-        if self.salary and (self.role.value == "Admin" or self.role.value == "Hr" or self.role.value == "Manager"):
+        if self._salary:
+            self._type = EmployeeType.CONTRACT if self._salary > 55000 else EmployeeType.INTERN
+
+        if self.role.value == "Admin" or self.role.value == "Hr" or self.role.value == "Manager":
             self.total_leave_days_for_the_year = 30
             self._type = EmployeeType.FULL_TIME
         else:
             self.total_leave_days_for_the_year = 14
-
-        if self._salary:
-            self._type = EmployeeType.CONTRACT if self._salary > 55000 else EmployeeType.INTERN
 
     @property
     def employee_id(self):

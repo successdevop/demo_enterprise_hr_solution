@@ -1,1 +1,15 @@
-{}
+{
+    "Engineering": {
+        "dept_name": "Engineering",
+        "dept_manager": {
+            "email": "sarah.williams@company.com",
+            "first_name": "Sarah",
+            "role": "Manager",
+            "dob": "17/12/1995",
+            "department": [
+                "Engineering"
+            ]
+        },
+        "dept_employees": []
+    }
+}

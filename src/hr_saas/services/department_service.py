@@ -67,8 +67,9 @@ class DepartmentService:
         if not department:
             raise NotFoundError(f"{dept_name} department not found")
 
-        department.dept_manager.department.remove(dept_name)
-        self._emp_repo.save_employee(self._emp_repo.get_employee_by_email(department.dept_manager.email))
+        dept_manager = self._emp_repo.get_employee_by_email(department.dept_manager.email)
+        dept_manager.department.remove(dept_name)
+        self._emp_repo.save_employee(dept_manager)
 
         for emp in department.get_dept_employees:
             if emp.email == manager.email:

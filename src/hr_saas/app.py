@@ -43,7 +43,7 @@ def main():
     auth.login("succeSs@gmail.com", "mynewpassword123@/.com")
     # auth.login("esther.adeleke@company.com", "EstherAdeleke@Dev#1")
     # dept_service.create_department(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("michael.j@company.com"))
-    # dept_service.assign_employee(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("esther.adeleke@company.com"))
+    # dept_service.assign_employee(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("sarah.williams@company.com"))
     # # dept_service.remove_employee(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("esther.adeleke@company.com"))
     #
     # dept_service.create_department(auth.get_current_user(), "Sales", emp_repo.get_employee_by_email("victor.ndukwe@company.com"))
@@ -54,8 +54,8 @@ def main():
     # dept_service.assign_employee(auth.get_current_user(), "TECH", emp_repo.get_employee_by_email("precious.eze@company.com"))
     # # dept_service.remove_employee(auth.get_current_user(), "TECH", emp_repo.get_employee_by_email("precious.eze@company.com"))
 
-    # department = dept_service.assign_a_new_department_manager(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("esther.adeleke@company.com"))
-    # print(department)
+    department = dept_service.assign_a_new_department_manager(auth.get_current_user(), ENGINEERING, emp_repo.get_employee_by_email("sarah.williams@company.com"))
+    print(department)
 
     # all_dept = dept_service.get_all_department(auth.get_current_user())
     # print(all_dept)
@@ -68,7 +68,7 @@ def main():
 
     # dept_service.delete_dept(auth.get_current_user(), ENGINEERING)
 
-    dept_service.delete_all_dept(auth.get_current_user())
+    # dept_service.delete_all_dept(auth.get_current_user())
 
 
 if __name__ == "__main__":
