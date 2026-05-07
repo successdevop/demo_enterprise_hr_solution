@@ -1,1 +1,138 @@
-{}
+{
+    "esther.adeleke@company.com": {
+        "2320": {
+            "leave_id": "2320",
+            "days": 25,
+            "leave_status": "Approved",
+            "leave_type": "Annual_leave",
+            "time_created": "2026-05-07 15:49:49",
+            "time_approved": "2026-05-07 15:56:07",
+            "reviewed_by": [
+                {
+                    "first_name": "John",
+                    "role": "Hr"
+                }
+            ],
+            "approval_stage": 2,
+            "employee": {
+                "email": "esther.adeleke@company.com",
+                "first_name": "Esther",
+                "role": "Manager",
+                "dob": "24/10/1993",
+                "department": [
+                    "Engineering"
+                ]
+            }
+        }
+    },
+    "victor.ndukwe@company.com": {
+        "2037": {
+            "leave_id": "2037",
+            "days": 22,
+            "leave_status": "Rejected",
+            "leave_type": "Unpaid_leave",
+            "time_created": "2026-05-07 15:49:49",
+            "time_approved": "2026-05-07 15:59:25",
+            "reviewed_by": [
+                {
+                    "first_name": "John",
+                    "role": "Hr"
+                }
+            ],
+            "approval_stage": 1,
+            "employee": {
+                "email": "victor.ndukwe@company.com",
+                "first_name": "Victor",
+                "role": "Manager",
+                "dob": "07/10/1987",
+                "department": [
+                    "Sales"
+                ]
+            }
+        }
+    },
+    "adamu.ibrahim@company.com": {
+        "3443": {
+            "leave_id": "3443",
+            "days": 19,
+            "leave_status": "Pending",
+            "leave_type": "Sick_leave",
+            "time_created": "2026-05-07 15:49:49",
+            "time_approved": null,
+            "reviewed_by": [],
+            "approval_stage": 1,
+            "employee": {
+                "email": "adamu.ibrahim@company.com",
+                "first_name": "Adamu",
+                "role": "Manager",
+                "dob": "14/05/1983",
+                "department": [
+                    "TECH"
+                ]
+            }
+        }
+    },
+    "femi.adeyemi@company.com": {
+        "2991": {
+            "leave_id": "2991",
+            "days": 14,
+            "leave_status": "Pending",
+            "leave_type": "Annual_leave",
+            "time_created": "2026-05-07 15:49:49",
+            "time_approved": null,
+            "reviewed_by": [],
+            "approval_stage": 1,
+            "employee": {
+                "email": "femi.adeyemi@company.com",
+                "first_name": "Oluwafemi",
+                "role": "Employee",
+                "dob": "12/06/1991",
+                "department": [
+                    "Engineering"
+                ]
+            }
+        }
+    },
+    "linda.brown@company.com": {
+        "3762": {
+            "leave_id": "3762",
+            "days": 11,
+            "leave_status": "Pending",
+            "leave_type": "Maternity_leave",
+            "time_created": "2026-05-07 15:49:49",
+            "time_approved": null,
+            "reviewed_by": [],
+            "approval_stage": 1,
+            "employee": {
+                "email": "linda.brown@company.com",
+                "first_name": "Linda",
+                "role": "Employee",
+                "dob": "18/07/1996",
+                "department": [
+                    "Sales"
+                ]
+            }
+        }
+    },
+    "precious.eze@company.com": {
+        "6549": {
+            "leave_id": "6549",
+            "days": 8,
+            "leave_status": "Pending",
+            "leave_type": "Emergency_leave",
+            "time_created": "2026-05-07 15:49:49",
+            "time_approved": null,
+            "reviewed_by": [],
+            "approval_stage": 1,
+            "employee": {
+                "email": "precious.eze@company.com",
+                "first_name": "Precious",
+                "role": "Employee",
+                "dob": "01/01/2000",
+                "department": [
+                    "TECH"
+                ]
+            }
+        }
+    }
+}

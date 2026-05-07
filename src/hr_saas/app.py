@@ -40,8 +40,8 @@ def main():
     # attendance_service = AttendanceService(attendance_repo)
     auth = Auth(emp_repo)
 
-    auth.login("succeSs@gmail.com", "mynewpassword123@/.com")
-    # auth.login("john.doe@company.com", "JohnDoe2024#Secure")
+    # auth.login("succeSs@gmail.com", "mynewpassword123@/.com")
+    auth.login("john.doe@company.com", "JohnDoe2024#Secure")
     # auth.login("victor.ndukwe@company.com", "VicNduk@Manager1")
     # auth.login("esther.adeleke@company.com", "EstherAdeleke@Dev#1")
 
@@ -75,12 +75,12 @@ def main():
     # dept_service.delete_all_dept(auth.get_current_user())
 
     # ======== LEAVE SERVICE ========
-    full_time_1 = emp_repo.get_employee_by_email("esther.adeleke@company.com")
-    full_time_2 = emp_repo.get_employee_by_email("victor.ndukwe@company.com")
-    full_time_3 = emp_repo.get_employee_by_email("adamu.ibrahim@company.com")
-
-    contract = emp_repo.get_employee_by_email("femi.adeyemi@company.com")
-    contract_1 = emp_repo.get_employee_by_email("linda.brown@company.com")
+    # full_time_1 = emp_repo.get_employee_by_email("esther.adeleke@company.com")
+    # full_time_2 = emp_repo.get_employee_by_email("victor.ndukwe@company.com")
+    # full_time_3 = emp_repo.get_employee_by_email("adamu.ibrahim@company.com")
+    #
+    # contract = emp_repo.get_employee_by_email("femi.adeyemi@company.com")
+    # contract_1 = emp_repo.get_employee_by_email("linda.brown@company.com")
     # contract_2 = emp_repo.get_employee_by_email("precious.eze@company.com")
 
     # leave_1 = leave_service.apply_for_leave(full_time_1, 25, LeaveType.ANNUAL)
@@ -96,26 +96,31 @@ def main():
     # leave_2 = leave_service.apply_for_leave(contract_2, 8, LeaveType.EMERGENCY)
     # print(leave_2)
 
-    # leave_service.approve_leave(auth.get_current_user(), full_time_1, "8777")
-    # leave_service.approve_leave(auth.get_current_user(), contract, "8182")
+    # leave_service.approve_leave(auth.get_current_user(), full_time_1, "2320")
+    # leave_service.approve_leave(auth.get_current_user(), contract, "2991")
     # leave_service.approve_leave(auth.get_current_user(), full_time_2, "1585")
     # leave_service.approve_leave(auth.get_current_user(), contract_1, "4258")
-    #
-    # leave_service.reject_leave(auth.get_current_user(), contract_1, "4258")
-    # leave_service.reject_leave(auth.get_current_user(), full_time_2, "1585")
+
+    # leave_service.reject_leave(auth.get_current_user(), full_time_1, "2320")
+    # leave_service.reject_leave(auth.get_current_user(), full_time_2, "2037")
     #
     # output = leave_service.get_all_leave_by_status(auth.get_current_user(), LeaveStatus.REJECTED)
     # print(output)
-    #
+
     # output = leave_service.get_all_employee_leave(auth.get_current_user(), full_time_1)
     # print(output)
-    # leave_service.get_all_employee_leave(auth.get_current_user(), contract)
-    #
+    # out = leave_service.get_all_employee_leave(auth.get_current_user(), contract)
+    # print(out)
+
     # out = leave_service.get_employee_leave_balance(auth.get_current_user(), full_time_1)
     # print(out)
-    # leave_service.get_employee_leave_balance(auth.get_current_user(), contract)
-    #
-    leave_service.delete_all_leave_request(auth.get_current_user())
+
+    # out = leave_service.get_employee_leave_balance(auth.get_current_user(), contract)
+    # print(out)
+
+    # leave_service.delete_all_leave_request(auth.get_current_user())
+
+    # ======== PAYROLL SERVICE ========
 
 
 if __name__ == "__main__":
