@@ -8,7 +8,7 @@ from src.hr_saas.file_IO.logging import Logger
 from src.hr_saas.file_IO.config_file import SUCCESS_LOG_FILE
 from src.hr_saas.enums.role import Role
 from src.hr_saas.enums.month import Month
-from src.hr_saas.error_handling.exceptions import AuthorizationError, NotFoundError
+from src.hr_saas.error_handling.exceptions import AuthorizationError, NotFoundError, ValidationError
 from src.hr_saas.auth.authorization import Authorization
 
 
@@ -26,8 +26,7 @@ class PayrollServices:
 
         payslip = self._payroll_repo.get_employee_payslip(employee, month.value)
         if payslip:
-            print(f"Payslip already processed for {employee.first_name} in {month.value}")
-            return payslip
+            raise ValidationError(f"Payslip already processed for {employee.first_name} for the month of {month.value}")
 
         base_salary = employee.salary
 

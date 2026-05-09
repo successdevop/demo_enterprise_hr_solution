@@ -21,22 +21,23 @@ from src.hr_saas.enums.leave import LeaveType, LeaveStatus
 from src.hr_saas.file_IO.database_files import (EMPLOYEE_DATABASE, DEPARTMENT_DATABASE, LEAVE_REQUEST_DATABASE,
                                                 PAYROLL_DATABASE, ATTENDANCE_DATABASE)
 from src.hr_saas.app_files.department_names import ENGINEERING
+from src.hr_saas.app_files.currency_files import USD, EUR, GBP, NGN
 
 
 def main():
     emp_repo = EmployeeRepo(EMPLOYEE_DATABASE)
     # dept_repo = DepartmentRepo(DEPARTMENT_DATABASE)
-    leave_repo = LeaveRepository(LEAVE_REQUEST_DATABASE)
-    # payroll_repo = PayrollRepository(PAYROLL_DATABASE)
+    # leave_repo = LeaveRepository(LEAVE_REQUEST_DATABASE)
+    payroll_repo = PayrollRepository(PAYROLL_DATABASE)
+    tax_strategy = NigerianTaxStrategy()
+    pension = Pension()
+    currency_converter = CurrencyStrategy()
     # attendance_repo = AttendanceRepository(ATTENDANCE_DATABASE)
-    # tax_strategy = NigerianTaxStrategy()
-    # pension = Pension()
-    # currency_converter = CurrencyStrategy()
 
     # emp_service = EmployeeService(emp_repo)
     # dept_service = DepartmentService(dept_repo, emp_repo)
-    leave_service = LeaveService(leave_repo)
-    # payroll_service = PayrollServices(payroll_repo, currency_converter, tax_strategy, pension)
+    # leave_service = LeaveService(leave_repo)
+    payroll_service = PayrollServices(payroll_repo, currency_converter, tax_strategy, pension)
     # attendance_service = AttendanceService(attendance_repo)
     auth = Auth(emp_repo)
 
@@ -75,13 +76,13 @@ def main():
     # dept_service.delete_all_dept(auth.get_current_user())
 
     # ======== LEAVE SERVICE ========
-    # full_time_1 = emp_repo.get_employee_by_email("esther.adeleke@company.com")
-    # full_time_2 = emp_repo.get_employee_by_email("victor.ndukwe@company.com")
-    # full_time_3 = emp_repo.get_employee_by_email("adamu.ibrahim@company.com")
-    #
-    # contract = emp_repo.get_employee_by_email("femi.adeyemi@company.com")
-    # contract_1 = emp_repo.get_employee_by_email("linda.brown@company.com")
-    # contract_2 = emp_repo.get_employee_by_email("precious.eze@company.com")
+    full_time_1 = emp_repo.get_employee_by_email("esther.adeleke@company.com")
+    full_time_2 = emp_repo.get_employee_by_email("victor.ndukwe@company.com")
+    full_time_3 = emp_repo.get_employee_by_email("adamu.ibrahim@company.com")
+
+    contract = emp_repo.get_employee_by_email("femi.adeyemi@company.com")
+    contract_1 = emp_repo.get_employee_by_email("linda.brown@company.com")
+    contract_2 = emp_repo.get_employee_by_email("precious.eze@company.com")
 
     # leave_1 = leave_service.apply_for_leave(full_time_1, 25, LeaveType.ANNUAL)
     # print(leave_1)
@@ -121,6 +122,21 @@ def main():
     # leave_service.delete_all_leave_request(auth.get_current_user())
 
     # ======== PAYROLL SERVICE ========
+    # salary = payroll_service.process_salary(auth.get_current_user(), full_time_1, Month.MAY, USD, 0, 290)
+    # print(salary)
+    # salary = payroll_service.process_salary(auth.get_current_user(), full_time_2, Month.MAY, NGN, 100, 780)
+    # print(salary)
+    # payslip = payroll_service.get_employee_payslip(auth.get_current_user(), full_time_1, Month.MAY)
+    # print(payslip)
+    # payslip = payroll_service.get_payslip_for_each_month(auth.get_current_user(), Month.MAY)
+    # print(payslip)
+
+    # payslip = payroll_service.get_all_payslips(auth.get_current_user())
+    # print(payslip)
+
+    # payroll_service.delete_payslip(auth.get_current_user(), Month.MAY, "24671")
+
+    # ======== ATTENDANCE SERVICE ========
 
 
 if __name__ == "__main__":

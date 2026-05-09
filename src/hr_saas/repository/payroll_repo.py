@@ -22,12 +22,10 @@ class PayrollRepository:
         return self._persist_to_disk()
 
     def get_employee_payslip(self, employee: Employee, month: str) -> Optional[Payslip]:
-        if month not in self._payroll_database:
-            print(f"Payslips for the month of {month} not yet processed")
+        if month not in self._payroll_database or not self._payroll_database.get(month):
             return None
 
-        payslips = self._payroll_database.get(month, [])
-        for payslip in payslips:
+        for payslip in self._payroll_database.get(month, []):
             if payslip.employee.email == employee.email:
                 return payslip
         return None
@@ -55,6 +53,7 @@ class PayrollRepository:
             if payslip.payslip_id == payslip_id:
                 payslips.remove(payslip)
                 return self._persist_to_disk()
+        return None
 
     def _persist_to_disk(self):
         savable_data = {
