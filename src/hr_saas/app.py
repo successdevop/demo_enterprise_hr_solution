@@ -134,9 +134,10 @@ def main():
     # payslip = payroll_service.get_all_payslips(auth.get_current_user())
     # print(payslip)
 
-    # payroll_service.delete_payslip(auth.get_current_user(), Month.MAY, "24671")
+    payroll_service.delete_payslip(auth.get_current_user(), Month.MAY, "47181")
 
     # ======== ATTENDANCE SERVICE ========
+
 
 
 if __name__ == "__main__":

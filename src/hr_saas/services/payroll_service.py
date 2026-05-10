@@ -64,7 +64,10 @@ class PayrollServices:
     def delete_payslip(self, current_user, month: Month, payslip_id: str):
         Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
 
-        self._payroll_repo.delete_payslip(month.value, payslip_id)
+        payslip = self._payroll_repo.delete_payslip(month.value, payslip_id)
+        if not payslip:
+            raise NotFoundError(f"Payslip with id {payslip_id} does not exist")
+        print(f"Payslip with id: ({payslip_id}) deleted")
 
     def get_all_payslips(self, current_user):
         Authorization.authorized_roles(current_user, [Role.ADMIN, Role.HR])
