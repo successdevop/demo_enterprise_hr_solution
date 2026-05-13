@@ -34,3 +34,5 @@
 [2026-05-07 20:05:40]: Error loading Payroll Database | strptime() argument 1 must be str, not None 
 [2026-05-07 20:14:10]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
 [2026-05-09 21:14:56]: Json Decode Error | Expecting value: line 1 column 1 (char 0) 
+[2026-05-13 19:07:35]: Error loading attendance_database | strptime() argument 1 must be str, not None 
+[2026-05-13 19:09:43]: Error loading attendance_database | strptime() argument 1 must be str, not None 

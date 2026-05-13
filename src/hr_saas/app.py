@@ -28,17 +28,17 @@ def main():
     emp_repo = EmployeeRepo(EMPLOYEE_DATABASE)
     # dept_repo = DepartmentRepo(DEPARTMENT_DATABASE)
     # leave_repo = LeaveRepository(LEAVE_REQUEST_DATABASE)
-    payroll_repo = PayrollRepository(PAYROLL_DATABASE)
-    tax_strategy = NigerianTaxStrategy()
-    pension = Pension()
-    currency_converter = CurrencyStrategy()
-    # attendance_repo = AttendanceRepository(ATTENDANCE_DATABASE)
+    # payroll_repo = PayrollRepository(PAYROLL_DATABASE)
+    # tax_strategy = NigerianTaxStrategy()
+    # pension = Pension()
+    # currency_converter = CurrencyStrategy()
+    attendance_repo = AttendanceRepository(ATTENDANCE_DATABASE)
 
     # emp_service = EmployeeService(emp_repo)
     # dept_service = DepartmentService(dept_repo, emp_repo)
     # leave_service = LeaveService(leave_repo)
-    payroll_service = PayrollServices(payroll_repo, currency_converter, tax_strategy, pension)
-    # attendance_service = AttendanceService(attendance_repo)
+    # payroll_service = PayrollServices(payroll_repo, currency_converter, tax_strategy, pension)
+    attendance_service = AttendanceService(attendance_repo)
     auth = Auth(emp_repo)
 
     # auth.login("succeSs@gmail.com", "mynewpassword123@/.com")
@@ -134,9 +134,25 @@ def main():
     # payslip = payroll_service.get_all_payslips(auth.get_current_user())
     # print(payslip)
 
-    payroll_service.delete_payslip(auth.get_current_user(), Month.MAY, "47181")
+    # payroll_service.delete_payslip(auth.get_current_user(), Month.MAY, "47181")
 
     # ======== ATTENDANCE SERVICE ========
+    # out = attendance_service.clock_in(auth.get_current_user(), WeekDay.WEDNESDAY)
+    # print(out)
+    # out = attendance_service.is_late(auth.get_current_user(), attendance_repo.get_employee_today_attendance(auth.get_current_user()))
+    # print(out)
+    # out = attendance_service.calculate_overtime(auth.get_current_user(), attendance_repo.get_employee_today_attendance(auth.get_current_user()))
+    # print(out)
+    # out = attendance_service.get_employee_today_attendance(auth.get_current_user(), auth.get_current_user())
+    # print(out)
+    # out = attendance_service.get_all_today_attendance(auth.get_current_user())
+    # print(out)
+    # out = attendance_service.get_all_employee_attendance(auth.get_current_user(), auth.get_current_user())
+    # print(out)
+    # out = attendance_service.clock_out(auth.get_current_user())
+    # print(out)
+    # out = attendance_service.calculate_overtime(auth.get_current_user(), attendance_repo.get_employee_today_attendance(auth.get_current_user()))
+    # print(out)
 
 
 

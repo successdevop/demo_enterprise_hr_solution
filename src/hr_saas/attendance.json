@@ -1,30 +1,16 @@
 {
-    "obiageli@gmail.com": [
+    "john.doe@company.com": [
         {
-            "day_of_the_week": "Monday",
-            "clocked_in": "2026-05-01 17:14:18",
-            "clocked_out": "2026-05-01 17:16:06",
-            "total_hours_worked_per_day": 0.03,
-            "date": "2026-05-01 17:14:18",
+            "day_of_the_week": "Wednesday",
+            "clocked_in": "2026-05-13 08:11:17",
+            "clocked_out": "2026-05-13 19:43:01",
+            "total_hours_worked_per_day": 11.528888888888888,
+            "date": "2026-05-13 19:10:39",
             "employee": {
-                "email": "obiageli@gmail.com",
-                "name": "Obi Joy",
-                "role": "Employee",
-                "department": []
-            }
-        }
-    ],
-    "francis@gmail.com": [
-        {
-            "day_of_the_week": "Tuesday",
-            "clocked_in": "2026-05-01 10:14:18",
-            "clocked_out": "2026-05-01 20:12:34",
-            "total_hours_worked_per_day": 2.971111111111111,
-            "date": "2026-05-01 17:14:18",
-            "employee": {
-                "email": "francis@gmail.com",
-                "name": "Francis Ebinabo",
-                "role": "Employee",
+                "email": "john.doe@company.com",
+                "first_name": "John",
+                "role": "Hr",
+                "dob": "15/03/1985",
                 "department": []
             }
         }
